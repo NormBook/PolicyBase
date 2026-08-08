@@ -30,7 +30,7 @@ owner 主题（本卷完整展开）：
 - 身份层 ID、registry generation、availability、alias 见 PolicyBase_07。
 - 去重与 reviewed decision 见 PolicyBase_08。
 - 内容生产状态机、content-layer review decision、OCR engine 见 PolicyBase_13。
-- 索引实现、`record_hash` frame 见 PolicyBase_14（其 `record_hash.body` 引用本卷 `normalized_lf_markdown_body`，`record_hash.semantic_hash` 引用 PolicyBase_07）。
+- 索引实现、`record_hash` frame 见 PolicyBase_14（其 `record_hash.body` 引用本卷 `normalized_lf_markdown_body`，`record_hash.registry_entry` 引用 PolicyBase_07）。
 - **repository rebootstrap**（删除远程仓库/.git/edition 块）不在本卷范围；本卷只覆盖 edition/包级回滚。
 
 核心规则：
@@ -153,7 +153,7 @@ recovery
 
 ### 4.5 switch event
 
-switch event 至少包含 event_id、doc_id、from/to edition、kind、actor、reason、created_at、target confirmation evidence、前一 event ID 与 `expected_previous_event_id`。event_id 为 canonical event payload 的 SHA-256 前 24 hex。事件文件一经创建不得修改或删除；事件只有被 `current.json` 直接或经后继事件链引用时才表示已生效切换。
+switch event 至少包含 event_id、doc_id、from/to edition、kind、actor、reason、created_at、target confirmation evidence、前一 event ID 与 `expected_previous_event_id`。event_id 为 canonical event payload 的 SHA-256 前 24 hex；`switch_event_id`（current.json 字段与 `switches/{switch_event_id}.json` 文件名）固定为 `sw-` 前缀 + 该 24 hex。事件文件一经创建不得修改或删除；事件只有被 `current.json` 直接或经后继事件链引用时才表示已生效切换。
 
 崩溃留下的未引用 event 是 abandoned intent，不改变 current，可保留供恢复审计。有效事件链不得断裂或成环。Git 可提供额外证据，但不是 switch 历史的唯一承载。
 
@@ -358,7 +358,7 @@ candidate、needs_review、pending_manual、rejected 或未通过 gate 的 editi
 
 ### 13.2 索引投影与发布门（跨卷声明）
 
-- PolicyBase_14 indexing 是本卷 current/edition 的**索引投影**，不是另一份消费权威；其 `record_hash.body` 引用本卷 `normalized_lf_markdown_body`（§4.2），`record_hash.semantic_hash` 引用 PolicyBase_07。
+- PolicyBase_14 indexing 是本卷 current/edition 的**索引投影**，不是另一份消费权威；其 `record_hash.body` 引用本卷 `normalized_lf_markdown_body`（§4.2），`record_hash.registry_entry` 引用 PolicyBase_07。
 - 只有 selected confirmed Markdown 与允许本地索引的 confirmed 附件文本进入 FTS。candidate、几何 JSON、diff、prompt、日志不得进入正文。
 - 发布（export/redistribution）还必须通过 PolicyBase_04 发布门（publication gate、redistribution gate、外传授权）；本卷的 `publication_gate` operation 是 edition 内证据，不替代 PolicyBase_04 的运行时发布门。
 
