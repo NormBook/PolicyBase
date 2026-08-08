@@ -107,7 +107,7 @@
 | 标签状态机三段门控 | github/spec-kit | bug-assess->bug-fix->bug-test 标签触发 |
 | Issue#=ADR 文件名 | open-gsd/gsd-core | 一 issue 一文档一 PR |
 | 审批标签门禁 | open-gsd/gsd-core | "No code before approval"，无标签 PR 自动关 |
-| AI 连续披露 | github/spec-kit | Assisted-by trailer + 反模式清单 |
+| AI 连续披露 | github/spec-kit | AI-assisted trailer（中性）+ 品牌词禁令 + 反模式清单 |
 | 一份规则多处软链 | zed-industries/zed | 单一规范源防多 AI 漂移 |
 | Rules Hygiene | zed-industries/zed | 规则变更流程（补种子缺的演进机制） |
 | CLI 唯一写入口 | MrLesk/Backlog.md | 不手改文件，工具代劳校验 |
@@ -208,12 +208,12 @@
 
 **提交 trailer 格式**：
 ```
-Assisted-by: Claude (model: glm-5.2, autonomous)
+AI-assisted: autonomous|supervised
 ```
 - `autonomous`：AI 自主完成（用户仅发起）
 - `supervised`：用户深度参与指导
 
-> **维度区分**：本节 trailer 是**治理层** AI 身份连续披露（P0 期间）；业务执行追溯（模型 backend/version、prompt hash、input/output hash、授权 ID 等）归 PolicyBase_13 §12 与 §4 统一内容工件 schema，**两者不重叠**——治理层回答"谁写了这段"，业务层回答"这个 candidate 怎么生成的"。本 trailer 不承担业务执行追溯责任。
+> **品牌词禁令（[AI 修正 2026-08-08]）**：commit message 任何位置（含 trailer、body、subject）**禁止出现** AI 模型品牌名（Claude、GLM、GPT、Gemini、Llama、Mistral 等）。`AI-assisted` 是允许的中性披露形式，**不列模型名、不列版本、不列能力等级**。AI 不作为贡献者（author / co-author / committer）；commit 身份始终为 janssenkm。**维度区分**：本节 trailer 是**治理层** AI 身份连续披露（P0 期间）；业务执行追溯（模型 backend/version、prompt hash、input/output hash、授权 ID 等）归 PolicyBase_13 §12 与 §4 统一内容工件 schema，**两者不重叠**——治理层回答"是否 AI 参与"，业务层回答"这个 candidate 怎么生成的"。本 trailer 不承担业务执行追溯责任。
 
 ### 2.2 治理元数据体系
 
@@ -397,7 +397,7 @@ Issue Type 是**组织级**配置（`NormBook` 组织，无硬上限；GraphQL �
        │
 5. [LOCAL-AUTO+REMOTE-AUTO] AI 自审 + 开 draft PR：
    - 运行所有 AC 命令，收集输出证据
-   - git commit（带 Assisted-by trailer）
+   - git commit（带 AI-assisted trailer，不含品牌名）
    - git push -u origin <branch>
    - gh pr create --draft --title "<type>(<scope>): <subject> (#<N>)" --body "..."
    - gh issue edit <N> --remove-label "do:in-progress" --add-label "do:review"
@@ -777,7 +777,7 @@ git commit -m "chore(infra): 初始化仓库，导入 19 卷种子规格
 - seeds/verify_seed_set.py（种子校验脚本）
 - tmp/ 已 gitignore（分析素材不入库）
 
-Assisted-by: Claude (model: glm-5.2, supervised)"
+AI-assisted: supervised"
 ```
 
 ```bash
@@ -950,9 +950,9 @@ gh pr create --draft \
 
 ## AI 披露
 - [x] 本 PR 包含 AI 辅助生成的代码
-- [x] 所有 commit 包含 Assisted-by trailer
+- [x] 所有 commit 包含 AI-assisted trailer
 
-AI 模型：Claude (model: glm-5.2, supervised)"
+AI 模型：（不列品牌名 / 版本 / 能力等级；按 §2.1 品牌词禁令，中性披露为 AI-assisted）"
 gh issue edit <N> --remove-label "do:in-progress" --add-label "do:review"
 
 # 步骤 6：观察 pr-gates 三个 check（这是门禁有效性的第一份真实证据）
@@ -1210,11 +1210,11 @@ Closes #
 ## AI 披露
 
 - [ ] 本 PR 包含 AI 辅助生成的代码
-- [ ] 所有 commit 包含 `Assisted-by:` trailer
-- [ ] 已披露 AI 模型名称与自主级别
+- [ ] 所有 commit 包含 `AI-assisted:` trailer
+- [ ] 未在 commit / PR body 中出现 AI 模型品牌名（按 §2.1 品牌词禁令）
 
-> AI 模型：<!-- 如 Claude (model: glm-5.2, autonomous) -->
-> 披露是**连续的**：每轮 review 新增的 commit 和回复也需声明 AI 参与。
+> AI 披露：<!-- 如 AI-assisted: autonomous -->
+> 披露是**连续的**：每轮 review 新增的 commit 和回复也需声明 AI 参与。**禁止列品牌名、版本号、能力等级**（仅"是否 AI 参与"）。
 
 ## 验收标准（从关联 Issue 复制，逐条勾选并附证据）
 
@@ -1632,37 +1632,52 @@ jobs:
             const problems = [];
 
             // --- 1) PR body：AI 披露 + 关联 Issue ---
-            if (!(/\[x\].*AI/i.test(body) || /Assisted-by:/i.test(body))) {
-              problems.push('PR body 缺少 AI 披露声明（勾选 AI-generated 复选框，或写入 Assisted-by trailer）');
+            if (!(/\[x\].*AI/i.test(body) || /AI-assisted/i.test(body))) {
+              problems.push('PR body 缺少 AI 披露声明（勾选 AI-generated 复选框，或写入 AI-assisted trailer）');
             }
             if (!/(?:closes|fixes|resolves|refs)\s+#\d+/i.test(body)) {
               problems.push('PR body 缺少关联 Issue（使用 closes/fixes/resolves #NNN）');
             }
 
-            // --- 2) 每个 commit 必须带 Assisted-by trailer ---
-            // AGENTS.md 反模式清单要求「每个 commit 必带 Assisted-by trailer」。
+            // --- 2) 每个 commit 必须带 AI-assisted trailer ---
+            // AGENTS.md 反模式清单要求「每个 commit 必带 AI-assisted trailer」。
             // 只校验 PR body 无法强制该约束，故在此逐 commit 复核（同一合同的两个落点）。
             const commits = await github.paginate(
               github.rest.pulls.listCommits,
               { owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number, per_page: 100 }
             );
             // trailer 必须独占一行（行首匹配），避免正文中偶然提及被误判为通过
-            const TRAILER = /^Assisted-by:\s*\S+/im;
+            const TRAILER = /^AI-assisted:\s*\S+/im;
             const missing = commits
               .filter(c => (c.parents || []).length < 2)   // 跳过 merge commit
               .filter(c => !TRAILER.test(c.commit.message || ''))
               .map(c => `${c.sha.substring(0, 7)} ${(c.commit.message || '').split('\n')[0]}`);
 
+            // --- 3) 每个 commit 禁止含 AI 模型品牌名（§2.1 品牌词禁令）---
+            // 品牌词白名单之外的 AI 模型名（Claude / GLM / GPT / Gemini / Llama / Mistral 等）
+            // 在 commit message 任何位置（含 subject、body、trailer）出现即为反模式。
+            const BRAND_RE = /\b(Claude|GLM|GPT|Gemini|Llama|Mistral|Qwen|DeepSeek|Anthropic|OpenAI)\b/i;
+            const brandOffenders = commits
+              .filter(c => (c.parents || []).length < 2)
+              .filter(c => BRAND_RE.test(c.commit.message || ''))
+              .map(c => `${c.sha.substring(0, 7)} ${(c.commit.message || '').split('\n')[0]}`);
+
+            if (brandOffenders.length) {
+              problems.push(
+                `以下 ${brandOffenders.length} 个 commit 含 AI 模型品牌名（违反 §2.1 品牌词禁令）：\n  - ` + brandOffenders.join('\n  - ')
+              );
+            }
+
             if (missing.length) {
               problems.push(
-                `以下 ${missing.length} 个 commit 缺少 Assisted-by trailer：\n  - ` + missing.join('\n  - ')
+                `以下 ${missing.length} 个 commit 缺少 AI-assisted trailer：\n  - ` + missing.join('\n  - ')
               );
             }
 
             if (problems.length) {
               core.setFailed('AI 披露门禁未通过：\n- ' + problems.join('\n- '));
             } else {
-              core.info(`OK: PR body 已披露；${commits.length} 个 commit 均含 Assisted-by trailer`);
+              core.info(`OK: PR body 已披露；${commits.length} 个 commit 均含 AI-assisted trailer 且无品牌词`);
             }
 
   # --- G2/G3: DoR 门禁（关联 Issue 状态检查）---
@@ -1725,7 +1740,7 @@ jobs:
 ## 身份与权限
 
 - **仓库所有者**：@janssenkm（GitHub: janssenkm）
-- **AI 身份**：当前会话模型，必须在每个 commit 添加 `Assisted-by:` trailer
+- **AI 身份**：当前会话模型，必须在每个 commit 添加 `AI-assisted:` trailer（**禁止列品牌名、版本号、能力等级**——按 §2.1 品牌词禁令）
 - **AI 可做**：自动开发、编写、审核、测试、创建分支/PR、运行验证命令、分诊第三方 Issue
 - **AI 禁止**：自我批准 merge、操作非 janssenkm 的 Issue、绕过门禁、手改 seeds/ 文件、自行将 Issue 从 `do:triage` 切换到 `do:ready`（G2 门禁：Ready 转换需用户确认）
 
@@ -1762,7 +1777,7 @@ jobs:
 | 分支 | `<type>/<issue#>-<slug>` | `feat/42-source-registry` |
 | Commit | `<type>(<scope>): <subject>` | `feat(PB10): Source Registry 注册接口` |
 | PR 标题 | `<type>(<scope>): <subject> (#<issue#>)` | `feat(PB10): Source Registry (#42)` |
-| Trailer | `Assisted-by: <model> (model: <id>, autonomous\|supervised)` | 见下 |
+| Trailer | `AI-assisted: autonomous\|supervised`（不列品牌名） | 见下 |
 
 提交示例：
 ```
@@ -1772,7 +1787,7 @@ feat(PB10): Source Registry 注册接口
 - 添加 frontmatter 校验
 - 关联 Issue #42
 
-Assisted-by: Claude (model: glm-5.2, autonomous)
+AI-assisted: autonomous
 ```
 
 PR body 必须包含：`Closes #<issue#>` + AI 披露复选框 + AC 逐条证据
@@ -1832,7 +1847,7 @@ evidence: <CI artifact / test output / command output>
 |---|---|
 | "我测过了"不附证据 | 附 command + exit code + output |
 | 秒回 commit（无思考痕迹） | 每轮 review 注明 SHA + 摘要 |
-| 隐藏 AI 身份的 commit | 每个 commit 必带 Assisted-by trailer（由 `ai-disclosure` job 逐 commit 强制，非自证） |
+| commit 含 AI 品牌词（违反 §2.1 禁令）| 每个 commit 必带 `AI-assisted:` trailer 且不含 Claude/GLM/GPT/Gemini 等品牌名（由 `ai-disclosure` job 逐 commit 强制） |
 | 手改 seeds/PolicyBase_NN.md | 通过 Issue + PR 修改 |
 | 绕过 verify_seed_set.py | commit 前必须运行 |
 | 在第三方 Issue 上直接开发 | 只做分诊分析，等采纳后在新 Issue 开发 |
@@ -1854,7 +1869,7 @@ evidence: <CI artifact / test output / command output>
 每次 AI 会话结束前：
 
 1. 确认所有 AC 证据已记录（command + exit code + output），未执行的标记为 `planned`
-2. 确认所有 commit 包含 `Assisted-by:` trailer
+2. 确认所有 commit 包含 `AI-assisted:` trailer（且不含 §2.1 禁止的 AI 品牌词）
 3. 如果在会话中发现了非显而易见的模式或坑，在 PR 描述中添加 **"Suggested AGENTS.md additions"** 段落，写出建议的规则文本
 4. **不要**在正常功能/修复工作中直接编辑 AGENTS.md（规则变更走 `gov(governance)` Issue + PR）
 5. 如有未完成的工作，在 Issue 或 PR 中评论说明当前进度和下一步
@@ -1908,7 +1923,7 @@ ls -la AGENTS.md CLAUDE.md GEMINI.md
 # 期望：AGENTS.md 为普通文件，CLAUDE.md 和 GEMINI.md 为 -> AGENTS.md 的软链
 ```
 
-> **设计说明**：不同 AI 工具（Claude Code、Gemini、Copilot 等）读取的入口文件名不同，但规则内容必须一致。软链保证只有一份源文件，修改 AGENTS.md 即同步生效到所有 AI。如后续需要添加 AI 特定指令，可在 AGENTS.md 中用条件区块或单独的 `.rules` 文件扩展，不走软链。
+> **设计说明**：不同 AI 工具（各 AI 助手 / 集成 IDE）读取的入口文件名不同，但规则内容必须一致。软链保证只有一份源文件，修改 AGENTS.md 即同步生效到所有 AI。如后续需要添加 AI 特定指令，可在 AGENTS.md 中用条件区块或单独的 `.rules` 文件扩展，不走软链。
 >
 > **与正式文档目录的关系**：软链在仓库根是为 AI 工具自动发现（CLAUDE.md / GEMINI.md 是各 AI CLI 的标准入口名）；正式用户文档按 PolicyBase_03 §8 仍在 `docs/` 子目录下（`docs/product/`、`docs/specs/` 等），二者职责不重叠——根目录的 AGENTS.md / 软链是 AI 入口，`docs/` 下是人类阅读入口。
 
@@ -1928,7 +1943,7 @@ git commit -m "gov(governance): 初始化 issue-first 治理基础设施
 - 19 个标签 + 9 个 Milestones 已创建（第 1 段）；10 个 Issue Type 组织级已存在
 - CLAUDE.md/GEMINI.md 软链至 AGENTS.md
 
-Assisted-by: Claude (model: glm-5.2, supervised)"
+AI-assisted: supervised"
 ```
 
 > **不要 `git push origin main`**：本节属第 2 段（自举期），变更在 `gov/<N>-governance-bootstrap`
@@ -2075,8 +2090,13 @@ assert: 输出包含 ai-disclosure、dor-check、verify-seeds 三者（门禁有
 evidence: planned（P0 尚未执行）
 
 AC-P0-09
-command: git -C /home/yangsen/Dropbox/workspaces/NormBook/PolicyBase.git log --format=%B main | grep -c "^Assisted-by:"
-assert: 输出 >= 2（main 上每个 commit 均含 Assisted-by trailer）
+command: git -C /home/yangsen/Dropbox/workspaces/NormBook/PolicyBase.git log --format=%B main | grep -cE "^AI-assisted:|^(.*\n)*AI-assisted:"
+assert: 输出 >= 2（main 上每个 commit 均含 AI-assisted trailer）
+evidence: planned（P0 尚未执行）
+
+AC-P0-09b
+command: git -C /home/yangsen/Dropbox/workspaces/NormBook/PolicyBase.git log --format=%B main | grep -ciE "\b(Claude|GLM|GPT|Gemini|Llama|Mistral|Qwen|DeepSeek|Anthropic|OpenAI)\b"
+assert: 输出 0（main 上 commit message 任何位置无 AI 模型品牌名，按 §2.1 品牌词禁令）
 evidence: planned（P0 尚未执行）
 ```
 
@@ -2198,7 +2218,7 @@ gh issue close <原#> --comment "采纳 via #<新#>，本 Issue 关闭。" --rea
 | DoR 门禁 | Issue 模板必填 + AI 检查 + CI dor-check | gsd-core | approved-* 标签是写码前置 |
 | PR 门禁 | required status checks（3 个 job） | spec-kit/uv | CI 状态检查即门禁 |
 | 验收门禁 | AC 命令全通过 + do:acceptance 状态 | claw-code/uv | 可执行命令即验收 |
-| AI 身份边界 | Assisted-by trailer + 反模式清单 | spec-kit | 连续披露制度 |
+| AI 身份边界 | AI-assisted trailer + 品牌词禁令 + 反模式清单 | spec-kit | 连续披露（中性形式）|
 | 来源控制 | origin:owner/external 标签 | 本方案原创 | 自动化触发依据 |
 | 规则变更 | Rules Hygiene + gov 类型 Issue | zed | 补种子缺的演进机制 |
 | 单一规范源 | AGENTS.md 软链 CLAUDE/GEMINI | zed | 一份规则多处引用 |
