@@ -4,6 +4,9 @@ on:
     types: [labeled, unlabeled, closed, reopened]
 jobs:
   sync-projects:
+    # 未配置 PROJECTS_TOKEN 时整个 job 跳过（标签是权威源，Projects v2 仅为镜像）。
+    # 配置 PROJECTS_TOKEN 后此 job 自动启用。
+    if: ${{ secrets.PROJECTS_TOKEN != '' }}
     name: sync-projects-v2
     runs-on: ubuntu-latest
     # 注意：permissions 中不存在 `organization` 键，GITHUB_TOKEN 也无法访问
@@ -15,7 +18,8 @@ jobs:
         env:
           PROJECT_NUMBER: 1
         with:
-          # 必须使用 PAT；未配置时下方脚本会跳过并记录 warning
+          # 必须使用 PAT（含 project scope）才能写 org-level Projects v2。
+          # 整个 job 已在 `if: ${{ secrets.PROJECTS_TOKEN != '' }}` 中跳过缺 token 的情况。
           github-token: ${{ secrets.PROJECTS_TOKEN }}
           script: |
             if (!process.env.PROJECT_NUMBER) return;
