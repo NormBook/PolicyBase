@@ -75,7 +75,7 @@ CLI 使用 UTF-8。参数经 Unicode NFC 规范化后验证；NUL、C0/C1 控制
 
 `RULE_ID`/`RULE_REF`/`PACK_REF` 的语义与 Rule/Pack schema 见 PolicyBase_12（草案）。`ENTRYPOINT_ROLE`/`BUCKET_ID` 的 Recipe/Registry 登记见 PolicyBase_10。
 
-对象不存在与词法非法分开：词法非法返回 `invalid_*_id`（统一码见 PolicyBase_19）；词法有效但 Registry/索引中不存在返回 `*_not_found`。只有 Registry 明确登记的历史完整 source ID alias 可用于迁移解析且必须输出 canonical ID；省名、拼音简称等非完整/未登记 alias 不接受。
+对象不存在与词法非法分开：词法非法（含 ID 词法）返回 PolicyBase_19 `cli_argument_format`；词法有效但 Registry/索引中不存在返回本卷 `*_not_found` 业务码（如 `source_not_found`，见 §16）。只有 Registry 明确登记的历史完整 source ID alias 可用于迁移解析且必须输出 canonical ID；省名、拼音简称等非完整/未登记 alias 不接受。
 
 ### 3.2 URL、日期与文本
 
@@ -618,6 +618,7 @@ ID/URL/ref 词法错误统一为 PolicyBase_19 `cli_argument_format`；单文件
 
 ```text
 output_path_out_of_scope
+output_exists
 capability_not_active
 fixture_not_registered
 fixture_context_mismatch
@@ -714,7 +715,7 @@ secret_material_detected
 | I01 | import 单文件+metadata | 0 candidate；dry-run 时零写入 |
 | I02 | import 多文件+metadata | 2 `cli_argument_dependency` |
 | I03 | import URL | 2 `cli_argument_format`，零网络 |
-| I04 | import symlink/device/FIFO | 2 `path_type_forbidden` |
+| I04 | import symlink/device/FIFO | 2 `cli_path_unsafe` |
 | I05 | import 超 max files/bytes | 2，在 candidate 写入前拒绝 |
 | G01 | prepare Tier 0-2 + identity/update 门通过 | 0，process-ready handoff；artifact/edition/current/index 均不变 |
 | G02 | prepare Tier 3/4 无 decision | 1 hold，current 不变 |
