@@ -1,0 +1,26 @@
+name: "\U0001F527 治理变更"
+description: 治理流程、CI、门禁、模板变更
+labels: ["do:triage"]
+title: "gov(governance): "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: 变更描述
+      description: 改什么、为什么改、影响哪些现有规则
+    validations:
+      required: true
+  - type: textarea
+    id: ac
+    attributes:
+      label: 验收标准（AC）
+      description: 变更后应满足的可执行验收命令
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options: ["priority:blocker", "priority:high", "priority:medium", "priority:low"]
+    validations:
+      required: true

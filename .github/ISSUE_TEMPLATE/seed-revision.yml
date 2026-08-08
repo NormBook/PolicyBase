@@ -1,0 +1,33 @@
+name: "\U0001F4DA 种子规格修订"
+description: 修订 PolicyBase_NN 种子分卷内容
+labels: ["do:triage"]
+title: "seed(PBNN): "
+body:
+  - type: input
+    id: volume
+    attributes:
+      label: 分卷编号
+      description: 要修订的种子分卷（如 PolicyBase_12）
+      placeholder: PolicyBase_NN
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: 修订内容
+      description: 改什么、为什么改、影响哪些跨卷引用
+    validations:
+      required: true
+  - type: textarea
+    id: ac
+    attributes:
+      label: 验收标准（AC）
+      description: |
+        修订后必须通过种子校验（格式见 PolicyBase_03 §9）。
+        未执行时省略 exit code 行，写 evidence: planned。
+        AC-1
+        command: python3 seeds/verify_seed_set.py
+        assert: 输出包含 "OK seed_set_verified: 19 volumes verified"
+        evidence: planned
+    validations:
+      required: true

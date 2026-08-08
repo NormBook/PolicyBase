@@ -1,0 +1,130 @@
+name: pr-gates
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+jobs:
+  # --- G3: 种子校验 ---
+  verify-seeds:
+    name: verify-seeds
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - name: Run verify_seed_set.py
+        run: python3 seeds/verify_seed_set.py
+
+  # --- G3: AI 披露（PR body + 每个 commit 的 trailer）+ Issue 关联检查 ---
+  ai-disclosure:
+    name: ai-disclosure
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            // 收集全部问题后一次性 setFailed：连续两次调用会让后一条消息覆盖前一条
+            const problems = [];
+
+            // --- 1) PR body：AI 披露 + 关联 Issue ---
+            if (!(/\[x\].*AI/i.test(body) || /AI-assisted/i.test(body))) {
+              problems.push('PR body 缺少 AI 披露声明（勾选 AI-generated 复选框，或写入 AI-assisted trailer）');
+            }
+            if (!/(?:closes|fixes|resolves|refs)\s+#\d+/i.test(body)) {
+              problems.push('PR body 缺少关联 Issue（使用 closes/fixes/resolves #NNN）');
+            }
+
+            // --- 2) 每个 commit 必须带 AI-assisted trailer ---
+            // AGENTS.md 反模式清单要求「每个 commit 必带 AI-assisted trailer」。
+            // 只校验 PR body 无法强制该约束，故在此逐 commit 复核（同一合同的两个落点）。
+            const commits = await github.paginate(
+              github.rest.pulls.listCommits,
+              { owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.number, per_page: 100 }
+            );
+            // trailer 必须独占一行（行首匹配），避免正文中偶然提及被误判为通过
+            const TRAILER = /^AI-assisted:\s*\S+/im;
+            const missing = commits
+              .filter(c => (c.parents || []).length < 2)   // 跳过 merge commit
+              .filter(c => !TRAILER.test(c.commit.message || ''))
+              .map(c => `${c.sha.substring(0, 7)} ${(c.commit.message || '').split('\n')[0]}`);
+
+            // --- 3) 每个 commit 禁止含 AI 模型品牌名（§2.1 品牌词禁令）---
+            // 品牌词白名单之外的 AI 模型名（Claude / GLM / GPT / Gemini / Llama / Mistral 等）
+            // 在 commit message 任何位置（含 subject、body、trailer）出现即为反模式。
+            // 排除文件名例外：CLAUDE.md / GEMINI.md 是 §4.10 软链文件名（非品牌词身份声明）。
+            const BRAND_RE = /\b(Claude|GLM|GPT|Gemini|Llama|Mistral|Qwen|DeepSeek|Anthropic|OpenAI)\b(?!\.md)/i;
+            const brandOffenders = commits
+              .filter(c => (c.parents || []).length < 2)
+              .filter(c => BRAND_RE.test(c.commit.message || ''))
+              .map(c => `${c.sha.substring(0, 7)} ${(c.commit.message || '').split('\n')[0]}`);
+
+            if (brandOffenders.length) {
+              problems.push(
+                `以下 ${brandOffenders.length} 个 commit 含 AI 模型品牌名（违反 §2.1 品牌词禁令）：\n  - ` + brandOffenders.join('\n  - ')
+              );
+            }
+
+            if (missing.length) {
+              problems.push(
+                `以下 ${missing.length} 个 commit 缺少 AI-assisted trailer：\n  - ` + missing.join('\n  - ')
+              );
+            }
+
+            if (problems.length) {
+              core.setFailed('AI 披露门禁未通过：\n- ' + problems.join('\n- '));
+            } else {
+              core.info(`OK: PR body 已披露；${commits.length} 个 commit 均含 AI-assisted trailer 且无品牌词`);
+            }
+
+  # --- G2/G3: DoR 门禁（关联 Issue 状态检查）---
+  dor-check:
+    name: dor-check
+    runs-on: ubuntu-latest
+    permissions:
+      issues: read
+      pull-requests: read
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = pr.body || '';
+            const match = body.match(/(?:closes|fixes|resolves|refs)\s+#(\d+)/i);
+            if (!match) {
+              core.setFailed('无法从 PR 提取关联 Issue 编号');
+              return;
+            }
+            const issueNum = parseInt(match[1]);
+            try {
+              const { data: issue } = await github.rest.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issueNum
+              });
+              const labels = issue.labels.map(l => l.name);
+              // 白名单仅含 PR 创建瞬间的合法状态：do:in-progress（pr create 之前）
+              // 和 do:review（pr create 之后）。标签切换发生在 gh pr create 之后，
+              // 见 §2.4.1 step 5。
+              // do:ready 与 do:acceptance 阶段 PR 不应为 draft（前者是已领取未开 PR，
+              // 后者是 merge 前验收阶段）；白名单过宽会被静默绕过。
+              const ALLOWED = ['do:in-progress', 'do:review'];
+              const problems = [];
+              if (!labels.some(l => ALLOWED.includes(l))) {
+                problems.push('关联 Issue #' + issueNum + ' 缺少 ' + ALLOWED.join('/') + ' 之一');
+              }
+              if (labels.includes('origin:external')) {
+                problems.push('关联 Issue #' + issueNum + ' 是第三方 Issue，禁止直接开发（采纳后应在新的 owner Issue 上开发）');
+              }
+              if (problems.length) {
+                core.setFailed('DoR 门禁未通过：\n- ' + problems.join('\n- '));
+              }
+            } catch (e) {
+              core.setFailed('获取 Issue #' + issueNum + ' 失败: ' + e.message);
+            }

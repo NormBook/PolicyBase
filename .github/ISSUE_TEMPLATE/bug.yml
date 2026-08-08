@@ -1,0 +1,40 @@
+name: "\U0001F41E 缺陷报告"
+description: 报告缺陷或异常行为
+labels: ["do:triage"]
+title: "fix(scope): "
+body:
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 影响范围
+      options:
+        - spec (种子规格 PB01-19)
+        - infra (基础设施)
+        - ci (CI/CD)
+        - cli (CLI 命令)
+        - data (数据管线)
+        - docs (文档系统)
+        - governance (治理系统)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 缺陷描述
+      description: 现象、复复步骤、预期 vs 实际
+    validations:
+      required: true
+  - type: textarea
+    id: ac
+    attributes:
+      label: 验收标准（AC）
+      description: 修复后应满足的可执行验收命令
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options: ["priority:blocker", "priority:high", "priority:medium", "priority:low"]
+    validations:
+      required: true

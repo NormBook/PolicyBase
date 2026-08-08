@@ -1,0 +1,136 @@
+name: label-sync
+on:
+  issues:
+    types: [labeled, unlabeled, closed, reopened]
+jobs:
+  sync-projects:
+    name: sync-projects-v2
+    runs-on: ubuntu-latest
+    # 注意：permissions 中不存在 `organization` 键，GITHUB_TOKEN 也无法访问
+    # org-level Projects v2。写权限只能由 PROJECTS_TOKEN（PAT，含 project scope）提供。
+    permissions:
+      issues: read
+    steps:
+      - uses: actions/github-script@v7
+        env:
+          PROJECT_NUMBER: 1
+        with:
+          # 必须使用 PAT；未配置时下方脚本会跳过并记录 warning
+          github-token: ${{ secrets.PROJECTS_TOKEN }}
+          script: |
+            if (!process.env.PROJECT_NUMBER) return;
+            const PROJECT_NUMBER = parseInt(process.env.PROJECT_NUMBER);
+            const issue = context.payload.issue;
+            const action = context.payload.action;
+            const labelName = context.payload.label?.name;
+
+            // 标签 -> Projects v2 Status 选项映射
+            const labelToStatus = {
+              'do:triage': 'Triage',
+              'do:ready': 'Ready',
+              'do:in-progress': 'In progress',
+              'do:review': 'In review',
+              'do:acceptance': 'Acceptance',
+              'state:blocked': 'Blocked'
+            };
+
+            // 优先级：state:blocked > do:* 前向状态
+            const statusPriority = ['state:blocked', 'do:acceptance', 'do:review', 'do:in-progress', 'do:ready', 'do:triage'];
+
+            // close reason -> Status 映射
+            let targetStatus = null;
+            if (action === 'closed') {
+              targetStatus = issue.state_reason === 'completed' ? 'Done' : 'Not planned';
+            } else if (action === 'reopened') {
+              targetStatus = 'Triage';
+            } else if (action === 'labeled' && labelName && labelToStatus[labelName]) {
+              targetStatus = labelToStatus[labelName];
+            } else if (action === 'unlabeled') {
+              // 移除标签时，根据剩余标签重算 Status（不使用被移除的标签名）
+              const { data: currentIssue } = await github.rest.issues.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issue.number
+              });
+              const currentLabels = currentIssue.labels.map(l => l.name);
+              for (const lbl of statusPriority) {
+                if (currentLabels.includes(lbl)) {
+                  targetStatus = labelToStatus[lbl];
+                  break;
+                }
+              }
+              if (!targetStatus) targetStatus = 'Triage'; // 无状态标签时回退
+            }
+
+            if (!targetStatus) return;
+
+            try {
+              // 获取 org project 的 Status 字段 ID 和选项 ID
+              const projQuery = await github.graphql(`
+                query($org: String!, $num: Int!) {
+                  organization(login: $org) {
+                    projectV2(number: $num) {
+                      id
+                      fields(first: 20) {
+                        nodes {
+                          ... on ProjectV2SingleSelectField {
+                            id
+                            name
+                            options { id name }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              `, { org: context.repo.owner, num: PROJECT_NUMBER });
+
+              const project = projQuery.organization.projectV2;
+              const statusField = project.fields.nodes
+                .find(f => f.name === 'Status');
+              if (!statusField) {
+                core.warning('Status field not found in project');
+                return;
+              }
+
+              const statusOption = statusField.options
+                .find(o => o.name === targetStatus);
+              if (!statusOption) {
+                core.warning(`Status option "${targetStatus}" not found. Available: ${statusField.options.map(o => o.name).join(', ')}`);
+                return;
+              }
+
+              // 将 issue 加入 project 并取得 item id。
+              // addProjectV2ItemById 是幂等的：content 已在 project 中时返回既有 item，
+              // 因此无需分页遍历 items（items(first:100) 在 Issue 数超 100 后会漏查并重复添加）。
+              const addMutation = await github.graphql(`
+                mutation($projectId: ID!, $contentId: ID!) {
+                  addProjectV2ItemById(input: {projectId: $projectId, contentId: $contentId}) {
+                    item { id }
+                  }
+                }
+              `, { projectId: project.id, contentId: issue.node_id });
+
+              const itemId = addMutation.addProjectV2ItemById.item.id;
+
+              await github.graphql(`
+                mutation($projectId: ID!, $itemId: ID!, $fieldId: ID!, $optionId: String!) {
+                  updateProjectV2ItemFieldValue(input: {
+                    projectId: $projectId, itemId: $itemId, fieldId: $fieldId, value: {singleSelectOptionId: $optionId}
+                  }) {
+                    projectV2Item { id }
+                  }
+                }
+              `, {
+                projectId: project.id,
+                itemId: itemId,
+                fieldId: statusField.id,
+                optionId: statusOption.id
+              });
+
+              core.info(`Projects v2 Status synced to: ${targetStatus}`);
+            } catch (e) {
+              core.warning(`Projects v2 sync failed: ${e.message}`);
+              // 非阻塞：标签是权威源，同步失败不影响主流程
+              // 常见原因：未配置 PROJECTS_TOKEN secret，或该 PAT 缺少 project scope
+            }
