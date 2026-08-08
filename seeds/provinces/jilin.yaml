@@ -1,0 +1,146 @@
+province: 吉林省
+slug: jilin
+short_name: 吉
+pinyin: jilin
+level: province
+operator_org_id: "2200000000000001"
+type: database
+
+main_website:
+  url: https://www.jl.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: http://xxgk.jl.gov.cn/
+  path_keyword: xxgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: http://xxgk.jl.gov.cn/61hwsj_zfxxgkzn/
+    path_keyword: zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: http://xxgk.jl.gov.cn/szf/gkyj/
+    path_keyword: gkyj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: http://xxgk.jl.gov.cn/szf/xxgk/gknr/
+    path_keyword: gknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（xxgk/szf/xxgk/gknr/）下设多个一级类目（2026-07-22 自动抓取）
+      URL: http://xxgk.jl.gov.cn/szf/xxgk/gknr/
+      注意：根 URL 通过 meta-refresh (0;url=./ghxx/) 跳转到 ghxx 子页（37198 字节）；ghxx 是默认页面。
+      HTML 树形结构（2026-07-22 真实 Chrome 150 抓取）：
+      吉林用 xxgk.jl.gov.cn 独立子域 + c108xxx 频道号 + ../相对路径（侧栏导航统一在 /szf/xxgk/ 下）。
+      累计 174 个政策相关 URL（5/6 栏目，公报首页 945 字节未完成）：
+      - 政府信息公开首页（33 个）：含 2026-07/06/05 发布的 11 个省政府文件 + 政策解读
+      - 政府信息公开指南（65 个）：含政策/地方性法规/规范性文件/规划/教育/卫生/环保/建议提案等 13 个子类入口
+      - 政府信息公开制度（19 个）：与指南同源但侧栏不同
+      - 法定主动公开内容根（17 个）：含 2022 年 8 月发布的 3 个十四五规划文件
+      - 规章库（40 个）：含省政府规章 + 长春/吉林/四平/辽源/通化/白山/松原/白城 8 个市州规章库入口 + doc/pdf 下载
+      - 政府公报（jl.gov.cn/gb/，抓取 945 字节失败，建议用 /xxgk/xxgk/xxgkzn/ 同源 URL 重试）
+      范式特征：吉林用 xxgk.jl.gov.cn 独立子域 + c108xxx 频道号 + ../相对路径（侧栏导航统一在 /szf/xxgk/ 下）。
+
+
+      类目结构（从 ghxx 默认子页抓取）：
+      1. 机构简介（外链主站）             - http://www.jl.gov.cn/szf
+      2. 规划信息（ghxx 默认页）          - ./ghxx/  （根 URL meta-refresh 落地）
+         - 国民经济和社会发展规划及专项规划信息 - ./fzgh/
+         - 国土空间规划（外链省自然资源厅） - http://zrzy.jl.gov.cn/zwgk/ghjh/
+      3. 统计信息（外链省统计局）         - http://tjj.jl.gov.cn/tjsj/tjgb/ndgb/
+      4. 行政管理服务信息（qzsxxx）       - ../qzsxxx/
+         - 政务服务事项清单（外链省政务服务网）- http://zwfw.jl.gov.cn/jlszwfw/?area=220000
+         - 权责清单（外链主站）           - http://www.jl.gov.cn/szfzt/qzqd/
+         - 结果公示（外链省政务服务网）   - http://zwfw.jl.gov.cn/jlszwfw/jggs/
+         - 行政处罚决定（外链省信用网）   - http://credit.jl.gov.cn/xygs/sgs/sgsdt/index.html?mingcheng=2
+      5. 财政资金（czzj）                 - ../czzj/
+         - 预算决算（外链省财政厅）       - http://czt.jl.gov.cn/yjs/
+         - 行政事业性收费                 - ../czzj/sfxmxx/
+         - 目录（外链省财政厅）           - http://czt.jl.gov.cn/sfjjmlqd/xzxsyxsf/
+         - 标准（外链主站）               - http://www.jl.gov.cn/szfzt/qssfqdyzw/
+      6. 政府采购（zfcg）                 - ../zfcg/
+         - 采购项目（外链省公共资源交易）- http://www.ggzyzx.jl.gov.cn/jyxx/zfcg/
+         - 采购标准（外链省政府采购网）   - http://www.ccgp-jilin.gov.cn/
+      7. 应急管理（外链省应急厅）        - http://yjt.jl.gov.cn/
+      8. 公务员考录（外链省公务员局）    - http://www.jlgwyks.cn/
+      9. 重大民生信息（zdmsxx）           - ../zdmsxx/
+         - 教育（外链省教育厅）           - http://jyt.jl.gov.cn/zwgk/
+         - 卫生（外链省卫健委）           - http://wsjkw.jl.gov.cn/zfxxgk/fdzdgknr/
+
+      子导航额外锚点：
+      - 政府信息公开基础平台入口         - ../../zfxxgk_hz/
+      - 履职依据子项：地方性法规 ../lzyj/dfxfg/
+      - 规章                                - ../../../gzk/
+      - 行政规范性文件                 - ../lzyj/xzgfxwj/
+      - 其他文件                       - ../lzyj/qtwj/
+
+      特色发现：
+      - 吉林「法定主动公开内容」颗粒度居中（9+ 类目），按"机构简介/规划/统计/行政管理/财政/采购/应急/考录/民生"组织；与重庆 14 类相比目录更扁平
+      - 与多数省不同的是吉林把"行政管理服务信息"（含权责清单、行政许可、行政处罚）独立成第 4 类，区别于重庆把此类归入"机关简介"或"重大民生"
+      - 大量外链垂域门户占抓取类目的 60%+；本主站 xxgk.jl.gov.cn 仅作框架与导航，正文分散在 11 个委办局子站
+      - HTML 源码无 chnl/docnum 字段；目录用 ul-li 静态渲染，未显式提供 chnltype
+  disclosure_annual_report:
+    url: http://xxgk.jl.gov.cn/szf/ndbg/
+    path_keyword: ndbg
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: http://xxgk.jl.gov.cn/ysqgk/sqcl/
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: http://www.jl.gov.cn/zcxx/
+    path_keyword: zcxx
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: http://xxgk.jl.gov.cn/szf/gzk/
+    path_keyword: gzk
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: http://xxgk.jl.gov.cn/szf/xxgk/gknr/lzyj/xzgfxwj/
+    path_keyword: xzgfxwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: http://xxgk.jl.gov.cn/
+    path_keyword: xxgk
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: http://www.jl.gov.cn/gb/
+  status: ok
+
+notes: |
+  - 吉林省"政府信息公开"采用子域 xxgk.jl.gov.cn 承载；5 子栏目与规章/规范性文件库均位于该子域下的 /szf/ 路径，结构清晰
+  - 政策文献库沿用主站 /zcxx/ 频道（"政策信息"），未设独立 zcwjk 子域；规范性文件库独立为 /szf/xxgk/gknr/lzyj/xzgfxwj/
+  - 3 个最关键 URL: https://www.jl.gov.cn/ ；http://xxgk.jl.gov.cn/ ；http://www.jl.gov.cn/gb/
+sources_consulted:
+  - url: https://www.jl.gov.cn/
+    type: main_portal
+  - url: http://xxgk.jl.gov.cn/
+    type: disclosure_homepage
+  - url: http://xxgk.jl.gov.cn/61hwsj_zfxxgkzn/
+    type: sub_section_guide
+  - url: http://xxgk.jl.gov.cn/szf/gkyj/
+    type: sub_section_regime
+  - url: http://xxgk.jl.gov.cn/szf/gzk/
+    type: library_regulation
+  - url: http://xxgk.jl.gov.cn/szf/xxgk/gknr/lzyj/xzgfxwj/
+    type: library_normative
+  - url: http://xxgk.jl.gov.cn/ysqgk/sqcl/
+    type: sub_section_upon_request
+  - url: http://www.jl.gov.cn/gb/
+    type: gazette

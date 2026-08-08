@@ -1,0 +1,267 @@
+province: 广西壮族自治区
+slug: guangxi
+short_name: 桂
+pinyin: guangxi
+level: autonomous_region
+operator_org_id: "4500000000000001"
+type: database
+
+main_website:
+  url: http://www.gxzf.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    广西壮族自治区人民政府门户网站（域名 gxzf.gov.cn）。由自治区人民政府办公厅
+    主办、自治区大数据发展局承办，备案号 桂ICP备06001517号-1。导航含 首页 /
+    政府信息公开（zwgk/）/ 政务服务（zwfw.gxzf.gov.cn）/ 政民互动 / 广西数据 /
+    美丽广西 / 政府公报。英文版 en.gxzf.gov.cn，移动版独立 CSSQ/2025gxzf。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzn/index.shtml
+  path_keyword: /zwgk/zfxxgkzl_84988/zfxxgkzn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "政府信息公开"专栏枢纽页（zfxxgkzl_84988 节点，zfxxgkzn 子目录）。
+    顶栏导航列出 5 个子栏目 + 政府公报 + 政府网站年度报表 + 国家/各设区市/自治区
+    部门链接，是与国务院办公厅模板对标的统一入口。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzn/
+    path_keyword: /zwgk/zfxxgkzl_84988/zfxxgkzn/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      广西壮族自治区人民政府办公厅政府信息公开指南（zfxxgkzn）。
+      含自治区办公厅和各组成部门/直属机构指南列表，标志性内容为
+      /zwgk/zfxxgkzl_84988/zfxxgkzn/t19207093.shtml（自治区政府办公厅指南全文）。
+
+  disclosure_regime:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzd_84990/
+    path_keyword: /zwgk/zfxxgkzl_84988/zfxxgkzd_84990/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开制度（zfxxgkzd_84990）。汇集国务院、自治区政府、自治区政府办公厅
+      制定的政府信息公开相关制度文件列表。
+
+  disclosure_proactive_catalog:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/
+    path_keyword: /zwgk/zfxxgkzl_84988/fdzdgknr/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（fdzdgknr）。"主动公开事项目录" 入口为同节点的
+      /zwgk/zfxxgkzl_84988/zfxxgkzd/index.shtml，二者并列于政府信息公开枢纽页侧栏。
+      2025 年印发的《广西壮族自治区人民政府信息主动公开事项目录》全文见
+      /gggs/t27805499.shtml。
+      HTML 树形结构（2026-07-22 真实 Chrome 150 抓取）：
+      广西采用 5 位数字节点编号（_84988/_885018/_251551/_85019），与重庆 chnl 模型差异显著。
+      累计 191 个政策相关 URL：
+      - 政务公开首页（97 个）：9 大菜单（指南/制度/主动公开事项目录/法定主动公开/年报/公报/依申请公开/国家各部门链接/国务院政策文件库）
+      - 规章库（7 个）：含 /zfgb/YYYY/d_Nq/ 期号路径 + docx/pdf 双格式
+      - 规范性文件库（51 个）：聚合 9 大类文件 + 自治区商务厅/住建厅/药监局等子站外链
+      - 政府公报（36 个）：含本省 + 全国 30+ 省级公报入口
+      - 政策库（1 个）：跳转国务院政策文件库（sousuo.www.gov.cn）
+      范式特征：广西用 5 位数字节点编号（zxwj_885018/xzgfxwj_251551/gsqsbmptlj_85019 等），与重庆 chnl 模型差异显著。
+
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      广西"法定主动公开内容"采用 ul#zzxxglNav 渲染（带 data-path 属性，
+      走自定义 Guangxi-CMS 范式，无 chnl/docnum 字段）。
+
+      1. 政府领导：         http://www.gxzf.gov.cn/zwgk/zzqzfld/  （外链）
+      2. 地方性法规：       https://gxfgwjk.gxrd.gov.cn:8090/#/home  （外链）
+      3. 机构职能：         http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/jgjj/
+      4. 政府工作报告：     http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/zfgzbg_85001/
+      5. 重大会议：         http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/zdhy_fdzdgk1/
+      6. 规划信息：         http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/ghxx/
+      7. 统计信息：         http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/tjxx/
+      8. 行政许可/其他对外管理服务：http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/xzxk_fdzdgk1/
+      9. 行政处罚/强制：    http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/cfqz_fdzdgk1/
+      10. 预算/决算：       http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/ysjs/
+      11. 财政资金直达基层：https://czt.gxzf.gov.cn/zt/gdlm/czzjzdjc/  （外链，自治区财政厅）
+      12. 行政事业性收费：  http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/xzsyxsf1_180694/
+      13. 政府采购：        http://www.ccgp-guangxi.gov.cn/home.html  （外链）
+      14. 重大项目：        http://fgw.gxzf.gov.cn/zfxxgkzl/fdzdgknr/zdjsxmpzhsslygk/  （外链）
+      15. 应急管理：        http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/yjgl/
+      16. 灾害事故救援：    http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/zhsgjy/
+      17. 公务员招录：      http://www.gxpta.com.cn/ksxm/gwyzlks/  （外链）
+      18. 重点领域信息公开：http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/zdmsxx/
+      19. 重大行政决策事项目录：http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/zdjcygk_fdzdgk1/
+      20. 建议提案答复：    http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/fdzdgk_jytadf/
+      21. 人事信息：        http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/rsxx/
+      22. 权责清单：        http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/zdjcygk_fdzdgk1_251831/
+
+      范式特征：
+      - 广西采用自定义 Guangxi-CMS 范式（data-path='jgjj/zfgzbg_85001/zdhy_fdzdgk1/...'），
+        不走 chnl/docnum 频道号模型（与重庆 chnl=120519 差异显著）
+      - 颗粒度比重庆细（22 个子项 vs 重庆 14 类 36 URL），特色是新增「政府领导/
+        政府工作报告/重大会议/重大行政决策事项目录/建议提案答复/权责清单」六个广西特有类目
+      - 大量子项委托给厅局子站（ccgp-guangxi / fgw.gxzf.gov.cn / czt.gxzf.gov.cn /
+        gxpta.com.cn / gxfgwjk.gxrd.gov.cn），是广西"分散维护"模式
+      - 主栏目路径加 _84988 后缀、目录加 _85001/_180694/_251831 数字后缀，揭示
+        是 TRS/China-CMS 派生变体（非官方 chnl 频道号）
+
+  disclosure_annual_report:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkgzndbg_251551/index.shtml
+    path_keyword: /zwgk/zfxxgkgzndbg_251551/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报（zfxxgkgzndbg_251551）。最新为 2025 年度报告
+      /gggs/t27414981.shtml；2024 年度报告见 /zwgk/zfxxgkgzndbg_227592/index.shtml
+      （历史栏目 id），含厅局/各市政府信息公开年报汇总。
+
+  disclosure_upon_request:
+    url: http://www.gxzf.gov.cn/zwgk/ysqgk/index.shtml
+    path_keyword: /zwgk/ysqgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开（ysqgk）。提供依申请公开指引、申请流程、申请表下载及受理机构
+      联系方式。位于 zwgk 节点下而非 zfxxgkzl 子树，与年报同列。
+
+# 专题库
+libraries:
+  policy_library:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/
+    path_keyword: /zwgk/zfxxgkzl_84988/zcwj_885018/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政策文件库（zcwj_885018）。标题为"政策"，汇集自治区政府、自治区政府办公厅
+      印发的政策文件，含"最新文件"索引页 /zfwj/zxwj/index.shtml 与各级政策文件
+      检索。顶层"政府文件" /zfwj/ 入口仍可用且主导航未直接外链。
+
+  regulation_library:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/gxgzk/zzqgzk/
+    path_keyword: /zwgk/zfxxgkzl_84988/zcwj_885018/gxgzk/zzqgzk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      自治区人民政府规章库（gxgzk/zzqgzk）。广西壮族自治区人民政府规章专题，
+      现行有效 167 部自治区政府规章，提供文字版 + 图片版下载。父目录
+      /zcwj_885018/gxgzk/ （自治区政府规章 与 自治区政府令 两栏并列）。
+      配套综合库：广西壮族自治区法规规章规范性文件数据库
+      https://gxfgwjk.gxrd.gov.cn:8090/（含地方性法规 560 + 自治条例 57 +
+      政府规章 251 + 规范性文件 8206，由广西人大主办）。
+
+  normative_library:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/xzgfxwj/
+    path_keyword: /zwgk/zfxxgkzl_84988/zcwj_885018/xzgfxwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      现行有效行政规范性文件（xzgfxwj）。位于政策文件库节点下，与规章库
+      （gxgzk）并列。汇集自治区政府及自治区政府办公厅印发的现行有效行政规范性文件。
+
+  disclosure_library:
+    url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzn/index.shtml
+    path_keyword: /zwgk/zfxxgkzl_84988/zfxxgkzn/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政务公开/政府信息公开专栏 = /zwgk/zfxxgkzl_84988/zfxxgkzn/index.shtml。
+      与 disclosure_homepage 同址，是政府信息公开的总枢纽，承载 5 子栏目 +
+      政府公报 + 各市各部门链接。
+
+  supplementary_libraries:
+    policy_finder:
+      url: http://www.gxzf.gov.cn/gxydm/xgzc/
+      path_keyword: /gxydm/xgzc/
+      status: ok
+      note: |
+        "桂在问"知识库 / "相关政策" 检索入口（gxydm/xgzc/）。位于"广西一点通"
+        板块下，提供按主题聚合的政策检索（/hdjl/guizaiwen/index.shtml 为
+        "桂在问"知识库主页）。
+    department_reports:
+      url: http://www.gxzf.gov.cn/zfndbb/zfndb/2025ndbb/index.shtml
+      path_keyword: /zfndbb/zfndb/2025ndbb/
+      status: ok
+      note: |
+        2025 年政府网站年度报表（zfndbb/zfndb/2025ndbb/）。与"政府信息公开年报"
+        并列于政府信息公开枢纽页侧栏，可作为部门网站年报的统一入口。
+
+# 政府公报
+gazette:
+  url: http://www.gxzf.gov.cn/zfgb/index.shtml
+  path_keyword: /zfgb/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    广西壮族自治区人民政府公报（zfgb/）。《政府公报》刊登的政府规章文本为标准
+    文本、与正式文件具有同等效力，主要栏目：自治区人民政府令、自治区人民政府
+    文件、自治区人民政府办公厅文件、人事任免等。提供"进入历史公报"入口
+    /zfgb/history.shtml。
+
+notes: |
+  - 广西采用"政府信息公开官网 www.gxzf.gov.cn + 法规规章规范性文件专题库
+    gxfgwjk.gxrd.gov.cn:8090"双站结构：前者是政府公报+省级政府/办公厅发文+
+    政策+规章+规范性文件+5 子栏目的统一枢纽；后者由广西人大主办，是涵盖地方性
+    法规 (560) + 自治条例及单行条例 (57) + 政府规章 (251) + 规范性文件 (8206)
+    的综合法规规章规范性文件数据库。两库均对外开放，跨站互补。
+  - 政策类资源三种并列专题：政策文献库 /zcwj_885018/、自治区政府规章库
+    /zcwj_885018/gxgzk/zzqgzk/、现行有效行政规范性文件 /zcwj_885018/xzgfxwj/，
+    均位于同一节点 zfxxgkzl_84988/zcwj_885018 下，链接结构清晰。
+  - 政府信息公开体系下没有单独的"行政规范性文件库"二级目录，规范性文件与规章
+    同列为政策文件库（zcwj）下的子专题，命名为"现行有效行政规范性文件
+    (xzgfxwj)"。该省特色还包括"桂在问"知识库（/hdjl/guizaiwen/index.shtml）
+    与"12345 接诉即办"互动入口。
+  - 三个最关键 URL：
+    1) http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzn/index.shtml
+       （政府信息公开总枢纽）
+    2) http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/gxgzk/zzqgzk/
+       （自治区政府规章库）
+    3) http://www.gxzf.gov.cn/zfgb/index.shtml （省政府公报）
+
+sources_consulted:
+  - url: http://www.gxzf.gov.cn/
+    type: homepage
+  - url: http://www.gxzf.gov.cn/zwgk/
+    type: homepage
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzn/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzn/
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzd_84990/
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/fdzdgknr/
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkzd/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkgzndbg_251551/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zfxxgkndbg_227592/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/ysqgk/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/gxgzk/
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/gxgzk/zzqgzk/
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zwgk/zfxxgkzl_84988/zcwj_885018/xzgfxwj/
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zfgb/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zfgb/history.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zfwj/zxwj/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zfndbb/zfndb/2025ndbb/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/hdjl/guizaiwen/index.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/zfxxgkzl_84988/zfxxgkzn/t19207093.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/gggs/t27414981.shtml
+    type: page_content
+  - url: http://www.gxzf.gov.cn/gggs/t27805499.shtml
+    type: page_content
+  - url: https://gxfgwjk.gxrd.gov.cn:8090/
+    type: search_result

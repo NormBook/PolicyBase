@@ -1,0 +1,144 @@
+province: 福建省
+slug: fujian
+short_name: 闽
+pinyin: fujian
+level: province
+operator_org_id: "3500000000000001"
+type: database
+
+main_website:
+  url: https://www.fujian.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.fujian.gov.cn/zwgk/
+  path_keyword: zwgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: http://www.fujian.gov.cn/zwgk/zfxxgk/xxgkzn/
+    path_keyword: zfxxgk/xxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: http://www.fujian.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    path_keyword: zfxxgk/zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.fujian.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    path_keyword: zfxxgk/fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（2026-07-22 自动抓取）。福建门户采用 Avalon.js
+      嵌入式 chnlid 三级树形（childlist + threeLev 双层），12 个大类 +
+      多级 URL，与重庆 chnl=120519/docnum=418 树形风格一致。
+
+      HTML 树形结构（从 fj.html JS 段 gknr.childlist 提取）：
+
+      1. 机关职能 (chnlid=40618)
+         - 省政府领导 (chnlid=40619)         http://www.fujian.gov.cn/zwgk/zfxxgk/fdzdgknr/jgzn/szfld/
+         - 省政府组织机构 (chnlid=40620)     http://www.fujian.gov.cn/zwgk/zfxxgk/fdzdgknr/jgzn/szfzzjg/
+      2. 规划计划 (chnlid=40753)              http://www.fujian.gov.cn/zwgk/ghjh/
+         - (三级为空)
+      3. 统计信息 (chnlid=40802)              http://www.fujian.gov.cn/zwgk/sjfb/
+         - (三级为空)
+      4. 行政许可 (chnlid=57855)             http://www.fujian.gov.cn/zwgk/zfxxgk/fdzdgknr/xzxk/
+         - 2019年 (chnlid=57856)              https://zwfw.fujian.gov.cn/person-todo/detail?userType=3
+         - 2018年以前 (chnlid=57857)          http://xy.fujian.gov.cn/#/double-publicity-info
+      5. 行政处罚 (chnlid=62658)             https://ythdrhxzzf.fujian.gov.cn/zfgs/#/publicity/start/services
+      6. 预算/决算 (chnlid=67104)            https://czt.fujian.gov.cn/ztzl/sjyjsgkpt/sjzfyjsgk/
+      7. 收费项目 (chnlid=40762)             https://www.fujian.gov.cn/zwgk/zdlyxxgk/jghsf/xzsyxsf/
+      8. 政府采购 (chnlid=40763)             http://zfcg.czt.fujian.gov.cn/
+      9. 重大项目 (chnlid=40764)             http://www.fujian.gov.cn/zwgk/ztzl/zdjsxm/
+      10. 重大民生信息 (chnlid=40629)         http://www.fujian.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/
+      11. 招考录用 (chnlid=40769)             http://gwykl.fujian.gov.cn
+      12. 其他法定信息 (chnlid=40639)         http://www.fujian.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/
+          - 2019年 (chnlid=40774)             http://zfgb.fujian.gov.cn/
+          - 2018年以前 (chnlid=40775)         http://www.fujian.gov.cn/szf/gzbg/
+          - 2018年以前 (chnlid=40776)         http://www.fujian.gov.cn/szf/szfhy/
+
+      父级 gknr.name="法定主动公开内容" (chnlid=40617)。
+      完整 chnlid 范围：40617（父）+ 40618-40620 + 40629 + 40639 + 40753 +
+      40762-40764 + 40769 + 40774-40776 + 40802 + 57855-57857 + 62658 + 67104。
+      注：未发现 "应急管理" 与 "监督检查" 两个独立大类（合并入"重大民生信息"/
+      "其他法定信息"或由 ythdrhxzzf.fujian.gov.cn 第三方系统承载），与重庆 14 大类
+      范式相比缺少 2 类。年报独立板块 gknb 由 chnlid=22084 承载，含
+      2020-2025 各年度子频道（41700/55061/59168/62598/65243/67890）。
+
+      范式特征：
+      - 福建是国内少数几个完整保留 chnlid+threeLev 双层树形的省份（与重庆一致）；
+      - 缺 docnum 文档数（HTML 中未发现 docnum 属性），仅 chnlid + URL；
+      - 颗粒度：12 大类 vs 重庆 14 大类，差异在"应急管理"和"监督检查"未独立。
+  disclosure_annual_report:
+    url: https://www.fujian.gov.cn/zwgk/zfxxgkzl/zfxxgkzdgk/zfxxgknb/
+    path_keyword: zfxxgknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: http://www.fujian.gov.cn/zwgk/zfxxgk/ysqxxgk/
+    path_keyword: zfxxgk/ysqxxgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.fujian.gov.cn/zck/
+    path_keyword: zck
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.fujian.gov.cn/zwgk/flfg/szfgz/
+    path_keyword: flfg/szfgz
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://www.fujian.gov.cn/zwgk/zfxxgk/szfwj/jgzz/xzgfxwj/
+    path_keyword: xzgfxwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://www.fujian.gov.cn/zwgk/zfxxgk/szfwj/
+    path_keyword: zfxxgk/szfwj
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: http://zfgb.fujian.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 福建省政府门户网站采用统一的"政务公开（/zwgk/）"一级栏目，二级栏目集中于 /zwgk/zfxxgk/ 下（指南、制度、法定主动公开、年报、依申请公开），结构清晰。
+  - 政策文件库为独立子站 /zck/，聚合国家法律法规、国家政策文件、福建省政府文件、各设区市文件四大类（首页曾短暂以 /zcwjk/ 上线，已重定向到 /zck/）。
+  - 政府公报使用独立站点 zfgb.fujian.gov.cn，公开历史可追溯至 1997 年至 2026 年（连续近 30 年）。
+  - 三个最关键 URL：主站 https://www.fujian.gov.cn/ 、政策文件库 https://www.fujian.gov.cn/zck/ 、政府公报 http://zfgb.fujian.gov.cn/
+sources_consulted:
+  - url: https://www.fujian.gov.cn/
+    type: main_homepage
+  - url: https://www.fujian.gov.cn/zwgk/
+    type: disclosure_homepage
+  - url: http://www.fujian.gov.cn/zwgk/zfxxgk/xxgkzn/
+    type: disclosure_guide
+  - url: http://www.fujian.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    type: disclosure_regime
+  - url: https://www.fujian.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    type: disclosure_proactive_catalog
+  - url: https://www.fujian.gov.cn/zwgk/zfxxgkzl/zfxxgkzdgk/zfxxgknb/
+    type: disclosure_annual_report
+  - url: http://www.fujian.gov.cn/zwgk/zfxxgk/ysqxxgk/
+    type: disclosure_upon_request
+  - url: https://www.fujian.gov.cn/zck/
+    type: policy_library
+  - url: https://www.fujian.gov.cn/zwgk/flfg/szfgz/
+    type: regulation_library
+  - url: https://www.fujian.gov.cn/zwgk/zfxxgk/szfwj/jgzz/xzgfxwj/
+    type: normative_library
+  - url: https://www.fujian.gov.cn/zwgk/zfxxgk/szfwj/
+    type: disclosure_library
+  - url: http://zfgb.fujian.gov.cn/
+    type: gazette

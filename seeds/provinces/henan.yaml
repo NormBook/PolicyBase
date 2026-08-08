@@ -1,0 +1,291 @@
+province: 河南省
+slug: henan
+short_name: 豫
+pinyin: henan
+level: province
+operator_org_id: "4100000000000001"
+type: database
+
+main_website:
+  url: https://www.henan.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    河南省人民政府门户网站。导航含 首页 / 河南要闻 / 政府信息公开 / 政务服务 /
+    互动交流 / 数据发布；主办单位：河南省人民政府办公厅；开通于 2006 年。
+    现行域名为 https://www.henan.gov.cn/，http://www.henan.gov.cn/ 301/302
+    跳转至同名 https 站点。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: https://www.henan.gov.cn/zwgk/
+  path_keyword: /zwgk/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    政务公开（/zwgk/）一级栏目首页，承接"政策文件 / 公告公示 / 政策解读 /
+    人事信息 / 政府领导 / 政府信息公开 / 政府公报 / 专题专栏"等二级入口。
+    栏目下"政府信息公开"再下一层走 https://www.henan.gov.cn/zwgk/zfxxgk/ ，
+    完整对应国办公开办模板五大子栏目 + 政府公报 + 各市各部门链接。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: https://www.henan.gov.cn/zwgk/xxgkzn/
+    path_keyword: /zwgk/xxgkzn/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      页面标题"河南省人民政府办公厅政府信息公开指南"。现行版本
+      /2024/12-20/331000.html（索引号 4100000002/2024-00013）于 2024 年发布，
+      含信息分类（省政府办公厅、省辖市政府、县市区政府、省级部门政府信息）、
+      公开范围（涉及公民/法人切身利益、需社会广泛知晓、机构设置/职能/办事程序
+      等）、获取方式（主动公开 + 依申请公开）。
+      历史旧版 /2008/04-24/275348.html 已失效（HTTP 404）。
+
+  disclosure_regime:
+    url: https://www.henan.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    path_keyword: /zwgk/zfxxgk/zfxxgkzd/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      标题"政府信息公开制度"。以列表形式汇集国务院/省政府/办公厅关于
+      信息公开的相关法规与规范性文件，列表项以文章详情页链接呈现，
+      是河南省政府信息公开制度层面的统一入口。
+
+  disclosure_proactive_catalog:
+    url: https://www.henan.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    path_keyword: /zwgk/zfxxgk/fdzdgknr/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "法定主动公开内容"总页面（无统一下属子目录列表页）。下分 13 个主题：
+      政府领导 / 政府机构 / 机关简介 / 规划信息 / 统计信息 / 行政许可 /
+      行政处罚和行政强制 / 财政预决算 / 政府收费 / 政府采购 / 重大建设项目 /
+      重点民生信息 / 应急管理 / 监督检查 / 公务员招录，每个子项对应独立页。
+      页面同时作为省政府主动公开信息的时序列表（2026/07-17 全省经济运行情况
+      等月度数据）。典型二级栏目 URL：
+      - 政府领导 /zwgk/zfxxgk/fdzdgknr/zfld/
+      - 政府机构 /zwgk/zfjg/
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      河南门户"法定主动公开内容"采用 SPA 路由模式（head.js + nav.js 加载
+      侧栏）。curl 直访 /zwgk/zfxxgk/fdzdgknr/ 仅返回 8388 字节，含
+      主列表（2026 年 7 月经济运行数据等时序条目），侧栏由 JS 加载。
+
+      直访已确认可达的子类页面：
+      - 政府领导 /zwgk/zfxxgk/fdzdgknr/zfld/    （ColumnName="政府领导"）
+      - 规划信息 /zwgk/zfxxgk/fdzdgknr/ghxx/    （ColumnName="规划信息"）
+      - 统计信息 /zwgk/zfxxgk/fdzdgknr/tjxx/    （ColumnName="统计信息"）
+      其余 11 个子类（机关简介/行政许可/行政处罚和行政强制/预决算/收费/采购/
+      重大建设项目/重点民生信息/应急管理/监督检查/公务员招录）侧栏 JS 加载，
+      curl 抓不到独立 path_keyword。
+
+      注：
+      - 河南侧栏由 JS 注入，curl + grep 无法直接抓取 chnlid/docnum 树形；
+      - 父级 hub 在 /zwgk/zfxxgk/，下挂 5 个法定子栏目 + 政府公报 + 各市各部门链接；
+      - 政府信息公开年报管理系统 https://nb.henan.gov.cn/login.html 独立部署；
+      - 河南政府信息公开平台 https://info.henan.gov.cn/ 走 SSL 旧协议，
+        curl 探测报 WRONG_VERSION_NUMBER（不在本字段采集范围）。
+
+      范式特征：河南是 SPA 单页模式（head.js + nav.js），无法通过静态 curl
+      提取完整 chnlid/docnum 三级树形；与重庆"内联 chnl/docnum"差异显著。
+      颗粒度近似重庆（13 子类 vs 14 子类），但采用客户端路由而非服务端 HTML。
+
+  disclosure_annual_report:
+    url: https://www.henan.gov.cn/zwgk/zfxxgk/zfxxgknb/
+    path_keyword: /zwgk/zfxxgk/zfxxgknb/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      标题"政府信息公开年报"。历年年报自 2015 起按年份归档，2023、2024
+      年报单篇 URL：
+      - /2024/03-29/2967452.html （2023 年）
+      - /2025/03-31/3143202.html （2024 年）
+      - /2025/01-15/3112532.html （2024 年办公厅本级）
+      另设年报管理系统（https://nb.henan.gov.cn/login.html）供各单位报送，
+      但前台公开侧入口仍以 zwgk/zfxxgk/zfxxgknb/ 为准。
+
+  disclosure_upon_request:
+    url: https://www.henan.gov.cn/zwgk/ysqgk/
+    path_keyword: /zwgk/ysqgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      标题"河南省政府信息依申请公开办理平台"。包含流程说明、注册/登录、
+      选择部门、填写申请表并提交等办理节点，并提供《依申请公开政府信息
+      申请表》下载。
+
+# 专题库
+libraries:
+  policy_library:
+    url: https://www.henan.gov.cn/zwgk/fgwj/
+    path_keyword: /zwgk/fgwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政策文件索引页（一级栏目"政策文件"）。是省政府文件主索引，
+      列表呈现 国务院文件 / 省政府令 / 豫政 / 豫政办 / 豫政任 / 豫政土 /
+      其他 等公文类目，并按部门筛选；具体内容页时序列表页 URL 为
+      /zwgk/fgwj/szfl/（含 szfl 子路径）。
+      与"政府规章（/zwgk/zfgz/）"、"行政规范性文件
+      （/zwgk/zfxxgk/zc/xzgfxwj/）"并列为三大政策库。
+      检索时可通过 /zwgk/ysqgk/ 提交信息不存在证明类申请。
+
+  regulation_library:
+    url: https://www.henan.gov.cn/zwgk/zfgz/
+    path_keyword: /zwgk/zfgz/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      标题"政府规章"。包含省政府规章（/zwgk/zfgz/）及省政府办公厅
+      规章目录（/zwgk/zfxxgk/zc/qtwj/）。已抓样本含 河南省政府投资
+      项目审计办法、地震安全性评价管理办法、水利工程管理条例实施
+      细则、水土保持补偿费征收使用管理办法、应急预案管理办法、
+      突发事件应急联动管理办法、行政事业性国有资产管理办法、
+      价格监测管理办法、文物勘探管理办法、应对气候变化管理办法、
+      粮食安全保障条例实施细则、价格调节基金管理办法、
+      国有资产处置管理办法、统计调查项目管理实施办法、
+      内部审计工作规定 等多部现行有效省政府规章；同时提供
+      各市地方规章索引链接。
+
+  normative_library:
+    url: https://www.henan.gov.cn/zwgk/zfxxgk/zc/xzgfxwj/
+    path_keyword: /zwgk/zfxxgk/zc/xzgfxwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      标题"行政规范性文件"。省政府门户网站的"行政规范性文件"专栏，
+      是河南省政府规范性文件统一归集入口，列表项按时间倒序呈现
+      省政府/办公厅印发的规范性文件，每条附文件正文全文下载。
+      注：独立的"河南省法规规章规范性文件数据库"（内网 IP 部署，
+      http://61.144.61.156:20305/）由省政府法制办运营，截至检索时
+      公开网络无法验证该 IP 的可达性，故不列入本字段首选入口。
+
+  disclosure_library:
+    url: https://www.henan.gov.cn/zwgk/zfxxgk/
+    path_keyword: /zwgk/zfxxgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      标题"政府信息公开"。承担"主动公开总目录 + 各子栏目"角色，
+      与 disclosure_homepage 同源（/zwgk/zfxxgk/）。同时指向
+      /zwgk/zfxxgk/dfbmptlj/ 提供国家与地方部门平台链接汇总，
+      /zwgk/zfxxgk/xxgkzn/ 链接政府信息公开指南，
+      是 5 子栏目 + 4 专题库的统一总枢纽。
+
+  supplementary_libraries:
+    info_platform:
+      url: https://info.henan.gov.cn/
+      path_keyword: info.henan.gov.cn
+      verified_at: 2026-07-22
+      status: not_accessible_via_search
+      note: |
+        河南省政府信息公开平台（info.henan.gov.cn）。WebFetch 探测
+        遭遇 SSL 协议不兼容（WRONG_VERSION_NUMBER），浏览器可直接访问，
+        检索快照显示其承担省级政府信息公开目录聚合与依申请公开在线办理
+        角色，但端口/证书细节未知；正式入库前需在客户端浏览器验证可达。
+    regulations_db:
+      url: http://61.144.61.156:20305/
+      path_keyword: 61.144.61.156:20305
+      verified_at: 2026-07-22
+      status: not_accessible_via_search
+      note: |
+        河南省法规规章规范性文件数据库（省政府法制办启用版，2015 起）。
+        部署在 61.144.61.156:20305 私网/政务外网 IP，公网检索无法
+        直接验证可达性；据 2024 年报道，全国 31 个省级法规规章规范性
+        文件数据库已全部上线（http://www.zhoukou.gov.cn/... 等地市站点
+        转载链接指向其 IP:PORT）。该资源作为内部合规性索引工具，
+        公开抓取建议以省政府门户的 /zwgk/zfgz/ 与 /zwgk/zfxxgk/zc/xzgfxwj/
+        入口为准。
+    service_hall:
+      url: https://www.hnzwfw.gov.cn/
+      path_keyword: hnzwfw.gov.cn
+      verified_at: 2026-07-22
+      status: ok
+      note: |
+        河南政务服务网（hnzwfw.gov.cn）。承担行政审批/办事服务角色，
+        与主门户 henan.gov.cn 域名分离；公示公告页
+        （https://www.hnzwfw.gov.cn/portal/noticeWrap?region=410225000000
+        等）为依申请公开的辅助渠道。
+
+# 政府公报
+gazette:
+  url: https://www.henan.gov.cn/zwgk/zfgb/
+  path_keyword: /zwgk/zfgb/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    标题"政府公报"。可按年度、期号检索，最早条目可追溯至 1989 年，
+    含 2026 年第 13 号等最近期次。检索页 /zwgk/zfgb/gbsy/，提供文件标题/
+    文件正文检索字段，支持按规范性文件筛选。
+
+notes: |
+  - 河南省门户采用"政务公开（/zwgk/）+ 政府信息公开（/zwgk/zfxxgk/）"
+    双层结构：上层 /zwgk/ 展示"政策文件/公告公示/政策解读/人事信息/
+    政府领导/政府信息公开/政府公报/专题专栏"八大入口；下层 /zwgk/zfxxgk/
+    是对标国办模板的"法定主动公开内容 + 政府信息公开指南 + 制度 + 年报"
+    总枢纽，是真正承担"政府信息公开"职责的栏目。
+  - 政策类资源分三大并列库：政策文件 /zwgk/fgwj/、政府规章 /zwgk/zfgz/、
+    行政规范性文件 /zwgk/zfxxgk/zc/xzgfxwj/。三库并存于政务公开侧栏
+    "政策"分类下，分别承担"发文 / 规章 / 规范性文件"不同口径，与安徽省
+    template 的"tpl=6311/6431/6991"三库结构类似，但 URL 形制是 URL
+    Path 而非 query string。
+  - 三个最关键 URL：
+    1) https://www.henan.gov.cn/zwgk/zfxxgk/   （政府信息公开总枢纽）
+    2) https://www.henan.gov.cn/zwgk/zfgz/     （政府规章库）
+    3) https://www.henan.gov.cn/zwgk/zfgb/     （省政府公报，1989-2026）
+
+sources_consulted:
+  - url: https://www.henan.gov.cn/
+    type: homepage
+  - url: https://www.henan.gov.cn/zwgk/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/xxgkzn/
+    type: page_content
+  - url: https://www.henan.gov.cn/2024/12-20/331000.html
+    type: search_result
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/fdzdgknr/zfld/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/zfxxgknb/
+    type: page_content
+  - url: https://www.henan.gov.cn/2024/03-29/2967452.html
+    type: search_result
+  - url: https://www.henan.gov.cn/2025/03-31/3143202.html
+    type: search_result
+  - url: https://www.henan.gov.cn/2025/01-15/3112532.html
+    type: search_result
+  - url: https://nb.henan.gov.cn/login.html
+    type: search_result
+  - url: https://www.henan.gov.cn/zwgk/ysqgk/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/fgwj/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/fgwj/szfl/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfgz/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/zc/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/zc/xzgfxwj/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfxxgk/zc/qtwj/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfgb/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/zfgb/gbsy/
+    type: page_content
+  - url: https://www.henan.gov.cn/zwgk/dfbmptlj/
+    type: search_result
+  - url: http://61.144.61.156:20305/
+    type: search_result
+  - url: https://info.henan.gov.cn/
+    type: search_result
+  - url: https://www.hnzwfw.gov.cn/
+    type: search_result

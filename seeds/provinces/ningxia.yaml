@@ -1,0 +1,294 @@
+province: 宁夏回族自治区
+slug: ningxia
+short_name: 宁
+pinyin: ningxia
+level: autonomous_region
+operator_org_id: "6400000000000001"
+type: database
+
+main_website:
+  url: https://www.nx.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    宁夏回族自治区人民政府门户网站（nx.gov.cn）。由自治区人民政府办公厅主办、
+    自治区政府信息中心承办。备案号 宁ICP备05000375号，网站标识码 6400000001，
+    地址 宁夏银川市兴庆区解放西街361号 邮编 750001 (0951)6363505。
+    主导航含 首页 / 政务公开（zwgk）/ 政务服务（zwfw.nx.gov.cn）/ 政民互动 /
+    宁夏数据 / 政府公报 等栏目。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: https://www.nx.gov.cn/zwgk/zfxxgk/
+  path_keyword: /zwgk/zfxxgk/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "政府信息公开"专栏总枢纽（zwgk/zfxxgk/）。承担 5 个子栏目 + 法定主动公开
+    内容下设 16 类目 + 重点领域公开（zdlygk）+ 政府信息公开年报的对外导航。
+    站内同时存在两条并行入口：(1) /zwgk/zfxxgk/（本字段）；(2) /zwgk/（政务公开
+    总枢纽，与广西 zfxxgkzl 节点同源）。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgkzn/
+    path_keyword: /zwgk/zfxxgk/zfxxgkzn/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开指南（zfxxgkzn）。由自治区人民政府办公厅印发，明确主动公开
+      16 类目（规章、规范性文件、机构职能、规划计划、统计信息、行政许可/处罚、
+      财政预决算、行政事业性收费、政府采购、重大建设项目、民生政策、应急管理、
+      监督检查、公务员招考、政府工作报告、政策解读），并列出公报、微信、查阅点
+      等公开渠道。最新的办公厅指南全文见
+      /zwgk/zfxxgk/zfxxgkzn/202206/t20220613_3558164.html。
+
+  disclosure_regime:
+    url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    path_keyword: /zwgk/zfxxgk/zfxxgkzd/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开制度（zfxxgkzd）。汇集国务院、自治区政府、自治区政府办公厅
+      制定的政府信息公开相关制度文件列表。同一节点下还有"依申请公开 > 制度规定"
+      入口 /zwgk/zfxxgk/ysqgk/zd/，与制度规定栏目互补。
+
+  disclosure_proactive_catalog:
+    url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    path_keyword: /zwgk/zfxxgk/fdzdgknr/
+    verified_at: 2026-07-22
+    status: fetch_failed
+    note: |
+      法定主动公开内容（fdzdgknr）。覆盖 16 类主动公开事项目录。下设重点领域公开
+      /zwgk/zfxxgk/fdzdgknr/zdlygk/、机构简介 /zwgk/zfxxgk/fdzdgknr/jgjj/、政府工作
+      报告 /zwgk/zfxxgk/fdzdgknr/zfgzbg_40932/、统计信息 /zwgk/zfxxgk/fdzdgknr/tjxx_40901/
+      等 2 级专题，是自治区政府信息主动公开的总入口。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      抓取失败：滑块 CAPTCHA 拦截。所有 /zwgk/* 子路径及根路径 / 均返回 22857 字节的「请稍候…」
+      挑战页（class="puzzle-vcode"、window._$ts 滑块验证 + ctct slider）。curl + Mozilla UA + 完整
+      headers + Referer 均无法通过；HEAD 请求返回 405/412，但 GET 始终落到挑战页。
+
+      已知子栏目（来自 YAML 已有 note + fdzdgknr 路径推断）：
+      - 重点领域公开      /zwgk/zfxxgk/fdzdgknr/zdlygk/
+      - 机构简介          /zwgk/zfxxgk/fdzdgknr/jgjj/
+      - 政府工作报告      /zwgk/zfxxgk/fdzdgknr/zfgzbg_40932/
+      - 统计信息          /zwgk/zfxxgk/fdzdgknr/tjxx_40901/
+      - 统计公报          /zwgk/zfxxgk/fdzdgknr/tjxx_40901/tjgb_40903/
+
+      16 类主动公开事项目录（来自指南页 note）：
+      1. 规章
+      2. 规范性文件
+      3. 机构职能
+      4. 规划计划
+      5. 统计信息
+      6. 行政许可/处罚
+      7. 财政预决算
+      8. 行政事业性收费
+      9. 政府采购
+      10. 重大建设项目
+      11. 民生政策
+      12. 应急管理
+      13. 监督检查
+      14. 公务员招考
+      15. 政府工作报告
+      16. 政策解读
+
+      统计：16 类 + 5 个可达子栏目；chnl/docnum 元数据全部不可见（被 CAPTCHA 拦截）。
+
+      特色发现：
+      - 宁夏「法定主动公开内容」颗粒度与青海相近（16 类）；与重庆 14 类相比，多「政策解读」「政府工作报告」两个独立类目
+      - 树形节点采用 `_NNNNN` 后缀做栏目识别号（如 `zfgzbg_40932`、`tjxx_40901`、`tjgb_40903`），与西藏 `_NNNN` 后缀同源
+      - 抓取边界：CAPTCHA/slider challenge 应记录为 blocked/handoff；不得执行滑块识别或反检测浏览器自动化，可复用已核验 YAML 路径表作为人工整理证据
+      - CAPTCHA 特征：所有 /zwgk/、/xxgk_ysqgk/、/zwgk/zfxxgk/ 子路径返回 22857 字节「请稍候…」挑战页；ctct slider + puzzle-vcode JS challenge
+
+  disclosure_annual_report:
+    url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgknb/
+    path_keyword: /zwgk/zfxxgk/zfxxgknb/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报（zfxxgknb）。历史年度目录见 /zwgk/zfxxgk/zfxxgknb_40939/，
+      含 2020 年度 /zwgk/zfxxgk/zfxxgknb_40939/2020/ 等；最新专题栏目
+      /zt/zfxxgkndbg/2024nxxgknb/zzqrmzf_63916/ 汇集自治区本级 2024 年年报全文；
+      /ztsj/zt/2022nxxgknb_68177/zzqrmzf_63916/index.html 为 2022 年专题。
+
+  disclosure_upon_request:
+    url: https://www.nx.gov.cn/zwgk/zfxxgk/ysqgk/
+    path_keyword: /zwgk/zfxxgk/ysqgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开（ysqgk）。栏目下设"制度规定" /zwgk/zfxxgk/ysqgk/zd/，提供在线申请
+      表单和办理指南。另一并行入口 /xxgk_ysqgk/（与"政府信息公开"缩短路径对齐）
+      同时存在，主导航与"政府信息公开制度"页均指向 /zwgk/zfxxgk/ysqgk/。
+
+# 专题库
+libraries:
+  policy_library:
+    url: https://www.nx.gov.cn/zwgk/
+    path_keyword: /zwgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政策文献库 = 政务公开总枢纽 /zwgk/，下设 政策（zc/）/ 政策解读（zwxx_11337/zcjd/
+      移动版 wap.html）/ 自治区政府文件（qzfwj/）三个子专题。聚合入口为
+      https://www.nx.gov.cn/zwgk/zc/index_2.html，按发布时序展示自治区政府、办公厅、
+      办公厅函、宁政规发、宁政办规发 等文号文件全文。
+
+  regulation_library:
+    url: https://www.nx.gov.cn/zwgk/zc/gzk/
+    path_keyword: /zwgk/zc/gzk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      自治区政府规章库（zwgk/zc/gzk/）。《自治区政府规章库》收录全区现行有效规章，
+      按发文机关分为自治区政府规章和各市政府规章两层，组织检索 + 文本/图片版下载，
+      根据公布/废止/修改情况动态更新。父目录 /zwgk/zc/ 同时是政策文献入口。
+
+  normative_library:
+    url: https://www.nx.gov.cn/zwgk/gfxwj/
+    path_keyword: /zwgk/gfxwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      行政规范性文件库（zwgk/gfxwj/）。汇集自治区人民政府、自治区政府办公厅印发的
+      现行有效规范性文件，与"宁政规发""宁政办规发"两个文号序列对齐；首页路径
+      /zwgk/gfxwj/index.html、第 2 页 /zwgk/gfxwj/index_1.html。2023 年
+      《现行有效行政规范性文件目录清单》见
+      /zwgk/tzgg/202309/t20230904_4247923.html，并设部门子库链接。
+
+  disclosure_library:
+    url: https://www.nx.gov.cn/zwgk/zfxxgk/
+    path_keyword: /zwgk/zfxxgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政务公开/政府信息公开专栏 = /zwgk/zfxxgk/。与 disclosure_homepage 同址，是政府
+      信息公开的总枢纽，承载 5 子栏目（指南/制度/法定主动公开/年报/依申请）+ 重点领域
+      公开（fdzdgknr/zdlygk）+ 机构简介 + 政府工作报告 + 统计信息 + 各设区市/各组成
+      部门链接。另一并行入口 /xxgk_ysqgk/ 仅承担依申请公开。
+
+  supplementary_libraries:
+    xingzheng_guifan_beian:
+      url: https://www.nx.gov.cn/zwgk/tzgg/202309/t20230904_4247923.html
+      path_keyword: /zwgk/tzgg/202309/t20230904_4247923.html
+      status: ok
+      note: |
+        自治区人民政府办公厅关于公布《现行有效的行政规范性文件目录清单》的通知
+        (2023-09-04)。是 gfxwj/ 专题库的目录页与发文依据。
+    gongzuobaogao:
+      url: https://www.nx.gov.cn/zzsl/zfgzbg/
+      path_keyword: /zzsl/zfgzbg/
+      status: ok
+      note: |
+        政府工作报告专题（zzsl/zfgzbg/）。汇集 2019-2026 各年度自治区政府工作报告全文，
+        含 2022 年度全文 /zzsl/zfgzbg/202201/t20220127_3306646.html。是法定主动公开
+        16 类目中"政府工作报告"的二级承载页。
+    zhengce_jiedu:
+      url: https://www.nx.gov.cn/zwxx_11337/zcjd/wap.html
+      path_keyword: /zwxx_11337/zcjd/wap.html
+      status: ok
+      note: |
+        政策解读（移动版 /zwxx_11337/zcjd/wap.html）。与政府工作报告同列于政务公开
+        总枢纽，是自治区层面"政策解读"类目的集中入口。
+
+# 政府公报
+gazette:
+  url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/zfgzbg_40932/
+  path_keyword: /zwgk/zfxxgk/fdzdgknr/zfgzbg_40932/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    《宁夏回族自治区人民政府公报》在线入口为 fdzdgknr/zfgzbg_40932/（政府工作报告
+    专题）；另一承接页为 zzsl/zfgzbg/。半月刊、CN64-1062/D、2007-12 由《宁夏政报》
+    更名而来，主办单位 自治区人民政府办公厅。公报文本与正式行政文件具有同等效力。
+    自治区层面未发现独立的 /zfgb/ 目录节点，公报内容统一归口到 fdzdgknr 法定主动公开
+    类的"政府工作报告"与 zfxxgk_xxxxx 主题页内。
+
+notes: |
+  - 宁夏采用"自治区政府主站 + 政务公开枢纽 (zwgk) + 政府信息公开 (zwgk/zfxxgk) +
+    政府公报室"四级站点结构。zwgk/ 承接 5 个子栏目（zfxxgkzn、zfxxgkzd、fdzdgknr、
+    zfxxgknb、ysqgk），未设单独的"政府信息公开专栏 zfxxgkzl_xxxxx"二级编号节点
+    （与广西 gxzf.gov.cn 的 zfxxgkzl_84988 不同）。
+  - 政策类资源三个并列专题：政策（zc）/ 自治区政府文件（qzfwj）/ 行政规范性文件
+    (gfxwj)，三者位于 zwgk/ 节点下平行位置，而非嵌套在"政策文件库"统一父目录下；
+    自治区政府规章库是 zc/ 下唯一带专题属性的子节点（zwgk/zc/gzk/）。
+  - 政府公报以"政府工作报告专题"为承载路径（/zwgk/zfxxgk/fdzdgknr/zfgzbg_40932/
+    与 /zzsl/zfgzbg/），没有广西 /zfgb/ 或贵州 /zwgk/zfgb/ 的独立顶层目录。公报同时
+    在 CNKI 提供电子版订阅（NXZB2017 等 ISSN 1008-0783）。
+  - 三个最关键 URL：
+    1) https://www.nx.gov.cn/zwgk/zfxxgk/      （政府信息公开总枢纽）
+    2) https://www.nx.gov.cn/zwgk/zc/gzk/      （自治区政府规章库）
+    3) https://www.nx.gov.cn/zwgk/gfxwj/       （行政规范性文件库）
+
+sources_consulted:
+  - url: https://www.nx.gov.cn/
+    type: homepage
+  - url: https://www.nx.gov.cn/zwgk/
+    type: homepage
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgkzn/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgkzn/202206/t20220613_3558164.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/ysqgk/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/ysqgk/zd/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/zdlygk/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/jgjj/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/zfgzbg_40932/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/tjxx_40901/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/fdzdgknr/tjxx_40901/tjgb_40903/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgknb/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgknb_40939/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zfxxgk/zfxxgknb_40939/2020/
+    type: search_result
+  - url: https://www.nx.gov.cn/zt/zfxxgkndbg/2024nxxgknb/zzqrmzf_63916/
+    type: search_result
+  - url: https://www.nx.gov.cn/ztsj/zt/2022nxxgknb_68177/zzqrmzf_63916/index.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zc/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zc/index_2.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/zc/gzk/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/qzfwj/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/qzfwj/index_3.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/qzfwj/zc.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/gfxwj/
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/gfxwj/index.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/gfxwj/index_1.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwgk/tzgg/202309/t20230904_4247923.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zzsl/zfgzbg/
+    type: search_result
+  - url: https://www.nx.gov.cn/zzsl/zfgzbg/202201/t20220127_3306646.html
+    type: search_result
+  - url: https://www.nx.gov.cn/zwxx_11337/zcjd/wap.html
+    type: search_result
+  - url: https://www.nx.gov.cn/wxb/wxzcgk/
+    type: search_result
+  - url: https://www.nx.gov.cn/ztsj/zt/2021wznb/
+    type: search_result

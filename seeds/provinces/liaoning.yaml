@@ -1,0 +1,141 @@
+province: 辽宁省
+slug: liaoning
+short_name: 辽
+pinyin: liaoning
+level: province
+operator_org_id: "2100000000000001"
+type: database
+
+main_website:
+  url: https://www.ln.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zfxxgkzn/index.shtml
+  path_keyword: zwgkx/zfxxgk1/zfxxgkzn
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zfxxgkzn/index.shtml
+    path_keyword: zwgkx/zfxxgk1/zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/xgfgwj/index.shtml
+    path_keyword: zwgkx/zfxxgk1/xgfgwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/fdzdgknr/lzyj/index.shtml
+    path_keyword: zwgkx/zfxxgk1/fdzdgknr/lzyj
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（zwgkx/zfxxgk1/fdzdgknr/）下设 22 个一级类目（2026-07-22 自动抓取）
+      URL: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/fdzdgknr/lzyj/index.shtml
+      注意：根 URL 实际可访问的是 lzyj 子页；fdzdgknr 父目录需通过此路径进入。
+
+      1. 履职依据（lzyj）          - /web/zwgkx/zfxxgk1/fdzdgknr/lzyj/index.shtml （含当前页右侧热门法规条例）
+      2. 机关简介（jgjj）          - /web/zwgkx/zfxxgk1/fdzdgknr/jgjj/index.shtml
+      3. 规划信息（ghxx）          - /web/zwgkx/zfxxgk1/fdzdgknr/ghxx/index.shtml
+      4. 统计信息（tjxx）          - /web/zwgkx/zfxxgk1/fdzdgknr/tjxx/index.shtml
+      5. 权责清单（qzqd）          - /web/zwgkx/zfxxgk1/fdzdgknr/qzqd/index.shtml
+      6. 处罚强制（xzcf）          - /web/zwgkx/zfxxgk1/fdzdgknr/xzcf/index.shtml
+      7. 预算/决算（ysjs）         - /web/zwgkx/zfxxgk1/fdzdgknr/ysjs/index.shtml
+      8. 收费项目（sfxm）          - /web/zwgkx/zfxxgk1/fdzdgknr/sfxm/index.shtml
+      9. 政府债务（外链）          - celma.org.cn/zqxx/index.jhtml?ad_code=21
+      10. 政府采购（外链，省财政厅）- ccgp-liaoning.gov.cn/portalindex.do?method=goPubInfoList
+      11. 重大项目（外链，省发改委）- fgw.ln.gov.cn/fgw/zfxxgk/fdzdgknr/zdxm/index.shtml
+      12. 重大民生信息（zdmsxx）   - /web/zwgkx/zfxxgk1/fdzdgknr/zdmsxx/index.shtml
+      13. 招考录用（外链，省人事考试）- lnrsks.com/
+      14. 公共资源配置（ggzypz）   - /web/zwgkx/zfxxgk1/fdzdgknr/ggzypz/index.shtml
+      15. 防范化解重大风险（ffhjzdfx）- /web/zwgkx/zfxxgk1/fdzdgknr/ffhjzdfx/index.shtml
+      16. 督查与审计（dcysj）      - /web/zwgkx/zfxxgk1/fdzdgknr/dcysj/index.shtml
+      17. 国资监管（外链，省国资委）  - gzw.ln.gov.cn/gzjg/
+      18. 安全生产（外链，省应急厅）  - yjgl.ln.gov.cn/yjgl/xxgk/zwgkzdgz/aqsczdlyxxgk/index.shtml
+      19. 企业减负（qyjf）         - /web/zwgkx/zfxxgk1/fdzdgknr/qyjf/index.shtml
+      20. 辽宁省政务服务事项目录（外链）- lnzwfw.gov.cn/wyk/fwqd/sxml/
+      21. 规章（侧面导航条 zc/gz） - /web/zwgkx/zfxxgk1/zc/gz/index.shtml
+      22. 行政规范性文件（省政府/省政府办公厅）- /web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/index.shtml
+
+      文档抽样（lzyj 子页 2026-07-22 当前已挂载）：
+      地方性法规（含 PDF 范式）：
+      - 辽宁省食品安全条例（2026-04-13，PDF）
+      - 辽宁省边境沿海地区边防管理条例（2026-04-13，PDF）
+      - 辽宁省乡镇人民代表大会工作条例（2026-04-13，PDF）
+      - 辽宁省县乡两级人民代表大会选举实施细则（2026-04-13，PDF）
+      - 辽宁省城镇燃气管理条例（2026-01-28，PDF）
+      规章样本：
+      - 辽宁省人民政府关于废止和修改部分省政府规章的决定（2025-02-17）
+      - 辽宁省实施行政处罚适用听证程序数额规定（2025-01-16）
+      - 辽宁省税费服务和征管保障办法（2024-03-28）
+
+      特色发现：
+      - 辽宁「法定主动公开内容」颗粒度极细（22 类）：在 §20 列举的 14 类之外新增「政府债务 / 权责清单 / 公共资源配置 / 防范化解重大风险 / 督查与审计 / 国资监管 / 安全生产 / 企业减负 / 政务服务事项目录」9 项辽宁特色
+      - 与重庆 14 类相比，辽宁把"重大民生信息"以外垂域（教育、医疗、社保等）独立成单独类目（"重大民生信息"本身保留）
+      - 含 7 个外链垂域门户（celma / ccgp-liaoning / fgw.ln / lnrsks / gzw.ln / yjgl.ln / lnzwfw），颗粒度比多数省粗放；外链挂载占类目总数 32%
+      - HTML 源码使用 huilan-jquery-ui 模板，无 chnl/docnum 字段；侧栏用 navTwoLi 列表展示
+  disclosure_annual_report:
+    url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/2010zfxxgk_148535/2025/index.shtml
+    path_keyword: zwgkx/zfxxgk1/2010zfxxgk_148535/2025
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://www.ln.gov.cn/web/ysqgk/index.shtml
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.ln.gov.cn/web/lnszcwjk/index.shtml
+    path_keyword: lnszcwjk
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/gz/index.shtml
+    path_keyword: zwgkx/zfxxgk1/zc/gz
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/index.shtml
+    path_keyword: zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zfxxgkzn/index.shtml
+    path_keyword: zwgkx/zfxxgk1/zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.ln.gov.cn/web/zwgkx/lnsrmzfgb/index.shtml
+  path_keyword: zwgkx/lnsrmzfgb
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 辽宁省政府门户 (ln.gov.cn) 沿用统一的 /web/zwgkx/zfxxgk1/ 路径约定：政策法规/规章/规范性文件统一挂在 zc/ 子树下。
+  - 政策文件库 (lnszcwjk) 为聚合入口（首页 tab 切分：政府文件 / 地方性法规 / 政府规章 / 行政规范性文件），专题库地址分别独立。
+  - 行政规范性文件库按发文主体二级分类（省政府/省政府办公厅 + 省政府部门），所有条目均标注"效力状态"（有效/废止/失效）。
+  - 依申请公开位于独立的 /web/ysqgk/ 域外路径，与其它栏目同级。
+sources_consulted:
+  - url: https://www.ln.gov.cn/
+    type: homepage
+  - url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zfxxgkzn/index.shtml
+    type: disclosure_homepage
+  - url: https://www.ln.gov.cn/web/lnszcwjk/index.shtml
+    type: policy_library
+  - url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/gz/index.shtml
+    type: regulation_library
+  - url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/zc/xzgfxwj/szf/szfwj/index.shtml
+    type: normative_library
+  - url: https://www.ln.gov.cn/web/zwgkx/lnsrmzfgb/index.shtml
+    type: gazette
+  - url: https://www.ln.gov.cn/web/ysqgk/index.shtml
+    type: upon_request
+  - url: https://www.ln.gov.cn/web/zwgkx/zfxxgk1/2010zfxxgk_148535/2025/index.shtml
+    type: annual_report

@@ -1,0 +1,312 @@
+province: 西藏自治区
+slug: xizang
+short_name: 藏
+pinyin: xizang
+level: autonomous_region
+operator_org_id: "5400000000000001"
+type: database
+
+main_website:
+  url: https://www.xizang.gov.cn/
+  path_keyword: /
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    西藏自治区人民政府门户网站（域名 www.xizang.gov.cn）。由自治区人民政府
+    办公厅主办、自治区人民政府办公厅电子政务中心承办，2007 年开通，备案号
+    藏ICP备11000045号，网站标识码 5400000040。导航含 首页 / 政务公开（zwgk/）
+    / 政务服务 / 互动交流 / 首页专题等；域名同时支持 www.xizang.gov.cn 与
+    http://xizang.gov.cn/ 短域跳转。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: https://www.xizang.gov.cn/zwgk/
+  path_keyword: /zwgk/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "政务公开"专栏枢纽页（zwgk/）。侧栏导航含 政府信息公开指南（xxgk_424/
+    xxgkzn）、法定政府公开内容（zfxxgk/fdzdgknr）、政府信息公开申请
+    （xxgk_424/ysqgk）、重点领域信息公开（zdxxlygk/）、政府规章库
+    （zfxxgk/fdzdgknr/zc/gz）、行政规范性文件（zfxxgk/fdzdgknr/zc/xzgfxwj）、
+    公示公告、信息公开目录、政府公报（zfgb/）等栏目。与国务院办公厅模板对标。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkzn/
+    path_keyword: /zwgk/xxgk_424/xxgkzn/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开指南（xxgk_424/xxgkzn）。标志性子页面为
+      /zwgk/xxgk_424/xxgkzn/201912/t20191223_126978.html（西藏自治区人民政府
+      政府信息公开指南全文，含主动公开时限 20 个工作日、依申请公开方式、公开
+      渠道：政府网站 + 公报 + 新闻发布会 + 微信公众号 + 报刊广播电视等）。
+
+  disclosure_regime:
+    url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkgd/
+    path_keyword: /zwgk/xxgk_424/xxgkgd/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开制度/信息公开规定（xxgk_424/xxgkgd）。汇集国务院、国务院办公
+      厅、自治区人民政府、自治区政府办公厅制定的政府信息公开相关法规、规章、
+      规范性文件列表，包括《中华人民共和国政府信息公开条例》、《国务院办公厅
+      关于施行<条例>若干问题的意见》、《西藏自治区政府信息公开办法》、
+      自治区政务公开工作要点等。
+
+  disclosure_proactive_catalog:
+    url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    path_keyword: /zwgk/zfxxgk/fdzdgknr/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（zfxxgk/fdzdgknr）。枢纽节点下含若干并列专题：
+      政府文件（zfxxgk/fdzdgknr/zc/zfwj/ 入口）、政府工作报告、政府会议、
+      建议提案办理、人事信息、行政规范性文件（/zc/xzgfxwj/）、政府规章
+      （/zc/gz/）、其他法定信息（/qtfdxx/）、重点领域信息公开
+      （/zdxxlygk/）等，目录页可访问但根路径返回非标准响应，需以具体子专题
+      入口为准。代表性子页面：/zfxxgk/fdzdgknr/zc/xzgfxwj/index.html
+      （行政规范性文件列表）。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+
+      根路径 https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/ 返回 200 + meta refresh 0 秒跳转至 /zwgk/zfxxgk/zfxxgkzn_3159/（指南页），即该省用「政府信息公开指南」页承载 fdzdgknr 侧栏导航。指南页左侧栏直接列出 7 个 fdzdgknr 子栏目（class="wugk-link"）：
+
+      1. 履职依据         /zwgk/zfxxgk/fdzdgknr/lzyj/                  （HTTP 200）
+      2. 机关简介         /zwgk/zfxxgk/fdzdgknr/jgjj/                  （HTTP 200）
+      3. 规划信息         /zwgk/zfxxgk/fdzdgknr/ghxx/                  （HTTP 200）
+      4. 统计信息         /zwgk/zfxxgk/fdzdgknr/tjxx_3166/             （HTTP 200）
+      5. 行政事业性收费    /zwgk/zfxxgk/fdzdgknr/sfxm/                  （HTTP 200）
+      6. 其他法定信息     /zwgk/zfxxgk/fdzdgknr/qtfdxx/                （HTTP 200）
+      7. 政策             /zwgk/zfxxgk/fdzdgknr/zc/                    （HTTP 200，重定向至 /zc/）
+
+      「政策」/zc/ 节点再下挂 4 子类：
+      - 政府规章：        /zwgk/zfxxgk/fdzdgknr/zc/gz/
+      - 行政规范性文件：   /zwgk/zfxxgk/fdzdgknr/zc/xzgfxwj/
+      - 政府文件：        /zwgk/zfxxgk/fdzdgknr/zc/zfwj/              （实测 404）
+      - 其他文件：        /zwgk/zfxxgk/fdzdgknr/zc/qtwj/             （未在主导航发现）
+
+      统计：7 个一级 fdzdgknr 子栏目 + 2 个二级（zc/gz, zc/xzgfxwj）= 9 个可达 URL；无 chnl/docnum 元数据（西藏模板未采用国办 chnl 编号体系）。
+
+      特色发现：
+      - 西藏「法定主动公开内容」颗粒度极粗（7 大类 vs 重庆 14 大类），未拆出「行政许可/处罚强制/预算决算/政府采购/重大项目/应急管理/监督检查/招考录用」等 §20 项
+      - 树形节点未挂载 chnl/docnum 元数据；改用 `_NNNN` 后缀（如 `tjxx_3166`）做栏目识别号
+      - 根路径用 meta refresh 跳转至指南页（与「指南页左侧栏承载 fdzdgknr 导航」的范式吻合）
+
+  disclosure_annual_report:
+    url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgknb/
+    path_keyword: /zwgk/xxgk_424/xxgknb/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报（xxgk_424/xxgknb）。按年（yyyy 目录）汇总自治区人民政
+      府办公厅、自治区人民政府、各组成部门、直属机构及各地市的政府信息公开
+      工作年度报告。最新为 2024 年度报告
+      /xxgknb/2024nb/202503/t20250331_470472.html （自治区人民政府，2025-03-31
+      发布）；办公厅 2024 年度报告见
+      /xxgknb/2024nb/202501/t20250126_459516.html。
+
+  disclosure_upon_request:
+    url: https://www.xizang.gov.cn/zwgk/xxgk_424/ysqgk/
+    path_keyword: /zwgk/xxgk_424/ysqgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开（xxgk_424/ysqgk）。提供依申请公开说明、申请流程、申请表下
+      载（如 /zwgk/xxgk_424/zxxxgk/201902/W020190223660011380979.doc）及受
+      理机构联系方式，由自治区人民政府办公厅统一受理并转办。
+      备注：根路径返回非标准响应，必须以 /index.html 形式或从政府信息公开指南
+      （xxgkzn）的导航进入可达。
+
+# 专题库
+libraries:
+  policy_library:
+    url: https://www.xizang.gov.cn/zwgk/xxfb/zfwj/
+    path_keyword: /zwgk/xxfb/zfwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府文件库/政策文献库（zwgk/xxfb/zfwj）。位于"信息发布"（zwgk/xxfb/）
+      节点下，与公示公告（gsgg_428/）、政策解读（zcjd_435/）、人事信息
+      （rsxx_434/）并列。汇集自治区人民政府、自治区政府办公厅印发的政府文件，
+      包括国务院文件转发、规划计划、政府文件、政办文件等。配套政策解读专栏：
+      /zwgk/xxfb/zcjd_435/。
+
+  regulation_library:
+    url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/zc/gz/
+    path_keyword: /zwgk/zfxxgk/fdzdgknr/zc/gz/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府规章库（zfxxgk/fdzdgknr/zc/gz）。位于"法定主动公开内容 → 政策"
+      子树下，专题名称"政府规章"，汇集自治区人民政府制定的现行有效政府规章
+      （藏政令形式）及配套程序规定（如《西藏自治区人民政府规章制定程序规定》/
+      /zwgk/zfxxgk/fdzdgknr/zc/gz/202112/t20211229_276898.html）。
+      配套第三方法规库：国家法律法规数据库西藏自治区地方政府规章页
+      https://falvdb.com/law/codex/levels/6-地方政府规章/provinces/26-西藏自治区。
+
+  normative_library:
+    url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/zc/xzgfxwj/
+    path_keyword: /zwgk/zfxxgk/fdzdgknr/zc/xzgfxwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      行政规范性文件库（zfxxgk/fdzdgknr/zc/xzgfxwj）。"西藏自治区行政规范性
+      文件"专题，与政府规章（/zc/gz/）并列于"法定主动公开内容 → 政策"
+      子树下。汇集自治区人民政府、自治区政府办公厅印发的现行有效行政规范性文
+      件，包括 2025 年 1 月《关于废止和修改部分行政规范性文件的决定》
+      （藏政发〔2025〕2号）等。
+
+  disclosure_library:
+    url: https://www.xizang.gov.cn/zwgk/xxgk_424/zxxxgk/
+    path_keyword: /zwgk/xxgk_424/zxxxgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      信息公开目录/政务公开专栏（xxgk_424/zxxxgk）。索引式列表，包含 索引号 /
+      文号 / 公开时限 / 生成日期 / 内容分类 / 责任部门 字段，按年度汇聚各类主
+      动公开文件（如藏财建〔2026〕46 号等）。
+
+  supplementary_libraries:
+    policy_interpretation:
+      url: https://www.xizang.gov.cn/zwgk/xxfb/zcjd_435/
+      path_keyword: /zwgk/xxfb/zcjd_435/
+      status: ok
+      note: |
+        政策解读专栏（xxfb/zcjd_435）。位于"信息发布"节点下，与政府文件
+        （zfwj）、人事信息（rsxx_434）、公示公告（gsgg_428）并列，对自治区
+        人民政府、政府办公厅出台的重要政策配套解读文章。
+    key_area_disclosure:
+      url: https://www.xizang.gov.cn/zwgk/zdxxlygk/
+      path_keyword: /zwgk/zdxxlygk/
+      status: ok
+      note: |
+        重点领域信息公开（zdxxlygk）。下含 财政预决算公开（/czyjsgk/）等
+        若干专题，是法定主动公开内容（fdzdgknr）的并列重要子集。代表性子
+        页面 /zwgk/zdxxlygk/czyjsgk/ 与 /zwgk/zdxxlygk/czyjsgk/index_22.html
+        等。
+    public_announcements:
+      url: https://www.xizang.gov.cn/zwgk/xxfb/gsgg_428/
+      path_keyword: /zwgk/xxfb/gsgg_428/
+      status: ok
+      note: |
+        公示公告（xxfb/gsgg_428）。位于"信息发布"节点下，发布自治区人民
+        政府各类公示公告，是政府信息公开年报中"主动公开 652 件（2023）"的
+        主要载体之一。
+    annual_government_website_report:
+      url: https://www.xizang.gov.cn/xwzx_406/ztzl_416/cxzt/ndbb/qjdw/
+      path_keyword: /xwzx_406/ztzl_416/cxzt/ndbb/
+      status: ok
+      note: |
+        政府网站年度报表（xwzx_406/ztzl_416/cxzt/ndbb/）。位于"新闻资讯"
+        子树下，发布自治区政府网站监管 / 季度年度报表材料，与"政府信息公开
+        年报"并列于政务公开枢纽页。
+
+# 政府公报
+gazette:
+  url: https://www.xizang.gov.cn/zwgk/zfgb/
+  path_keyword: /zwgk/zfgb/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    西藏自治区人民政府公报（zwgk/zfgb/）。《政府公报》是自治区人民政府
+    规章标准文本的法定载体，与正式文件具有同等效力。办公厅 2024 年报披露
+    全年编辑《政府公报》12 期。
+
+notes: |
+  - 西藏自治区政府门户 URL 主域为 www.xizang.gov.cn（短域 xizang.gov.cn 也跳
+    转至主域），WAF 对 User-Agent 严格的 WebFetch/爬虫拦截较重（报"不合法的参
+    数"），但对 curl + Mozilla UA 的访问返回 HTTP 200；多个根级路径（如
+    /zwgk/xxgk_424/ysqgk/、/zwgk/zfxxgk/fdzdgknr/、/zwgk/zfxxgk/fdzdgknr/qtfdxx/）
+    在裸域或 /index.shtml 后缀下返回 000/非标准响应，但 /index.html 后缀或具
+    体子专题页面普遍返回 200，故本表采用已验证可访问的具体页面。
+  - 西藏的结构与国务院办公厅模板对标：政务公开 zwgk/ 节点下分两大子树——
+    "政府信息公开"（xxgk_424，含指南/规定/依申请/年报/目录 5 子栏目）与"法
+    定主动公开内容"（zfxxgk/fdzdgknr，下含政策/规章/规范性文件/重点领域等子
+    专题）；另设"信息发布"（xxfb/，含政府文件/政策解读/人事信息/公示公告）
+    作为政策发布主轴。"政府信息公开"与"法定主动公开内容"在概念上有所
+    重叠，前者是《条例》体系下的口径（指南/制度/申请/年报），后者是"主动
+    公开"范畴下的内容专题（含规章、规范性文件等）。
+  - 政府信息公开体系下未独立设"行政规范性文件库"二级库，规范性文件与政府
+    规章同列于"法定主动公开内容 → 政策"（/zc/）子树下，分别为
+    /zc/xzgfxwj/ 与 /zc/gz/。第三方法规库（falvdb.com/法律法规数据库）也提
+    供西藏自治区地方政府规章查询，可作为补充。
+  - 三个最关键 URL：
+    1) https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkzn/
+       （政府信息公开指南 — 5 子栏目总入口）
+    2) https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/zc/xzgfxwj/
+       （行政规范性文件库）
+    3) https://www.xizang.gov.cn/zwgk/zfgb/
+       （西藏自治区人民政府公报）
+
+sources_consulted:
+  - url: https://www.xizang.gov.cn/
+    type: homepage
+  - url: https://www.xizang.gov.cn/zwgk/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkzn/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkzn/index.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkzn/201912/t20191223_126978.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkgd/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgkgd/index.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/zxxxgk/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/zxxxgk/index.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgknb/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgknb/index.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgknb/2024nb/202503/t20250331_470472.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgknb/2024nb/202501/t20250126_459516.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/xxgknb/2023nb/202403/t20240331_409959.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/ysqgk/index.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zfxxgk/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/zc/xzgfxwj/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/zc/xzgfxwj/index.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/zc/gz/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zdxxlygk/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zdxxlygk/czyjsgk/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxfb/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxfb/zfwj/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxfb/zcjd_435/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxfb/gsgg_428/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxfb/rsxx_434/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zfgb/
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/zfxxgk/fdzdgknr/zc/gz/202112/t20211229_276898.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/zwgk/xxgk_424/zxxxgk/201902/W020190223660011380979.doc
+    type: attachment
+  - url: https://www.xizang.gov.cn/zwgk/zwxxgkzl/009001001_01001_20191230_e590958b-bb40-4641-8763-ea51f97e8bca.html
+    type: page_content
+  - url: https://www.xizang.gov.cn/xwzx_406/ztzl_416/cxzt/ndbb/qjdw/
+    type: page_content
+  - url: https://falvdb.com/law/codex/levels/6-地方政府规章/provinces/26-西藏自治区
+    type: search_result

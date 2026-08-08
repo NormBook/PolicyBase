@@ -1,0 +1,143 @@
+province: 云南省
+slug: yunnan
+short_name: 云
+pinyin: yunnan
+level: province
+operator_org_id: "5300000000000001"
+type: database
+
+main_website:
+  url: https://www.yn.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  # 政务公开首页（含政府信息公开平台入口）
+  url: https://www.yn.gov.cn/zwgk/
+  path_keyword: zwgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    # 政府信息公开指南
+    url: https://www.yn.gov.cn/zwgk/zfxxgkpt/zfxxgkzn/
+    path_keyword: zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    # 政府信息公开制度（分国家文件 zfxxgkptzyzfwj / 云南省文件 zfxxgkptynswj）
+    url: https://www.yn.gov.cn/zwgk/zfxxgkpt/zfxxgkzd/zfxxgkptzyzfwj/
+    path_keyword: zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    # 法定主动公开内容（栏目根目录）
+    url: https://www.yn.gov.cn/zwgk/zfxxgkpt/fdzdgknr/
+    path_keyword: fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      HTML 树形结构（2026-07-22 自动抓取）：
+      云南"法定主动公开内容"采用客户端 JS 渲染（curl 默认只能拿首页 shell，
+      大量子菜单通过 JS 异步加载；静态 HTML 仅露出部分导航锚点）。
+
+      静态 HTML 可直接观察到的 fdzdgknr 子项：
+      1. 省政府领导：     https://www.yn.gov.cn/zwgk/zfxxgkpt/fdzdgknr/zfld/
+      2. 省政府机构：     https://www.yn.gov.cn/szf/zfjg/
+      3. 省政府会议：     https://www.yn.gov.cn/ywdt/hyxx/szfhy/
+      4. 常务会议日历：   https://www.yn.gov.cn/ywdt/hyxx/szfhy/szfcwhy/index_769.html
+      5. 政府工作报告：   https://www.yn.gov.cn/zwgk/zfxxgk/zfgzbg/
+      6. 政府信息公开平台：https://www.yn.gov.cn/zwgk/zfxxgkpt/zfxxgkzn/
+      7. 政策文件：       https://www.yn.gov.cn/zwgk/zcwj/zxwj/
+      8. 政策解读：       https://www.yn.gov.cn/zwgk/zcjd/zcjd1/
+      9. 省政府公报：     https://www.yn.gov.cn/zwgk/zfgb/index_769.html
+      10. 规章库：        https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/gz/
+      11. 规范性文件库：  https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/xzgfxwj/
+      12. 云南省政策文件库：https://searchfs/index_826.html?siteCode=ynzcwjk
+      13. 省长信箱：      https://xfservice.yn.gov.cn/wsxf/mailbox?type=02
+
+      树根 id：#szfbm（省政府部门）/ #zszf（州市政府）——切换 tab 显示 14 类
+      法定主动公开子菜单。
+
+      范式特征：
+      - 云南 fdzdgknr 主页面采用客户端 JS 渲染（curl 无法获得完整树形），
+        走"zfxxgkpt"目录分支（与江西/吉林的"zfxxgkpt"同源变体）
+      - 14 类法定主动公开子菜单通过 #szfbm / #zszf tab 切换加载，
+        JS 加载后挂接到二级域名 ynsrmzfw_vx/wap/zfxxgkpt 频道
+      - 政策文件库采用第三方全文检索接口 searchfs（siteCode=ynzcwjk），
+        是云南"分散检索入口"模式
+      - 静态 HTML 仅露出顶层导航（领导/机构/会议/政府工作报告/政策解读/
+        公报/规章/规范性文件），其他 14 大类需 JS 异步加载才能完整捕获
+  disclosure_annual_report:
+    # 政府信息公开年报（2009-2025 各年度）
+    url: https://www.yn.gov.cn/zwgk/zfxxgkpt/zfxxgknb/
+    path_keyword: zfxxgknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    # 依申请公开（独立子域名系统）
+    url: http://ysqgk.yn.gov.cn/YSQGK/ShenQingZZ/ShenQingZZ
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    # 云南省政策文件库（全文检索系统，siteCode=ynzcwjk）
+    url: https://www.yn.gov.cn/searchfs/index_826.html?siteCode=ynzcwjk
+    path_keyword: ynzcwjk
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    # 省政府规章库（现行有效 140 部，省+州市，文字版 doc + 图片版 pdf）
+    url: https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/gz/
+    path_keyword: gkptzcwj/gz
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    # 省行政规范性文件库（现行有效 140 件，含州市入口）
+    url: https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/xzgfxwj/
+    path_keyword: gkptzcwj/xzgfxwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    # 政府信息公开平台（政务公开专栏总入口）
+    url: https://www.yn.gov.cn/zwgk/zfxxgkpt/
+    path_keyword: zfxxgkpt
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  # 云南省人民政府公报（半月刊，1988 创刊，CN53-1228/D）
+  url: https://www.yn.gov.cn/zwgk/zfgb/
+  status: ok
+
+notes: |
+  - 云南省采用"政府信息公开平台"(zfxxgkpt) 架构：指南/制度/法定主动公开/年报为其子栏目，
+    政策文件库/规章库/行政规范性文件库均集中在 gkptzcwj 与检索系统中，结构清晰规范。
+  - 特色：政策文件库为独立全文检索系统 searchfs/?siteCode=ynzcwjk；依申请公开走独立子域名 ysqgk.yn.gov.cn。
+  - 3 个最关键 URL：
+    1. 政策文件库 https://www.yn.gov.cn/searchfs/index_826.html?siteCode=ynzcwjk
+    2. 行政规范性文件库 https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/xzgfxwj/
+    3. 规章库 https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/gz/
+
+sources_consulted:
+  - url: https://www.yn.gov.cn/zwgk/
+    type: WebFetch 政务公开首页（提取全部栏目URL）
+  - url: https://www.yn.gov.cn/zwgk/zfxxgkpt/zfxxgkzn/
+    type: WebFetch 政府信息公开指南（验证含制度/主动公开/年报/依申请链接）
+  - url: https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/xzgfxwj/
+    type: WebFetch 行政规范性文件库（验证 140 件现行有效）
+  - url: https://www.yn.gov.cn/zwgk/zfxxgkpt/gkptzcwj/gz/
+    type: WebFetch 规章库（验证 140 部现行有效）
+  - url: https://www.yn.gov.cn/zwgk/zfgb/
+    type: WebFetch 省政府公报（验证 2026 年各期列表）
+  - url: https://www.yn.gov.cn/zwgk/zfxxgkpt/fdzdgknr/zcwj/zfxxgkptzxwj/
+    type: WebFetch 政策文件最新文件列表（验证公文种类分类）
+  - url: 云南省人民政府门户网站 政府信息公开
+    type: WebSearch
+  - url: 云南省 政策文件库 行政规范性文件库
+    type: WebSearch
+  - url: 云南省人民政府公报
+    type: WebSearch

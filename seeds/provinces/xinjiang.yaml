@@ -1,0 +1,248 @@
+province: 新疆维吾尔自治区
+slug: xinjiang
+short_name: 新
+pinyin: xinjiang
+level: autonomous_region
+operator_org_id: "6500000000000001"
+type: database
+
+main_website:
+  url: https://www.xinjiang.gov.cn/
+  path_keyword: xinjiang
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    主办单位：新疆维吾尔自治区人民政府办公厅；
+    政府网站标识码 6500000034；网站备案号 65010202000778；
+    提供维吾尔语 / 哈萨克语 / 柯尔克孜语 / 锡伯语 / 蒙古语 等多语种入口。
+
+# 信息公开总枢纽（政务公开 / 政府信息公开）
+disclosure_homepage:
+  url: https://www.xinjiang.gov.cn/xinjiang/zfxxgk/jump.shtml
+  path_keyword: xinjiang/zfxxgk/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    自治区政府门户网站"政府信息公开"专栏总枢纽。从该页可进入：
+    指南 / 制度 / 法定主动公开 / 年报 / 依申请公开 / 各地各部门链接 等 6 个子栏目。
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.xinjiang.gov.cn/xinjiang/xxgkzl/zfxxgk_xxgkzn.shtml
+    path_keyword: xinjiang/xxgkzl/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      自治区人民政府办公厅政府信息公开指南总入口。
+      当前详情页示例（2023-10-07 发布版）：
+      https://www.xinjiang.gov.cn/xinjiang/xxgkzl/202310/af4ca971c6f7438eb146c1b4128e35ff.shtml
+
+  disclosure_regime:
+    url: https://www.xinjiang.gov.cn/xinjiang/xxgkzd/zfxxgk_xxgkzd.shtml
+    path_keyword: xinjiang/xxgkzd/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      信息公开制度总入口（含国务院制度 / 自治区制度两大分类）。
+      制度文件列表页：
+      /xinjiang/c101639/zfxxgk_xxgkzd_list.shtml（国家层面）
+      /xinjiang/c101640/zfxxgk_xxgkzd_list.shtml（国家层面 续）
+      /xinjiang/c101641/zfxxgk_xxgkzd_list.shtml（自治区层面）
+
+  disclosure_proactive_catalog:
+    url: https://www.xinjiang.gov.cn/xinjiang/fdzdgknr/jumpkey.shtml
+    path_keyword: xinjiang/fdzdgknr/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容总入口（含政府领导 / 机构职能 / 政府文件 / 财政预决算 /
+      统计信息 / 建议提案办理 / 应急管理 / 重大建设项目 / 行政许可 / 行政处罚 等子类目）。
+      该页通过 javascript: 切换展开各子目录。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+
+      新疆采用「cXXXXX 栏目号」单页架构，每个类目挂载到门户 /xinjiang/cNNNNN/ 子路径，无 chnl/docnum 元数据。
+
+      fdzdgknr 总入口跳转：根路径 https://www.xinjiang.gov.cn/xinjiang/fdzdgknr/jumpkey.shtml 通过 javascript: 切换展开各子目录，但 zwgk 总枢纽页 /xinjiang/zwgk/zw.shtml 已暴露以下 fdzdgknr 子栏目（class="wugk-link"）：
+
+      1.  重点领域／重大民生    /xinjiang/c101363/zdlyzdxxgk.shtml          （HTTP 200）
+      2.  政府信息公开          /xinjiang/c114806/zfxxgk_gknrz.shtml         （HTTP 200）
+      3.  政府信息公开          /xinjiang/c114807/zfxxgk_gknrz.shtml         （HTTP 200）
+      4.  跳转链接              /xinjiang/c112439/jump.shtml
+      5.  跳转链接              /xinjiang/c112442/jump.shtml
+      6.  跳转链接              /xinjiang/c112447/jump.shtml
+      7.  联系我们               /xinjiang/lxwm/jumpxq.shtml
+
+      「重点领域／重大民生」/c101363/zdlyzdxxgk.shtml 进一步下挂 18 个子类（多数外链到厅局子站）：
+      - 助企纾困服务专栏          https://zwfw.xinjiang.gov.cn/tsfw/zqskfwzl/index.html
+      - 优化营商环境              http://xjdrc.xinjiang.gov.cn/xjfgw/c108309/yhys.shtml
+      - 减税降费                  https://czt.xinjiang.gov.cn/xjczt/c115007/zfxxgk_list.shtml
+      - 食品监管                  http://scjgj.xinjiang.gov.cn/xjaic/c112985/zfxxgk_gknrz.shtml
+      - 药品监管                  http://mpa.xinjiang.gov.cn/xjyjj/ypjgdt/list_tyz.shtml
+      - 法律法规                  http://rst.xinjiang.gov.cn/xjrst/c112719/list.shtml
+      - 工作动态                  http://rst.xinjiang.gov.cn/xjrst/c112720/list.shtml
+      - 就业服务                  https://rst.xinjiang.gov.cn/xjrst/jycyx/list.shtml
+      - 事业单位招聘              http://rst.xinjiang.gov.cn/xjrst/c112746/list.shtml
+      - 养老服务                  http://mzt.xinjiang.gov.cn/xjmzt/c113051/zfxxgk_list.shtml
+      - 老年人服务专区            https://zwfw.xinjiang.gov.cn/tsfw/lnrfwzq/index.html
+      - 文化活动场所              http://wlt.xinjiang.gov.cn/wlt/whhdcs/gzfw_list.shtml
+      - 旅游服务信息              http://wlt.xinjiang.gov.cn/wlt/c112780/newwenlvtin_index.shtml
+      - 服务事项                  https://zwfw.xinjiang.gov.cn/jiopweb/...
+      - 政策解读                  http://wjw.xinjiang.gov.cn/hfpc/zcjd/zfxxgk_gknrz.shtml
+      - 重点领域信息公开          http://wjw.xinjiang.gov.cn/hfpc/zdxxgk/zfxxgk_gknrz.shtml
+      - 行政权力清单和责任清单    http://wjw.xinjiang.gov.cn/hfpc/qzqd/zfxxgk_gknrz.shtml
+      - 联系我们                  /xinjiang/lxwm/jumpxq.shtml
+
+      门户主导航额外暴露 2 个 fdzdgknr 入口：
+      - 自治区人大        //www.xjpcsc.gov.cn/
+      - 自治区政协        //www.xjzx.gov.cn/
+
+      统计：3 个 fdzdgknr 一级栏目（c101363/c114806/c114807）+ 18 个 zdly 子类 = 21 个 URL；无 chnl/docnum 元数据。
+
+      特色发现：
+      - 新疆「法定主动公开内容」是单页 SPA 架构（cXXXXX 栏目号 + javascript: 切换展开），与传统 fdzdgknr/ 树形不同
+      - fdzdgknr 一级栏目被压缩到 3 个：c101363 重点领域/重大民生 + c114806 + c114807 各为「zfxxgk_gknrz.shtml」一般栏目
+      - 大量子类挂到厅局子站（czt.xinjiang.gov.cn 减税降费、rst.xinjiang.gov.cn 就业服务、mzt.xinjiang.gov.cn 养老服务 等），呈现「省政府门户壳 + 厅局子站承载」模式
+      - 抓取主入口：zwgk/zw.shtml 总枢纽 + c101363/zdlyzdxxgk.shtml 子栏目；fdzdgknr/jumpkey.shtml 根路径只做 javascript 切换跳转
+
+  disclosure_annual_report:
+    url: https://www.xinjiang.gov.cn/xinjiang/xxgknb/jump.shtml
+    path_keyword: xinjiang/xxgknb/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      信息公开年报总入口（2008–2025 共 18 个年度报告均可访问）。
+      当前可见最近期：/xinjiang/c116116/zfxxgk_gknbz.shtml（2025 年度）。
+      历年 URL 范式：
+      /xinjiang/{year}/zfxxgk_gknb.shtml（2008–2017）
+      /xinjiang/2018/zfxxgk_gknbq.shtml
+      /xinjiang/2019/zfxxgk_gknbz.shtml
+      /xinjiang/2020n/zfxxgk_gknbz.shtml
+      /xinjiang/2021nb/zfxxgk_gknbz.shtml
+      /xinjiang/2022nb/zfxxgk_gknbz.shtml
+      /xinjiang/c114825/zfxxgk_gknbz.shtml（2023）
+      /xinjiang/c115539/zfxxgk_gknbz.shtml（2024）
+      /xinjiang/c116116/zfxxgk_gknbz.shtml（2025）
+
+  disclosure_upon_request:
+    url: https://www.xinjiang.gov.cn/xinjiang/ysqgk/zfxxgk_ysqgk.shtml
+    path_keyword: xinjiang/ysqgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开总入口。提供申请表下载（DOC 格式，路径示例：
+      /xinjiang/ysqgk/2023-03/27/7d5d12f123b54893ab57196e0806c1fe/files/fb0ce962be77491f8ee95948d2314691.doc）。
+      自治区本级及各厅局（财政厅 / 民政厅 / 水利厅 / 应急厅 / 广电局 / 机关事务局 等）
+      均各自维护依申请公开子栏目，URL 范式：{dept}.xinjiang.gov.cn/.../zfxxgk_ysqgk.shtml 或
+      /.../zfxxgk_xxgkzn.shtml。
+
+libraries:
+  policy_library:
+    url: https://www.xinjiang.gov.cn/xinjiang/zfl/zfxxgk_zhengce_list.shtml?cnName=政府令
+    path_keyword: xinjiang/zfl/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政策文献库总入口（"政策" 栏目）。当前默认加载 cnName=政府令；
+      通过 cnName 参数切换政策子类：
+      cnName=政府令（已验证） / 政府文件 / 行政规范性文件 / 政策解读 等。
+      当前在录最近期政府令 251 号（2026-06-10）。栏目同时提供
+      文号 / 体裁 / 成文日期 三个检索维度。
+      配套栏目：
+      - 政策解读：/xinjiang/zcjd/zwgk_com_list.shtml
+      - 政府令详表：/xinjiang/zfl/zfxxgk_zhengce_list.shtml?cnName=政府令
+
+  regulation_library:
+    url: https://www.xinjiang.gov.cn/xinjiang/gzk/search_gkgz_4.shtml
+    path_keyword: xinjiang/gzk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      自治区政府规章库（市级总库 + 13 个地州市子库链接）。
+      收录自治区现行有效政府规章（按自治区 / 地州市两级编排），
+      每条提供文字版（DOC）+ 图片版（PDF）下载。
+      已确认在录：政府令第 213–251 号（2019–2026 年间发布）。
+
+  normative_library:
+    url: https://www.xinjiang.gov.cn/xinjiang/gfxwj1/zfxxgk_zc_gfxwj.shtml
+    path_keyword: xinjiang/gfxwj1/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      自治区行政规范性文件库总入口。已确认在录最新文件：
+      新政发〔2025〕72 号《关于调整残疾、孤老人员和烈属所得减征个人所得税的通知》；
+      新政办发〔2025〕53 号《关于印发〈中国(新疆)自由贸易试验区农作物种子
+      进出口生产经营许可管理办法〉的通知》。
+      配套依据：《新疆维吾尔自治区行政规范性文件管理办法》
+      （自治区政府令第 218 号，2021-02-01 起施行）。
+
+  disclosure_library:
+    url: https://www.xinjiang.gov.cn/xinjiang/zfxxgk/jump.shtml
+    path_keyword: xinjiang/zfxxgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政府信息公开"专栏 = /xinjiang/zfxxgk/jump.shtml，与 disclosure_homepage 同一入口。
+      该栏目集中了指南 / 制度 / 法定主动公开 / 年报 / 依申请公开 等全部主动公开类目，
+      是新疆"政务公开"统一收口页。
+
+gazette:
+  url: https://www.xinjiang.gov.cn/xinjiang/zfgb/zfgb.shtml
+  path_keyword: xinjiang/zfgb/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    新疆维吾尔自治区人民政府公报总入口（半月刊）。
+    已确认当期：2026 年第 11-12 期（2026-06-15 发布，来源：自治区人民政府办公厅）。
+    每期含 10 个常设栏目：政府工作报告 / 自治区人民政府令 / 自治区人民政府文件 /
+    自治区人民政府办公厅文件 / 干部任免 / 部门文件 / 法律法规 / 政府规章 /
+    常务会议 / 其他。每期同步提供 PDF 下载（路径范式：
+    /xinjiang/zfgbxx/{YYYYMM}/{hash}/files/{hash}.pdf）。
+    历史归档另有 /xinjiang/zfgb/common_list_16.shtml（2002–2004 公报目录）。
+    主办：新疆维吾尔自治区人民政府政务服务办公室；编辑部地址：乌鲁木齐市天山区中山路 479 号；
+    邮编 830000；电话 0991-2383718。
+
+notes: |
+  - 新疆门户把"政务公开"与"政府信息公开"分两个入口呈现：
+    /xinjiang/zwgk/zw.shtml（政务公开，侧重视觉化推荐位）
+    /xinjiang/zfxxgk/jump.shtml（政府信息公开，侧重要素式目录）。
+    前者聚合"政府公报 / 政策解读 / 政策 / 通知公告"等动态类目；
+    后者聚合"指南 / 制度 / 法定主动公开 / 年报 / 依申请公开"等法定类目。
+  - 政府规章库（/xinjiang/gzk/）与行政规范性文件库（/xinjiang/gfxwj1/）分别建库，
+    互不交叉。规章库以"政府令"序号为索引；规范性文件库以"新政发 / 新政办发"为索引。
+  - 三个最关键 URL：
+    1) https://www.xinjiang.gov.cn/xinjiang/zfxxgk/jump.shtml  （信息公开总枢纽）
+    2) https://www.xinjiang.gov.cn/xinjiang/zfl/zfxxgk_zhengce_list.shtml?cnName=政府令  （政策文献库）
+    3) https://www.xinjiang.gov.cn/xinjiang/zfgb/zfgb.shtml  （政府公报）
+
+sources_consulted:
+  - url: https://www.xinjiang.gov.cn/
+    type: homepage
+  - url: https://www.xinjiang.gov.cn/xinjiang/zfxxgk/jump.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/xxgkzl/zfxxgk_xxgkzn.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/xxgkzl/202310/af4ca971c6f7438eb146c1b4128e35ff.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/xxgkzd/zfxxgk_xxgkzd.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/fdzdgknr/jumpkey.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/xxgknb/jump.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/ysqgk/zfxxgk_ysqgk.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/zfl/zfxxgk_zhengce_list.shtml?cnName=政府令
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/gzk/search_gkgz_4.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/gfxwj1/zfxxgk_zc_gfxwj.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/zfgb/zfgb.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/zfgb/common_list_16.shtml
+    type: page_content
+  - url: https://www.xinjiang.gov.cn/xinjiang/zfgbxx/202502/be5f108f81ce4da7b18ef1b7f64f2592.shtml
+    type: gazette_issue
+  - url: https://tmp/paradigm-survey.md
+    type: paradigm_reference

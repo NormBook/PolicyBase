@@ -1,0 +1,260 @@
+province: 重庆市
+slug: chongqing
+short_name: 渝
+pinyin: chongqing
+level: municipality
+operator_org_id: "5000000000000001"
+type: database
+
+main_website:
+  url: https://www.cq.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.cq.gov.cn/zwgk/zfxxgkzl/
+  path_keyword: zwgk/zfxxgkzl
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zfxxgkzn/
+    path_keyword: zwgk/zfxxgkzl/zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zfxxgkzd/
+    path_keyword: zwgk/zfxxgkzl/zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/
+    path_keyword: zwgk/zfxxgkzl/fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（fdzdgknr）下设 14 大类 + 36 个三级 URL（2026-07-22 用户通过 HTML 源码 id="fd-nr" 完整提供）。
+      对应《政府信息公开条例》§20 列举式 15 项的前 14 项；第 15 项为兜底项。
+      每个一级类目 HTML 含 chnl 频道号 + docnum 文档数 + chnltype 内外链标志（0=站内 / 11=外链）。
+
+      完整 14 大类 + 子类树形结构：
+
+      1. 履职依据（chnl=120519，docnum=418）
+         - 行政法规：           http://xzfg.moj.gov.cn/search2.html  （外链，chnltype=11）
+         - 地方性法规：         http://fggs.cqrd.gov.cn/list.html?id=2  （外链，chnltype=11）
+         - 政府规章：           https://sfj.cq.gov.cn/xzwjk/page/shizhengfu/guizhangku/index.html  （外链，chnltype=11）
+         - 行政规范性文件：     https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/lzyj/xzgfxwj/
+
+      2. 机关简介（chnl=120530，docnum=48）
+         - 市政府领导：         https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jgjj/szfld/
+         - 机构职能：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jgjj/jgzn/
+         - 联系我们：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jgjj/lxwm/
+
+      3. 规划信息（chnl=120537，docnum=163）
+         - 国民经济和社会发展规划：https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ghxx/gmjjhshfzgh/
+         - 国土空间和控制性详细规划：https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ghxx/gtkjgh/
+         - 专项规划：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ghxx/zxgh/
+         - 区域规划：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ghxx/qygh/
+
+      4. 统计信息（chnl=120542，docnum=121）
+         - 统计公报：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/tjxx/tjgb/
+         - 统计年鉴：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/tjxx/tjnj/
+         - 统计月报：           http://tjj.cq.gov.cn/zwgk_233/fdzdgknr/tjxx/sjzl_55471/jdsj_55474/  （外链，chnltype=11，市统计局）
+         - 统计查询和数据解读：https://www.cq.gov.cn/zwgk/zfxxgkml/sjfb_120853/cqsj/  （chnltype=11）
+
+      5. 行政许可（chnl=120547，docnum=46）
+         - URL：https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/xzxk/
+
+      6. 行政处罚/强制（chnl=120550，docnum=61）
+         - 行政处罚：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/xzcfqz/xzcf_142399/
+         - 行政强制：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/xzcfqz/xzqz/
+
+      7. 预算/决算（chnl=120555，docnum=241）
+         - 重庆市预决算报告：   https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ysjs/sjyjsqk/
+         - 部门预算：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ysjs/bmys/
+         - 部门决算：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ysjs/bmjs/
+         - 市政府部门预决算情况：https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/ysjs/szfbgtjszfbmyjsqk/
+
+      8. 收费项目（chnl=120562，docnum=10）
+         - URL：https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/sfxm/
+
+      9. 政府采购（chnl=177478，docnum=5）
+         - 政府采购目录标准：   https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zfcg1/zfcgmlbb/
+         - 政府采购实施情况：   https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zfcg1/zfcgssqk001/
+
+      10. 重大项目（chnl=120567，docnum=3445 — 重庆单类最大）
+          - 重大项目名单：       https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zdxm/zdxmqd/
+          - 重大项目审批核准备案信息：http://fzggw.cq.gov.cn/zwgk/zfxxgkml/sphzbaxx/  （外链，chnltype=11，市发改委）
+          - 重大项目推进情况：   https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zdxm/dtxx/
+
+      11. 重大民生信息（chnl=120570，docnum=6013 — 重庆单类第二）
+          - 脱贫攻坚与乡村振兴：https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zdmsxx/fp/
+          - 教育：               https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zdmsxx/jy/
+          - 医疗：               https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zdmsxx/yl/
+          - 社会保障：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zdmsxx/shbz/
+          - 促进就业：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zdmsxx/cjjy/
+
+      12. 应急管理（chnl=120585，docnum=1510）
+          - 市级应急预案：       https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/yjgl/sjyjya/
+          - 预警信息：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/yjgl/yjxx/
+          - 地质灾害预警图：     https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/yjgl/yjt/
+
+      13. 监督检查（chnl=120588，docnum=4598）
+          - 环境保护：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jdjc/hjbh/
+          - 公共卫生：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jdjc/ggws/
+          - 安全生产监督管理：   https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jdjc/aqsc/
+          - 食品药品：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jdjc/spyp/
+          - 产品质量：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jdjc/cpzl/
+
+      14. 招考录用（chnl=173897，docnum=147）
+          - 招考公告：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zkly/zkgg/
+          - 录用公示：           https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/zkly/lygs/
+
+      统计：14 大类共 30 个站内 URL + 5 个外链 URL；总文档数（docnum 之和）：418+48+163+121+46+61+241+10+5+3445+6013+1510+4598+147 = 16826 条。
+
+      5 个外链（chnltype=11）所属单位：
+      - 司法部（行政法规）：http://xzfg.moj.gov.cn/
+      - 重庆市人大（地方性法规）：http://fggs.cqrd.gov.cn/
+      - 重庆市司法局（政府规章）：https://sfj.cq.gov.cn/xzwjk/
+      - 重庆市统计局（统计月报）：http://tjj.cq.gov.cn/
+      - 重庆市发改委（重大项目审批核准备案）：http://fzggw.cq.gov.cn/
+
+      范式特征：
+      - 重庆「法定主动公开」颗粒度全国最细（14 类 36 URL；多数省 6-8 类）
+      - 重庆第 11 项用「脱贫攻坚与乡村振兴」替代 §20 的「扶贫」（2021 年后口径更新）
+      - 重大民生信息（docnum=6013）和监督检查（docnum=4598）是重庆信息量最大的两个主动公开类目
+  disclosure_annual_report:
+    url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zfxxgknb/
+    path_keyword: zwgk/zfxxgkzl/zfxxgknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: null
+    path_keyword: null
+    verified_at: 2026-07-22
+    status: not_found
+    note: |
+      重庆市政府门户未提供独立的「依申请公开」栏目入口。2026-07-22 用户再次确认：重庆信息公开官网的栏目仅含「高级搜索 + 政策（3 类）+ 政府信息公开指南 + 政府信息公开制度 + 法定主动公开内容（14 子类）+ 政府信息公开年报」共 8 个主入口，**没有独立的依申请公开栏目**。
+      检索过程：
+      1. 政府信息公开指南页面（/zwgk/zfxxgkzl/zfxxgkzn/szf/202501/t20250106_14051663.html）的「二、依申请公开政府信息」段落仅指向一个相对路径 ./tip.html（在指南页内嵌的「在线申请」表单，无独立栏目 URL）；
+      2. 政务公开首页（/zwgk/）未列出「依申请公开」导航；
+      3. 制度页（/zwgk/zfxxgkzl/zfxxgkzd/）仅有指南/制度/主动公开/年报四个侧栏链接，无「依申请公开」一栏；
+      4. 关键词检索「依申请公开 site:cq.gov.cn」无政府门户直链，仅返回区县/部门子站（如 cqkz.gov.cn、cqnc.gov.cn 等）。
+      建议在抓取阶段把依申请公开申请表挂在「市政府办公厅政府信息公开指南（2025年版）」页面下作为子资源；具体受理仍由区县/部门子站分散承担。
+
+libraries:
+  policy_library:
+    url: https://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/
+    path_keyword: zwgk/zfxxgkml/szfwj
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政策文献库（重庆）下设 3 大类（2026-07-22 用户通过 HTML 源码确认）：
+      - 政府规章：https://sfj.cq.gov.cn/xzwjk/page/shizhengfu/guizhangku/index.html （与 regulation_library 同 URL）
+      - 行政规范性文件：http://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/xzgfxwj/ （与 normative_library 同前缀）
+      - 其他文件：//www.cq.gov.cn/zwgk/zfxxgkzl/zc/qtwj/ （新增子栏目）
+      （注：「行政法规」与「地方性法规」不在省政府层面的政策库内，按立法法分别由全国人大与省级人大维护；本字段已与「履职依据」栏目下的行政法规/地方性法规分类互不重叠）
+  regulation_library:
+    url: https://sfj.cq.gov.cn/xzwjk/page/shizhengfu/guizhangku/index.html
+    path_keyword: sfj.cq.gov.cn/xzwjk/page/shizhengfu/guizhangku
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府规章挂在重庆市政府信息公开官网「政策」栏目下（chnl=322734），由市司法局「现行有效行政规范性文件库（sfj.cq.gov.cn/xzwjk/.../shizhengfu/guizhangku/）」托管。这是「双库架构」的另一半——与「规范性文件」目录分开维护。
+  normative_library:
+    url: http://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/xzgfxwj/
+    path_keyword: zwgk/zfxxgkml/szfwj/xzgfxwj
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      行政规范性文件（chnl=311410）。原记录 `xzgfxwj.html` 是单页式列表入口，HTML 源码显示其上级目录 `/xzgfxwj/` 同样可达（http://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/xzgfxwj/）；采集路由建议优先用上级目录 + 分页参数。
+  qita_wenjian_library:
+    url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zc/qtwj/
+    path_keyword: zwgk/zfxxgkzl/zc/qtwj
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      「其他文件」库（chnl=311418）。这是重庆市政府信息公开官网「政策」栏目下 3 大类之一，区别于政府规章与行政规范性文件。
+      收录范围：「其他文件」通常包含跨类别或不属于典型法规层级的市政府文件——例如综合性的政府工作报告、专项规划、人事任免等需公开但无法归入「政府规章」或「行政规范性文件」两类的文件。
+      收录口径待用户进一步明确（重庆信息公开官网未给出详细定义）；采集路由可通过 HTML 源码中 id="fd-zc" 的 zc-root.zc-box 列表识别。
+  disclosure_library:
+    url: https://www.cq.gov.cn/zwgk/zfxxgkzl/
+    path_keyword: zwgk/zfxxgkzl
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2026/
+  path_keyword: zwgk/zfxxgkml/zfgb/YYYY/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    重庆市政府公报范式：按年份目录 + 期号子目录双层结构。
+    根路径 `/zwgk/zfxxgkml/zfgb/`（2026 年实测为首页入口）；按年份下钻到 `/zfgb/YYYY/`（2022-2026 全部实测可达）：
+    - 2026: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2026/  （已发布 5 期）
+    - 2025: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2025/  （全年 24 期）
+    - 2024: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2024/  （全年 24 期）
+    - 2023: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2023/
+    - 2022: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2022/  （全年 19-21 期）
+    期号子路径模式：`/d1q/` `/d2q_398756/` `/d24q/` 等（带期号 + 随机后缀的目录形式）。
+    主管：市政府办公厅；CN 50-1147/D；半月刊。
+    修订历史：本字段在初始调研中被标为 not_found（2026-07-22 早间因 javascript:; 控件未识别路径）；用户反馈后实测验证 `/zwgk/zfxxgkml/zfgb/YYYY/` 范式可用，2026/2024/2022 三年均 HTTP 200。
+
+notes: |
+  - **重庆市政府信息公开官网完整栏目清单（2026-07-22 用户二次确认）**：共 8 个主入口
+    1. 高级搜索（独立检索入口）
+    2. 政策（3 大类：政府规章 / 行政规范性文件 / 其他文件；位于 /zwgk/zfxxgkml/szfwj/）
+    3. 政府信息公开指南（/zwgk/zfxxgkzl/zfxxgkzn/）
+    4. 政府信息公开制度（/zwgk/zfxxgkzl/zfxxgkzd/）
+    5. 法定主动公开内容（/zwgk/zfxxgkzl/fdzdgknr/，14 子类，详见对应字段 note）
+    6. 政府信息公开年报（/zwgk/zfxxgkzl/zfxxgknb/）
+    7. 政府公报（/zwgk/zfxxgkml/zfgb/YYYY/，5 个年份目录全部 200）
+    8. （无独立「依申请公开」栏目，详见 disclosure_upon_request 字段）
+  - 重庆采用「市政府门户 + 司法局规章库」双库架构：政策/规范性文件统一在 cq.gov.cn/zwgk/zfxxgkml/szfwj/ 下；政府规章（渝府令）则单独托管于 sfj.cq.gov.cn/xzwjk/page/shizhengfu/guizhangku/，两库分立
+  - 「法定主动公开内容」/zwgk/zfxxgkzl/fdzdgknr/ 含 14 个子分类（履职依据/机关简介/规划信息/统计信息/行政许可/行政处罚强制/预算决算/收费项目/政府采购/重大项目/重大民生信息/应急管理/监督检查/招考录用），颗粒度细于其他省
+sources_consulted:
+  - url: https://www.cq.gov.cn/
+    type: homepage
+  - url: https://www.cq.gov.cn/zwgk/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkzl/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zfxxgkzn/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zfxxgkzd/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkzl/fdzdgknr/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zfxxgknb/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zc/qtwj/
+    type: page_content
+  - url: http://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/xzgfxwj/
+    type: page_content
+  - url: https://sfj.cq.gov.cn/xzwjk/page/shizhengfu/guizhangku/index.html
+    type: page_content
+  - url: "https://www.cq.gov.cn/zwgk/zfxxgkzl/ (HTML 源码 id=\"fd-zc\" 政策栏目下拉菜单 chnl=322734/311410/311418)"
+    type: page_html_source
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/xzgfxwj/xzgfxwj.html
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/xzgfxwj/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/szfwj/zfgz/zfgz/
+    type: page_content
+  - url: https://sfj.cq.gov.cn/xzwjk/page/shizhengfu/guizhangku/index.html
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkzl/zfxxgkzn/szf/202501/t20250106_14051663.html
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2026/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2025/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2024/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2023/
+    type: page_content
+  - url: https://www.cq.gov.cn/zwgk/zfxxgkml/zfgb/2022/
+    type: page_content

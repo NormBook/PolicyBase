@@ -1,0 +1,18 @@
+# 分析素材（不入库）
+tmp/
+
+# 备份
+seeds-backup-before-cleanup.tar.gz
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+
+# 环境与密钥
+.env
+.env.*
+
+# 系统
+.DS_Store
+*.log

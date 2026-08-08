@@ -1,0 +1,117 @@
+province: 北京市
+slug: beijing
+short_name: 京
+pinyin: beijing
+level: municipality
+operator_org_id: "1100000000000001"
+type: database
+
+main_website:
+  url: https://www.beijing.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.beijing.gov.cn/gongkai/zfxxgk/
+  path_keyword: gongkai/zfxxgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.beijing.gov.cn/gongkai/zfxxgk/zfxxgkzn/
+    path_keyword: gongkai/zfxxgk/zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.beijing.gov.cn/gongkai/zfxxgk/zfxxgkzd/
+    path_keyword: gongkai/zfxxgk/zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.beijing.gov.cn/gongkai/zfxxgk/fdzdgknr/
+    path_keyword: gongkai/zfxxgk/fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（fdzdgknr）下设 4 个一级类目（2026-07-22 自动抓取）：
+      URL: https://www.beijing.gov.cn/gongkai/zfxxgk/fdzdgknr/
+
+      1. 履职依据（lzyj）         - https://www.beijing.gov.cn/gongkai/zfxxgk/fdzdgknr/lzyj/index.html
+      2. 机关简介（jgjj）         - https://www.beijing.gov.cn/gongkai/zfxxgk/fdzdgknr/jgjj/index.html
+                                  子项：市领导 / 机构职能 / 市级部门及区政府领导 / 北京市政府对外联系电话查询
+      3. 重大民生信息（zdmsxx）   - https://www.beijing.gov.cn/gongkai/zfxxgk/fdzdgknr/zdmsxx/index.html
+      4. 其他法定信息（qtfdxx）   - https://www.beijing.gov.cn/gongkai/zfxxgk/fdzdgknr/qtfdxx/index.html
+
+      特色发现：
+      - 北京「法定主动公开内容」颗粒度极粗（仅 4 类），与重庆 14 类 36 URL 相比是省内最简版本；4 类是首都之窗门户的自定义分组，未严格按《政府信息公开条例》§20 列举式 15 项展开
+      - HTML 源码中无 chnl/docnum 字段（非 channelcms 模板），用 URL pinyin 缩写代替（lzyj/jgjj/zdmsxx/qtfdxx）
+      - 第 3 类「重大民生信息」与重庆同名，承载教育、医疗、社保等 17 个子栏目；其他三类颗粒度很细（机关简介子页含市领导、机构职能、联系方式）
+  disclosure_annual_report:
+    url: https://www.beijing.gov.cn/gongkai/zfxxgk/gknb/
+    path_keyword: gongkai/zfxxgk/gknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://www.beijing.gov.cn/gongkai/zfxxgk/ysqgk/
+    path_keyword: gongkai/zfxxgk/ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.beijing.gov.cn/zhengce/zhengcefagui/
+    path_keyword: zhengce/zhengcefagui
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.beijing.gov.cn/gongkai/zfxxgk/zc/gz/
+    path_keyword: gongkai/zfxxgk/zc/gz
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://www.beijing.gov.cn/zhengce/gfxwj/
+    path_keyword: zhengce/gfxwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://www.beijing.gov.cn/gongkai/zfxxgk/
+    path_keyword: gongkai/zfxxgk
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.beijing.gov.cn/zhengce/zfgb/
+  path_keyword: zhengce/zfgb
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 北京市采用"首都之窗"门户（www.beijing.gov.cn），主站强制 HTTPS；早期 http:// 链接仍可访问但 301 跳转至 https://
+  - 政务公开与政府信息公开栏目统一挂载在 /gongkai/ 路径下，区别于其他省常用的 /zwgk/ 或 /xxgk/
+  - 5 个子栏目 URL 范式完全遵循 /gongkai/zfxxgk/{zfxxgkzn,zfxxgkzd,fdzdgknr,gknb,ysqgk}/，全部为独立可访问页面
+  - 政策/规章/规范性文件三库分别位于 /zhengce/zhengcefagui/、/gongkai/zfxxgk/zc/gz/、/zhengce/gfxwj/，各自独立
+  - 政府公报位于 /zhengce/zfgb/（主页面），历史公报通过 /zhengce/zfgb/lsgb/ 和搜索系统 /so/zcdh/zfgbHistory 提供
+sources_consulted:
+  - url: https://www.beijing.gov.cn/
+    type: homepage
+  - url: https://www.beijing.gov.cn/gongkai/zfxxgk/
+    type: page_content
+  - url: https://www.beijing.gov.cn/gongkai/zfxxgk/zfxxgkzn/
+    type: page_content
+  - url: https://www.beijing.gov.cn/gongkai/zfxxgk/zfxxgkzd/
+    type: page_content
+  - url: https://www.beijing.gov.cn/gongkai/zfxxgk/fdzdgknr/
+    type: page_content
+  - url: https://www.beijing.gov.cn/gongkai/zfxxgk/gknb/
+    type: page_content
+  - url: https://www.beijing.gov.cn/gongkai/zfxxgk/ysqgk/
+    type: page_content
+  - url: https://www.beijing.gov.cn/zhengce/zhengcefagui/
+    type: page_content
+  - url: https://www.beijing.gov.cn/gongkai/zfxxgk/zc/gz/
+    type: page_content
+  - url: https://www.beijing.gov.cn/zhengce/gfxwj/
+    type: search_result
+  - url: https://www.beijing.gov.cn/zhengce/zfgb/
+    type: page_content

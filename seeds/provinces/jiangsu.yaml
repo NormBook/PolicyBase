@@ -1,0 +1,260 @@
+province: 江苏省
+slug: jiangsu
+short_name: 苏
+pinyin: jiangsu
+level: province
+operator_org_id: "3200000000000001"
+type: database
+
+main_website:
+  url: https://www.jiangsu.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+# 政务公开首页（江苏省人民政府"政务公开"专栏总入口）
+disclosure_homepage:
+  url: https://www.jiangsu.gov.cn/col/col84228/index.html
+  path_keyword: col84228
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    江苏省人民政府"政务公开"主入口，集中政策法规、政府文件、人事信息、
+    财政信息、政务公开年报、政府公报、依申请公开等子栏目。从该页可进入
+    "政府信息公开"二级页面（/col/col84239/）。
+
+# 政务公开导航（更细化的全栏目总览）
+disclosure_navigation:
+  url: https://www.jiangsu.gov.cn/col/col84597/index.html
+  path_keyword: col84597
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "政务公开导航"页面，按"政府信息公开/重点领域信息公开/专题公开"三大类
+    列出全部公开栏目，包括规章、行政规范性文件、政策文件、政府公报、
+    13 个设区市公开入口等，是完整的栏目索引。
+
+# 政府信息公开二级页面（指南/制度/主动公开/年报/依申请公开等子栏目容器）
+disclosure_section_homepage:
+  url: https://www.jiangsu.gov.cn/col/col84239/index.html
+  path_keyword: col84239
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.jiangsu.gov.cn/col/col84257/index.html
+    path_keyword: col84257
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "江苏省人民政府办公厅政府信息公开指南"，含持有信息基本情况、主动
+      公开渠道（《江苏省人民政府公报》/门户网站/省档案馆/南京图书馆/
+      省政务服务中心/新闻发布会）、依申请公开受理流程（当面/邮政寄送/
+      政府网站在线/传真 025-83398111）、信息处理费说明、工作机构（办公厅
+      政府信息公开办公室，电话 025-83398111，邮箱 jszwgk@163.com）。
+
+  disclosure_regime:
+    url: https://www.jiangsu.gov.cn/col/col84258/index.html
+    path_keyword: col84258
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政府信息公开制度"栏目页，含政府信息公开指南/制度/法定主动公开内容/
+      年报等导航。制度条文以列表形式展示在右侧正文，包括《中华人民共和国
+      政府信息公开条例》《江苏省政府信息公开实施办法》等。
+
+  disclosure_proactive_catalog:
+    url: https://www.jiangsu.gov.cn/col/col84273/index.html
+    path_keyword: col84273
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "法定主动公开内容"栏目页（顶部页头确认），分省级部门与设区市
+      公开内容列表，涵盖机关简介、行政权力运行、财政预决算、重大建设
+      项目、公共资源配置等领域。条目按省级部门（约 41 个）+ 13 个设区市
+      两级展开。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      江苏门户"法定主动公开内容"采用 col[col编号]/index.html 频道体系，
+      无 chnl/docnum 属性（meta 仅含 channel="省级部门" / chnlcatalog=""）。
+      主入口 col84273 页面 meta name="channel" content="省级部门"，下设
+      41 个省级部门子站（外链到 jyt/ / kxjst/ / scjgj/ 等子域），加
+      13 个设区市（南京/无锡/徐州/常州/苏州/南通/连云港/淮安/盐城/扬州/
+      镇江/泰州/宿迁）。
+
+      父级兄弟栏目（col84239 政府信息公开二级页下 5 子栏目）：
+      - col84257 政府信息公开指南
+      - col84258 政府信息公开制度
+      - col84273 法定主动公开内容（本字段）
+      - col84241 政府信息公开年报 + col93261 2025年度报告
+      - col81854 依申请公开（"苏政公开"统一入口）
+
+      年度报告 col 索引（按历史年份）：
+      - col84312 = 2017年度
+      - col84363 = 2016年度
+      - col84364 = 2015年度
+      - col84365 = 2014年度
+      - col84308 = 2021年度
+      - col91833 = 2024年度
+      （其余 2018-2023/2025 年度 col 编号未在本批次探测）
+
+      范式特征：
+      - 江苏是"部门 + 设区市"二级组织模式，与重庆"14 大类"模式完全不同；
+      - 不挂 chnl/docnum 属性，频道编号走 col[] 路径，无树形 HTML 片段；
+      - 探测中 curl 触发 CDN WAF（"online-desc-con"页面）一次，需
+        带 Accept-Language: zh-CN header 才能正常返回。
+
+  disclosure_annual_report:
+    url: https://www.jiangsu.gov.cn/col/col93261/index.html
+    path_keyword: col93261
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "2025 年度"政府信息公开年报汇总索引（2026 年 3 月 31 日发布），
+      包含省级部门报告 + 13 个设区市报告。往期年报入口同栏目下：
+      2024 年度、2023 年度、2022 年度……2013 年以前汇总。
+      上一级索引页：/col/col84241/index.html（年报导航）。
+
+  disclosure_upon_request:
+    url: https://www.jiangsu.gov.cn/col/col81854/index.html
+    path_keyword: col81854
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "江苏省政府信息依申请公开系统"全省依申请公开导航。列出省政府
+      办公厅、发改委、教育厅、科技厅、工信厅、公安厅、民政厅、司法厅、
+      财政厅等 36 个省级部门 + 南京、无锡、徐州等 13 个设区市的依申请
+      公开入口。
+
+libraries:
+  policy_library:
+    url: https://www.jiangsu.gov.cn/col/col84242/index.html
+    path_keyword: col84242
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政策文件"专题专栏（江苏省人民政府门户网站），汇总省政府发布
+      的各类政策文件，已确认收录 261 页内容（持续累积）。该栏目是江苏
+      "苏政发 / 苏政办发 / 苏政规 / 苏政办规" 等系列政策原文的总入口，
+      与政府公报互补使用。栏目顶部同时挂接"政策解读"（/col/col84725/）。
+
+  regulation_library:
+    url: https://www.jiangsu.gov.cn/col/col76704/index.html
+    path_keyword: col76704
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "省政府规章 + 行政规范性文件"联合栏目，承载现行有效省政府规章
+      与规范性文件列表。注：江苏未单独建"省政府规章库"独立页面，规章
+      与规范性文件在此栏目共同呈现。配套可查：江苏省法规规章规范性文件
+      数据库（https://wjk.jsrd.gov.cn:8004/，2023-12-29 上线，省人大常委会
+      办公厅主办，整合地方性法规 2220 部、政府规章 545 部、人大规范性文件
+      1152 部、行政规范性文件 4608 件等 8860 件）。
+
+  normative_library:
+    url: https://www.jiangsu.gov.cn/col/col84241/index.html
+    path_keyword: col84241
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "行政规范性文件"专题专栏（江苏省人民政府门户网站），已确认收录
+      29 页内容。栏目右侧同时挂接"规章行政规范性文件"（/col/col76704/）。
+      配套可查：江苏省法规规章规范性文件数据库
+      https://wjk.jsrd.gov.cn:8004/ ，或规范性文件目录"继续有效行政规范性
+      文件目录"PDF（如自然资源厅 zrzy.jiangsu.gov.cn/gtxxgk/nrgl/）。
+
+  disclosure_library:
+    url: https://www.jiangsu.gov.cn/col/col84228/index.html
+    path_keyword: col84228
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政务公开专栏总入口（同 disclosure_homepage）。从该页可进入政府信息
+      公开（/col/col84239/）、政务公开导航（/col/col84597/）、政策文件、
+      行政规范性文件、政府公报等所有主动公开类目，是江苏省"政务公开/政府
+      信息公开"总枢纽。
+
+  supplementary_libraries:
+    regulations_and_normative_db:
+      url: https://wjk.jsrd.gov.cn:8004/
+      path_keyword: wjk.jsrd.gov.cn:8004
+      status: ok
+      note: |
+        "江苏省法规规章规范性文件数据库"，2023 年 12 月 29 日由省人大常委会
+        办公厅开通。已收录 8860 件：地方性法规 2220、政府规章 545、人大
+        规范性文件 1152、政府及政府部门行政规范性文件 4608、监察规范
+        性文件 52、法院规范性文件 117、检察院规范性文件 166。同名微信小程序
+        "江苏法规规章文件库"也可访问。
+    policy_interpretation:
+      url: https://www.jiangsu.gov.cn/col/col84725/index.html
+      path_keyword: col84725
+      status: ok
+      note: "政策解读（文字解读 / 图片解读 / 视频解读）配套栏目"
+
+gazette:
+  url: https://www.jiangsu.gov.cn/col/col81677/index.html
+  path_keyword: col81677
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "江苏省人民政府公报"专题页面。页面同时挂接最新公报（5 条 2026-06-29
+    发布）、公报期刊（2020 年第 1-15 期精选版起，向前回溯到 1993 年按月
+    发布期）、公报检索（按标题 / 成文时间 / 月份）。联系信息：南京市北京
+    西路 68 号，电话 025-83396745，邮箱 jszfgb@js.gov.cn。
+    另设"网上公报室"分入口：/col/col76703/index.html，按"苏政规 / 苏政发
+    / 苏政办规 / 苏政办发 / 苏政复 / 苏政办函"发文字号检索。
+
+notes: |
+  - 江苏政务公开采用"三级入口"结构：①政务公开（/col/col84228/）
+    →②政务公开导航（/col/col84597/）→③政府信息公开二级页（/col/col84239/）。
+    5 子栏目挂在 /col/col84239/ 上，分别为 col84257 / col84258 / col84273
+    / col84241 / col81854。
+  - 江苏未单独建立"省政府规章库"独立页面，规章与规范性文件共用
+    /col/col76704/ 栏目。如需"独立规章库"形态，可用省人大常委会办公厅
+    主办的"江苏省法规规章规范性文件数据库"（wjk.jsrd.gov.cn:8004/）替代，
+    该库整合省/市/县三级 8860 件规范文件。
+  - 13 个设区市（南京/无锡/徐州/常州/苏州/南通/连云港/淮安/盐城/扬州/
+    镇江/泰州/宿迁）每市均有独立公开门户与公报，挂接在
+    /col/col84597/（政务公开导航）和 /col/col81677/（政府公报）上。
+  - 三个最关键 URL：
+    1) https://www.jiangsu.gov.cn/col/col84228/index.html （政务公开总入口）
+    2) https://www.jiangsu.gov.cn/col/col84597/index.html （政务公开导航全索引）
+    3) https://www.jiangsu.gov.cn/col/col81677/index.html （省政府公报）
+
+sources_consulted:
+  - url: https://www.jiangsu.gov.cn/
+    type: homepage
+  - url: https://www.jiangsu.gov.cn/col/col84228/index.html
+    type: disclosure_homepage
+  - url: https://www.jiangsu.gov.cn/col/col84597/index.html
+    type: disclosure_navigation
+  - url: https://www.jiangsu.gov.cn/col/col84239/index.html
+    type: disclosure_section
+  - url: https://www.jiangsu.gov.cn/col/col84257/index.html
+    type: sub_section (guide)
+  - url: https://www.jiangsu.gov.cn/col/col84258/index.html
+    type: sub_section (regime)
+  - url: https://www.jiangsu.gov.cn/col/col84273/index.html
+    type: sub_section (proactive)
+  - url: https://www.jiangsu.gov.cn/col/col84241/index.html
+    type: sub_section (annual_report_index)
+  - url: https://www.jiangsu.gov.cn/col/col93261/index.html
+    type: sub_section (annual_report_2025)
+  - url: https://www.jiangsu.gov.cn/col/col81854/index.html
+    type: sub_section (upon_request)
+  - url: https://www.jiangsu.gov.cn/col/col84242/index.html
+    type: library (policy)
+  - url: https://www.jiangsu.gov.cn/col/col76704/index.html
+    type: library (regulations)
+  - url: https://www.jiangsu.gov.cn/col/col81677/index.html
+    type: gazette
+  - url: https://www.jiangsu.gov.cn/col/col76703/index.html
+    type: gazette_online_room
+  - url: https://wjk.jsrd.gov.cn:8004/
+    type: supplementary_library (regulations_and_normative_db)
+  - url: https://www.jiangsu.gov.cn/col/col84725/index.html
+    type: supplementary_library (policy_interpretation)
+  - url: https://jsnews.jschina.com.cn/jsyw/202401/t20240104_3343982.shtml
+    type: search_result (regulations_db_launch_news)
+  - url: tmp/paradigm-survey.md
+    type: reference

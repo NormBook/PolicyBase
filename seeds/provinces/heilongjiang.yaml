@@ -1,0 +1,139 @@
+province: 黑龙江省
+slug: heilongjiang
+short_name: 黑
+pinyin: heilongjiang
+level: province
+operator_org_id: "2300000000000001"
+type: database
+
+main_website:
+  url: https://www.hlj.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  # 政务公开总入口（含政策、政府信息公开、政策解读、政府公报等）
+  url: https://www.hlj.gov.cn/hlj/c108368/zwgk.shtml
+  path_keyword: zwgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.hlj.gov.cn/hlj/c108390/zfxxgk.shtml
+    path_keyword: c108390
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.hlj.gov.cn/hlj/c108391/zfxxgk.shtml
+    path_keyword: c108391
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    # 法定主动公开内容
+    url: https://www.hlj.gov.cn/hlj/c108395/redirect_firstChannel.shtml
+    path_keyword: c108395
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（2026-07-22 自动抓取）。黑龙江门户采用"频道号 c108xxx
+      组织"模式而非 chnl/docnum 树形。父频道 c108395（中华人民共和国政府信息公开
+      条例）通过 meta-refresh 重定向到 /hlj/c108397/zfxxgk.shtml（机关简介）；
+      法定主动公开内容下设 22 个频道，按"政府信息公开条例 §20 列举"展开：
+
+      1. 机关简介 (c108397, 父级)
+         - 机构设置 (c108396) - 省政府组成部门 (c108400)、省政府机关 (c108398)、
+           省政府办公厅 (c108399)、直属特设机构 (c108401)、直属机构 (c108402)、
+           部门管理机构 (c108403)
+      2. 规划计划 (c108408) — 国民经济和社会发展规划 (c108409)、
+         国土空间规划 (c108410)、专项规划 (c108411)、区域规划 (c108412)
+      3. 统计信息 (c108418) — 统计公报 (c108419)、统计年鉴 (c108420)、
+         统计分析 (c108421)
+      4. 财政预决算 (c108417)
+      5. 重大建设项目 (c108422) — 批准情况 (c108423)、实施情况 (c108424)
+      6. 重大民生信息 (c108425) — 乡村振兴 (c108426)、教育 (c108427)、
+         医疗 (c108428)、社会保障 (c108431)、促进就业 (c108432)
+      7. 应急管理 (c108413) — 应急预案 (c108414)、应对情况 (c108415)
+      8. 监督检查 (c108426 隐含父) — 环境保护 (c108433)、公共卫生 (c108434)、
+         安全生产 (c108435)、食品药品 (c108436)、产品质量 (c108439)
+      9. 招录信息 (c108405)
+
+      注：c108404 / c108406 / c108407 / c108416 在 HLJ zwgk.shtml 侧栏未链接；
+      直访 list.shtml 全部 200 但返回 zwgk.shtml 模板页（body 147917 字节，含
+      "我向省长说句话/意见征集/政务访谈"等互动类栏目），疑似已废弃或预留频道号。
+
+      范式特征：HLJ 不使用 chnl/docnum 树形，而是把每个子类建成独立频道号
+      c108xxx，每个频道返回独立 ColumnName meta + zfxxgk.shtml 模板；
+      与重庆 chnl=120519+docnum=418 的树形结构完全不同。颗粒度近似重庆
+      （13 大类 vs 重庆 14 大类），但导航层级比重庆浅 1 层（无三级 URL）。
+  disclosure_annual_report:
+    # 政府信息公开年报
+    url: https://www.hlj.gov.cn/hlj/c108463/zfxxgk.shtml
+    path_keyword: c108463
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    # 依申请公开栏目（在线申请平台为 c110002）
+    url: https://www.hlj.gov.cn/hlj/c108464/redirect_firstChannel.shtml
+    path_keyword: c108464
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    # 文件库（政策文件检索）
+    url: https://www.hlj.gov.cn/hlj/c108371/zfxxgk_search.shtml
+    path_keyword: c108371 / zfxxgk_search
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    # 规章库（收录全省现行有效规章）
+    url: https://www.hlj.gov.cn/hlj/c108370/zfxxgk_gzk.shtml
+    path_keyword: c108370 / zfxxgk_gzk
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    # 黑龙江省法规规章规范性文件库（含地方性法规/政府规章/行政规范性文件），省人大主办
+    url: https://fgk.hljrd.gov.cn/h5/
+    path_keyword: fgk.hljrd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    # 政府信息公开专栏（政策/信息公开总栏目）
+    url: https://www.hlj.gov.cn/hlj/c108369/zfxxgk.shtml
+    path_keyword: c108369
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.hlj.gov.cn/hlj/c107882/redirect_firstChannel.shtml
+  path_keyword: c107882
+  status: ok
+
+notes: |
+  - 省门户 www.hlj.gov.cn 由省政府办公厅主办、省政务信息化管理服务中心维护；政务公开以频道号 c108xxx 组织，年报/依申请等以 shtml 静态页承载。
+  - 省门户设"规章库"(c108370)与"文件库"(c108371) 两个独立库，但未见"行政规范性文件"专用库；行政规范性文件的权威检索入口是省人大主办的"黑龙江省法规规章规范性文件库" https://fgk.hljrd.gov.cn/h5/ （已作 normative_library）。
+  - 3 个最关键 URL：主站 https://www.hlj.gov.cn/ ；政务公开 https://www.hlj.gov.cn/hlj/c108368/zwgk.shtml ；规范性文件库 https://fgk.hljrd.gov.cn/h5/
+sources_consulted:
+  - url: https://www.hlj.gov.cn/
+    type: 省政府主站(WebFetch验证)
+  - url: https://www.hlj.gov.cn/hlj/c108368/zwgk.shtml
+    type: 政务公开首页(WebFetch验证)
+  - url: https://www.hlj.gov.cn/hlj/c108391/zfxxgk.shtml
+    type: 信息公开制度(WebFetch验证)
+  - url: https://www.hlj.gov.cn/hlj/c108395/redirect_firstChannel.shtml
+    type: 法定主动公开(WebFetch验证标题)
+  - url: https://www.hlj.gov.cn/hlj/c108370/zfxxgk_gzk.shtml
+    type: 规章库(WebFetch验证)
+  - url: https://www.hlj.gov.cn/hlj/c108371/zfxxgk_search.shtml
+    type: 文件库(WebFetch/首页导航)
+  - url: https://www.hlj.gov.cn/hlj/c107882/redirect_firstChannel.shtml
+    type: 省政府公报(WebFetch验证标题)
+  - url: https://fgk.hljrd.gov.cn/h5/
+    type: 法规规章规范性文件库(WebFetch验证)
+  - url: https://www.hlj.gov.cn/hlj/c108390/zfxxgk.shtml
+    type: 信息公开指南(首页导航+搜索)
+  - url: https://www.hlj.gov.cn/hlj/c108463/zfxxgk.shtml
+    type: 年报(首页导航)
+  - url: https://www.hlj.gov.cn/hlj/c108464/redirect_firstChannel.shtml
+    type: 依申请公开(首页导航)

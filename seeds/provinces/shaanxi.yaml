@@ -1,0 +1,158 @@
+province: 陕西省
+slug: shaanxi
+short_name: 陕
+pinyin: shaanxi
+level: province
+operator_org_id: "6100000000000001"
+type: database
+
+main_website:
+  url: https://www.shaanxi.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.shaanxi.gov.cn/zfxxgk/
+  path_keyword: zfxxgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.shaanxi.gov.cn/zfxxgk/zfxxzn/
+    path_keyword: zfxxzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.shaanxi.gov.cn/zfxxgk/zfxxgkzd/
+    path_keyword: zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/
+    path_keyword: fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（zfxxgk/fdzdgknr）。根路径返回 200 + meta refresh 跳转至 ./jgjj/，但实际入口在 zfxxgk 总枢纽 https://www.shaanxi.gov.cn/zfxxgk/ 的 fdzdgknr 频道下，含 18 个一级类目（无 chnl/docnum 元数据，仅靠链接 id="210"/"214"/"215" 等区分）。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+
+      根节点 https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/ 下挂 18 个一级类目（id 为门户内部编号）：
+
+      1.  机关简介            id="195"      /zfxxgk/fdzdgknr/jgjj/         （含子栏目 省政府领导 id="4735" /zfxxgk/fdzdgknr/szfld/）
+      2.  政策文件            id="195"      /zfxxgk/fdzdgknr/zcwj/         （含子栏目 规章 /zcwj/nszfgz/、行政规范性文件 /zcwj/gfxwj/、其他文件 /zcwj/index_qt.html、省政府文件 /zcwj/nszfwj/、省政府办公厅文件 /zcwj/nszfbgtwj/）
+      3.  规划信息            id="210"      /zfxxgk/fdzdgknr/ghxx/
+      4.  重大项目            id="214"      /zfxxgk/fdzdgknr/zdxm/
+      5.  权责清单            id="215"      /zfxxgk/fdzdgknr/qzqd/
+      6.  行政许可            id="216"      /zfxxgk/fdzdgknr/xzxk/
+      7.  处罚强制            id="217"      /zfxxgk/fdzdgknr/cfqz/
+      8.  预算／决算          id="218"      /zfxxgk/fdzdgknr/ysjs/
+      9.  重点领域            id="222"      /zfxxgk/fdzdgknr/zdly/         （下含 14 子类，全部以 /zdly/<X>/ 形式挂载）
+      10. 政府采购            id="236"      /zfxxgk/fdzdgknr/zfcg/
+      11. 招考录用            id="237"      /zfxxgk/fdzdgknr/zkly/
+      12. 统计信息            id="238"      /zfxxgk/fdzdgknr/tjxx/
+      13. 收费项目            id="241"      /zfxxgk/fdzdgknr/sfxm/
+      14. 建议提案            id="242"      /zfxxgk/fdzdgknr/jyta/
+      15. 政府网站年度报表     id="243"      /zfxxgk/fdzdgknr/zfwzndbb/
+
+      「重点领域」/zdly/ 下挂 14 子类（与重庆 14 大类「重大民生信息」分类近似）：
+      - 乡村振兴            /zfxxgk/fdzdgknr/zdly/fp/
+      - 义务教育            /zfxxgk/fdzdgknr/zdly/jy/
+      - 医疗卫生            /zfxxgk/fdzdgknr/zdly/wsjk/
+      - 稳岗就业            /zfxxgk/fdzdgknr/zdly/cjjy/
+      - 生态环境            /zfxxgk/fdzdgknr/zdly/hjbh/
+      - 食品安全            /zfxxgk/fdzdgknr/zdly/spyp/
+      - 养老服务            /zfxxgk/fdzdgknr/zdly/ylfw/
+      - 公共资源            /zfxxgk/fdzdgknr/zdly/ggzypz/
+      - 应急管理            /zfxxgk/fdzdgknr/zdly/yjgl/
+      - 社会保障            /zfxxgk/fdzdgknr/zdly/shbz/
+      - 土地管理            /zfxxgk/fdzdgknr/zdly/tdzs/
+      - 保障性住房          /zfxxgk/fdzdgknr/zdly/bzxzf/
+      - 财政资金直达基层     /zfxxgk/fdzdgknr/zdly/zdjc/
+      - 安全生产            /zfxxgk/fdzdgknr/zdly/aqsc/
+
+      统计：18 个一级 fdzdgknr 类目 + 14 个 zdly 子类 + 5 个 zcwj 子类 = 37 个可达 URL；无 chnl/docnum 元数据。
+
+      特色发现：
+      - 陕西「法定主动公开内容」采用「15 类一级 + 重点领域 14 子类」双层结构，总计 18 类一级 + 19 类二级 = 37 个 URL；颗粒度粗于重庆（重庆 14 类直接挂 URL，不嵌套 zdly/）
+      - 把「应急管理」「社会保障」「乡村振兴」「稳岗就业」「食品安全」等民生信息全归到 zdly/ 重点领域，而把「行政许可」「处罚强制」「收费项目」「政府网站年度报表」作为独立一级类目（与重庆的 §20 一级类目范式相近）
+      - 树形节点未挂载 chnl/docnum 元数据；改用 id="210"/"214"/... 内部编号
+      - zcwj/ 政策文件下挂 5 子类（规章/规范性文件/其他文件/省政府文件/省政府办公厅文件），是陕西的「政策统一公开查询」入口；与 disclosure_regime 的「政策文件库 zcwjk/adsearch.html」呼应
+  disclosure_annual_report:
+    url: https://www.shaanxi.gov.cn/zfxxgk/xxgknb/
+    path_keyword: xxgknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://www.shaanxi.gov.cn/zfxxgk/ysqgk/
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.shaanxi.gov.cn/zfxxgk/zcwjk/adsearch.html
+    path_keyword: zcwjk/adsearch
+    verified_at: 2026-07-22
+    status: ok
+    note: "省级政策文件库(高级搜索页);2024-03 上线,统一公开查询平台"
+  regulation_library:
+    url: https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/zcwj/nszfgz/
+    path_keyword: zcwj/nszfgz
+    verified_at: 2026-07-22
+    status: ok
+    note: "省政府规章库;数据 117 件(2024-03 上线时口径)"
+  normative_library:
+    url: https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/zcwj/gfxwj/
+    path_keyword: zcwj/gfxwj
+    verified_at: 2026-07-22
+    status: ok
+    note: "省政府及其部门行政规范性文件库;数据 1199 件(2024-03 上线时口径)"
+  disclosure_library:
+    url: https://www.shaanxi.gov.cn/zfxxgk/
+    path_keyword: zfxxgk
+    verified_at: 2026-07-22
+    status: ok
+    note: "即政府信息公开专栏首页,内含所有子栏目;与首页重合"
+
+gazette:
+  url: https://www.shaanxi.gov.cn/zfxxgk/zfgb/
+  path_keyword: zfgb
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  陕西特色:2024-03 上线"省级政策文件统一公开查询平台",在同一入口整合了省地方性法规(212 件)、省政府规章(117 件)、行政规范性文件(1199 件)三大类,统一检索/筛选/排序。
+  政策文件库(zcwjk)首页为 JS 动态渲染的目录导航壳,爬取入口使用其高级检索页 `zcwjk/adsearch.html`(HTTP 200)。
+  最关键 3 个 URL:
+    1) https://www.shaanxi.gov.cn/zfxxgk/  政府信息公开专栏首页
+    2) https://www.shaanxi.gov.cn/zfxxgk/zcwjk/adsearch.html  省级政策文件统一查询(高级检索页)
+    3) https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/zcwj/nszfgz/  省政府规章库
+sources_consulted:
+  - url: https://www.shaanxi.gov.cn/
+    type: main_website
+  - url: https://www.shaanxi.gov.cn/zfxxgk/
+    type: disclosure_homepage
+  - url: https://www.shaanxi.gov.cn/zfxxgk/zfxxzn/
+    type: disclosure_guide
+  - url: https://www.shaanxi.gov.cn/zfxxgk/zfxxgkzd/
+    type: disclosure_regime
+  - url: https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/
+    type: disclosure_proactive_catalog
+  - url: https://www.shaanxi.gov.cn/zfxxgk/xxgknb/
+    type: disclosure_annual_report
+  - url: https://www.shaanxi.gov.cn/zfxxgk/ysqgk/
+    type: disclosure_upon_request
+  - url: https://www.shaanxi.gov.cn/zfxxgk/zcwjk/adsearch.html
+    type: policy_library
+  - url: https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/zcwj/nszfgz/
+    type: regulation_library
+  - url: https://www.shaanxi.gov.cn/zfxxgk/fdzdgknr/zcwj/gfxwj/
+    type: normative_library
+  - url: https://www.shaanxi.gov.cn/zfxxgk/zfgb/
+    type: gazette
+  - url: http://news.cnwest.com/sxxw/a/2024/03/12/22432025.html
+    type: press_release
+  - url: https://finance.sina.com.cn/jjxw/2024-03-12/doc-inanaarn2757544.shtml
+    type: press_release

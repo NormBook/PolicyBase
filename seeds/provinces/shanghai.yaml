@@ -1,0 +1,249 @@
+province: 上海市
+slug: shanghai
+short_name: 沪
+pinyin: shanghai
+level: municipality
+operator_org_id: "3100000000000001"
+type: database
+
+main_website:
+  url: https://www.shanghai.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+# 信息公开总枢纽
+disclosure_homepage:
+  url: https://www.shanghai.gov.cn/nw2319/index.html
+  path_keyword: nw2319
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    上海市政府门户网站"信息公开"专栏总入口。从该页可进入政府信息公开目录、
+    公开年报、政府公报、依申请公开、专题公开、重点信息公开等子板块。
+
+# 市政府信息公开目录（独立栏目）
+disclosure_catalog_homepage:
+  url: https://www.shanghai.gov.cn/nw11494/index.html
+  path_keyword: nw11494
+  verified_at: 2026-07-22
+  status: ok
+
+# 上海市"政府信息公开"专栏（指南/制度/主动公开合一）
+disclosure_unified_page:
+  url: https://www.shanghai.gov.cn/nw49254/index.html
+  path_keyword: nw49254
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.shanghai.gov.cn/nw49254/index.html
+    path_keyword: nw49254
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      上海市未将"公开指南"设为独立入口页面。指南内容整合在
+      /nw49254/（信息公开专栏）的页面正文里，包括主动公开范围、
+      公开渠道、公开时限、依申请公开受理点、申请表下载等。
+
+  disclosure_regime:
+    url: https://www.shanghai.gov.cn/nw44398/20200824/0001-44398_45637.html
+    path_keyword: nw44398
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      制度文件总集在 /nw49254/ 页面正文（"七、公开制度"章节）以列表形式呈现，
+      顶部两条核心制度为：《中华人民共和国政府信息公开条例》和《上海市政府信息公开规定》。
+      本 URL 指向《政府信息公开条例》正文。
+
+  disclosure_proactive_catalog:
+    url: https://www.shanghai.gov.cn/nw49254/index.html
+    path_keyword: nw49254#法定主动公开内容
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容在 /nw49254/ 页面正文以"八、法定主动公开内容"章节呈现，
+      分履职依据、机关简介、其他主动公开、突发事件、其他法定信息等大类。
+      上海市未单独提供"法定主动公开目录"独立 URL。
+
+      HTML 树形结构（2026-07-22 自动抓取 /nw49254/页面）：
+      URL: https://www.shanghai.gov.cn/nw49254/index.html
+
+      1. 履职依据
+         - 沪府规文件：       /nw42944/index.html
+         - 沪府办规文件：     /nw42850/index.html
+         - 沪府令文件：       /nw2407/index.html
+         - 沪府发文件：       /nw11407/index.html
+         - 沪府办发文件：     /nw11408/index.html
+         - 沪府文件：         /nw39220/index.html
+         - 沪府办文件：       /nw39221/index.html
+         - 沪府任文件：       /nw44931/index.html
+         - 沪府公告：         /nw44010/index.html
+         - 现行市政府规章：   /xxzfgzwj/index.html （市司法局）
+         - 行政规范性文件数据库：service.shanghai.gov.cn/XingZhengWenDangKuJyh/Index.aspx
+
+      2. 机关简介
+         - 市政府领导：       /nw44727/index.html
+         - 工作机构：         /nw2405/index.html
+
+      3. 决策事项目录
+         - 重大行政决策：     /2023zdjc/index.html
+         - 规章草案征集：     hd.sh.gov.cn/inter/#/draft/list?siteId=0001
+
+      4. 规划计划 / 数据
+         - 规划计划：         /nw22396/index.html
+         - 数据发布：         tjj.sh.gov.cn/sjfb/index.html
+
+      5. 执法 / 预算 / 收费 / 采购 / 重大项目
+         - 执法公示：         tyzf.sh.gov.cn/ApprShPublicity/index.html#/home
+         - 预算决算：         /nw49149/index.html
+         - 收费清单：         fgw.sh.gov.cn/fgw_xzsyxsfml/index.html
+         - 政府采购：         zfcg.sh.gov.cn/
+         - 重大项目：         app.fgw.sh.gov.cn/fgw-interaction-front/biz/projectApproval/home
+
+      6. 公共资源 / 权责清单
+         - 公共资源配置：     shggzy.com/
+         - 权责清单：         zwdt.sh.gov.cn/govPortals/administrative/zrList.jsp
+
+      7. 重点领域（生态环境/养老/减税降费/食品/药品监管/专项资金/稳岗就业/医疗卫生/入学招生/助企惠企/社会救助/双公示）
+         - 生态环境：         sthj.sh.gov.cn/...
+         - 养老服务：         shyl.mzj.sh.gov.cn/homePage
+         - 减税降费：         shanghai.chinatax.gov.cn/xwdt/ztzl/zcgll/jsjf/
+         - 食品安全：         spaq.odb.sh.cn/...
+         - 药品监管：         yjj.sh.gov.cn/jgxx/index.html
+         - 专项资金：         /nw41584/index.html
+         - 稳岗就业：         rsj.sh.gov.cn/trrly_17749/
+         - 医疗卫生：         wsjkw.sh.gov.cn/...
+         - 入学招生：         edu.sh.gov.cn/xxgk2_zdgz_rxgkyzs/index.html
+         - 助企惠企：         zwdt.sh.gov.cn/smzy/shell_pc/tourist/enterpriseHelp
+         - 社会救助：         mzj.sh.gov.cn/MZ_zhuzhan2608_0-2-2607/index.html
+         - 双公示：           xyfw.fgw.sh.gov.cn/credit-front/doublepublic/index
+
+      8. 应急 / 招考 / 公务员
+         - 应急预案：         /yjya/index.html
+         - 监测预警：         wx.soweather.com/wxapp/warn.jsp
+         - 公务员招考：       shacs.gov.cn/CivilServants/Recruits
+
+      特色发现：
+      - 上海「法定主动公开内容」未拆分独立 URL，整体聚合在 /nw49254/ 页面 HTML 列表中（属 SPD 单页范畴）
+      - 与重庆 14 类相比更扁平：仅以沪府发字号家族（沪府/沪府办/沪府规 等 8 类）做一级分类；不显式区分"机关简介/规划信息/统计信息"等独立类目
+      -「重点领域」是上海特色分组：将生态环境/养老/食药监等 12 个垂域信息公开聚合对外（替代 §20 第 11 项"重大民生信息"）
+
+  disclosure_annual_report:
+    url: https://www.shanghai.gov.cn/2025ndbg/index.html
+    path_keyword: 2025ndbg
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      当前显示 2025 年度报告汇总（含市政府、各委办局、各区）。
+      历年报告通过同栏目切换年份；2024 年报告已确认存在并附 PDF/DOC。
+
+  disclosure_upon_request:
+    url: https://xxgk.sh.gov.cn/zwgk_interface/pages/zwgkfront/publicApplyDefault.html
+    path_keyword: xxgk.sh.gov.cn/zwgk_interface
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开入口设在独立子域 xxgk.sh.gov.cn/zwgk_interface/，
+      提供市政府部门、各区人民政府、各管委会三类申请入口。
+      另有专用咨询邮箱 xxgkyjx@shanghai.gov.cn 和电话 021-63582606。
+
+libraries:
+  policy_library:
+    url: null
+    path_keyword: zcyc.sh.gov.cn
+    verified_at: 2026-07-22
+    status: not_found
+    note: |
+      检索过程：上海于近年上线"统一政策发布平台"，但未在公开 Web 搜索结果中找到
+      可直接确认的稳定 URL（域名 zcyc.sh.gov.cn 在多篇新闻报道中出现但当前访问失败）。
+      现有政策文件分散在市政府门户下 9 个发文字号栏目（沪府规、沪府办规、沪府令、
+      沪府发、沪府办发、沪府文件、沪府办文件、沪府任等，路径 /nw42944/、/nw42850/、
+      /nw2407/、/nw11407/、/nw11408/、/nw39220/、/nw39221/、/nw44931/）以及
+      /nw41893/ 政策解读栏目。建议初次采集以 /nw11407/（沪府发）和 /nw10800/
+      （市政府文件）作为政策总览入口。
+
+  regulation_library:
+    url: https://www.shanghai.gov.cn/xxzfgzwj/index.html
+    path_keyword: xxzfgzwj
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      上海市政府规章库（市级）。已确认含 235 部现行有效规章，并提供文字版 / 图片版下载。
+
+  normative_library:
+    url: https://service.shanghai.gov.cn/XingZhengWenDangKuJyh/Index.aspx
+    path_keyword: service.shanghai.gov.cn/XingZhengWenDangKuJyh
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      上海市行政规范性文件数据库（含市政府 367 件、办公厅 298 件及全部委办局、各区）。
+      同步提供"备案审查意见书"子库。
+
+  disclosure_library:
+    url: https://www.shanghai.gov.cn/nw11494/index.html
+    path_keyword: nw11494
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政务公开专栏 = /nw11494/（市政府信息公开目录）。该目录集中了规章、文件、
+      规划计划、数据发布、权责清单、审计公开、重点领域、人大政协建议提案办理、
+      政策解读等所有主动公开类目。
+
+  supplementary_libraries:
+    city_regulation_compendium:
+      url: https://law.sfj.sh.gov.cn/#/home
+      path_keyword: law.sfj.sh.gov.cn
+      status: ok
+      note: "上海城市法规全书（市司法局主办，整合地方性法规、政府规章、规范性文件）"
+    normative_review_opinions:
+      url: https://service.shanghai.gov.cn/XingZhengWenDangKuJyh/Index.aspx?tab=1
+      status: ok
+      note: "行政规范性文件备案审查意见书（规范库同站 tab=1）"
+
+gazette:
+  url: https://www.shanghai.gov.cn/nw2404/index.html
+  path_keyword: nw2404
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    上海市人民政府公报。按年份 + 期号浏览（2001 至今）。每期收录市政府文件、
+    部门规范性文件、人事任免等。2026 年已确认至第 13 期。
+
+notes: |
+  - 上海将"政府信息公开"五子栏目集中整合在 /nw2319/ + /nw49254/ 两级页面，
+    没有按全国通行模板做"指南/制度/主动公开"独立 URL。
+  - 独立子域 xxgk.sh.gov.cn 承担"依申请公开"统一受理；service.shanghai.gov.cn
+    承担"行政规范性文件数据库"。
+  - 上海城市法规全书（law.sfj.sh.gov.cn）和统一政策发布平台（zcyc.sh.gov.cn，
+    URL 待验证）两个二级平台是特色资源，建议另立采集通道。
+  - 三个最关键 URL：
+    1) https://www.shanghai.gov.cn/nw2319/index.html （信息公开枢纽）
+    2) https://www.shanghai.gov.cn/nw49254/index.html （指南/制度/主动公开合一）
+    3) https://xxgk.sh.gov.cn/zwgk_interface/pages/zwgkfront/publicApplyDefault.html （依申请公开）
+
+sources_consulted:
+  - url: https://www.shanghai.gov.cn/nw2319/index.html
+    type: homepage
+  - url: https://www.shanghai.gov.cn/nw11494/index.html
+    type: page_content
+  - url: https://www.shanghai.gov.cn/nw49254/index.html
+    type: page_content
+  - url: https://www.shanghai.gov.cn/xxgkztgk/
+    type: page_content
+  - url: https://www.shanghai.gov.cn/2025ndbg/index.html
+    type: page_content
+  - url: https://www.shanghai.gov.cn/nw2404/index.html
+    type: page_content
+  - url: https://www.shanghai.gov.cn/xxzfgzwj/index.html
+    type: page_content
+  - url: https://service.shanghai.gov.cn/XingZhengWenDangKuJyh/Index.aspx
+    type: page_content
+  - url: https://xxgk.sh.gov.cn/zwgk_interface/pages/zwgkfront/publicApplyDefault.html
+    type: page_content
+  - url: https://law.sfj.sh.gov.cn/#/home
+    type: homepage
+  - url: https://www.shanghai.gov.cn/nw44398/20200824/0001-44398_45637.html
+    type: page_content
+  - url: https://tmp/paradigm-survey.md
+    type: search_result

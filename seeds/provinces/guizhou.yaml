@@ -1,0 +1,170 @@
+province: 贵州省
+slug: guizhou
+short_name: 黔
+pinyin: guizhou
+level: province
+operator_org_id: "5200000000000001"
+type: database
+
+main_website:
+  url: https://www.guizhou.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.guizhou.gov.cn/zwgk/
+  path_keyword: zwgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zfxxgkzn/
+    path_keyword: zfxxgk/zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    path_keyword: zfxxgk/zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    path_keyword: zfxxgk/fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      HTML 树形结构（2026-07-22 自动抓取）：
+      贵州"法定主动公开内容"采用 ul#gknr 渲染（自定义 Guizhou-CMS 范式，
+      无 chnl/docnum 字段；含 13 个一级类目 + 38 个三级 URL）。
+
+      1. 履职依据：        https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/lzyj/
+      2. 机关简介：
+         - 省政府领导：   https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/jgjj/szfld/
+         - 省政府工作机构：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/jgjj/szfgzjg/
+      3. 规划信息：        https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/ghxx/
+      4. 统计数据：        https://stjj.guizhou.gov.cn/tjsj/  （外链，省统计局）
+      5. 行政许可：        https://data.guizhou.gov.cn/open-data  （外链）
+      6. 收费项目：
+         - 政策文件：     https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/sfxm/zcwj/
+         - 经营服务性收费目录：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/sfxm/jyfwxsfml/
+         - 行政事业性收费与政府性基金目录清单：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/sfxm/xzsyxsfyzfxjjmlqd/
+      7. 政府采购：        https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zfcg/  （父级）
+      8. 重大项目：
+         - 项目名单及工程包：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdxm/xmmdjgcb/
+         - 建设进展：     https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdxm/jsjz/
+         - 项目批复：     https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdxm/xmpf/
+         - 项目核准：     https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdxm/xmhz/
+      9. 人事信息：        https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/rsxx/  （父级）
+      10. 重大民生信息：
+          - 教育：        https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/jy/
+          - 卫生健康：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/wsjk/
+          - 社会保险：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/shbx/
+          - 就业创业：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/wgjy/
+          - 应急管理：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/yjgl/
+          - 生态环境：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/sthj/
+          - 事故调查：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/aqsg/
+          - 食品安全：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/spaq/
+          - 产品质量监督：http://amr.guizhou.gov.cn/zwgk/xxgkml/zdlyxx/sjspcjtg/  （外链）
+          - 疫情信息：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/yqfk/
+          - 公务员综合：  https://www.gzzzb.gov.cn/gbgz/gwyzh/  （外链）
+          - 税费管理：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/jsjf/
+          - 民政救济：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/mzjj/
+          - 药品监管：    http://yjj.guizhou.gov.cn/gsgg/  （外链）
+          - 社会安全：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/zdmsxx/shaq/
+          - 城乡建设：    https://www.guizhou.gov.cn/zwgk/zdlygk/jjgzlfz/cxjs/
+          - 住房保障：    https://zfcxjst.guizhou.gov.cn/zwgk/zdlyxx/zfbz/  （外链）
+          - 养老服务：    https://mzt.guizhou.gov.cn/xxgk/xxgkml/zdlyxx1/ylfw_88522/  （外链）
+          - 医疗保障：    https://www.guizhou.gov.cn/zwgk/zdlygk/shsyjzdms/ylbz/
+          - 社会保障：    https://www.guizhou.gov.cn/yycj/shbz/
+      11. 其他法定信息：
+          - 权责清单：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/qzqd/
+          - 政府工作报告：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/zfgzbg/
+          - 省政府文件：  https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/szfwj/
+          - 省政府公报：  https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/szfgb/
+          - 省政府常务会议：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/szfcwhy/
+          - "双随机、一公开"：http://61.243.10.146:9090  （外链 IP 形式）
+          - 公共资源配置：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/ggzypz/
+          - 省级公共服务事项：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/sjggfwsx/
+          - 财政资金直达基层：https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/czzjzdjc/
+          - 行政处罚：    https://cx.guizhou.gov.cn/xinxishuanggongshi/?navPage=5  （外链）
+          - 征集调查：    https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/qtfdxx/zjdc/
+
+      范式特征：
+      - 贵州采用自定义 Guizhou-CMS 范式（ul#gknr），不走 chnl/docnum 频道号模型
+        （与重庆 chnl=120519 差异显著）
+      - 颗粒度极细（13 类 38 URL，单"重大民生信息"就有 21 个三级 URL），
+        是已抓 8 省中颗粒度仅次于广西（22 项）的省份
+      - 特色是新增「人事信息/权责清单/政府工作报告/省政府文件/省政府公报/
+        省政府常务会议/省级公共服务事项/财政资金直达基层/征集调查」九个贵州特有类目
+      - 大量子项委托给厅局子站（stjj/amr/yjj/zfcxjst/mzt.guizhou.gov.cn），
+        是贵州"分散维护"模式
+      - 注意："双随机、一公开"使用 IP 直连形式 http://61.243.10.146:9090，疑似旧库未迁移
+  disclosure_annual_report:
+    url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zfxxgknb/
+    path_keyword: zfxxgk/zfxxgknr/zfxxgknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://www.guizhou.gov.cn/zwgk/ysqgk/
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.guizhou.gov.cn/ztzl/zcwjk/
+    path_keyword: ztzl/zcwjk
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zc/
+    path_keyword: zfxxgk/zc
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://www.guizhou.gov.cn/ztzl/gzsgzhgfxwjsjk/gfxwjsjk/
+    path_keyword: ztzl/gzsgzhgfxwjsjk/gfxwjsjk
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://www.guizhou.gov.cn/zwgk/zfxxgk/
+    path_keyword: zwgk/zfxxgk
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.guizhou.gov.cn/zwgk/zfgb/gzszfgb/
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 贵州省门户采用统一 /zwgk/ 政务公开 + /zwgk/zfxxgk/ 政府信息公开二级架构；政策文件库独立于 /ztzl/zcwjk/ 专题。
+  - 规章与规范性文件拥有两套独立门户：规章库挂在 /zwgk/zfxxgk/zc/ 下可按省/9 市州分库，规范性文件库与备案审查归口 /ztzl/gzsgzhgfxwjsjk/；另有人大 gzfg.gzrd.gov.cn 综合库（地方性法规/规章/规范性文件）作为补充入口。
+  - 政府公报采用省级栏目 /zwgk/zfgb/gzszfgb/，历史可追溯至 1992 年至 2026 年共 35 年（2026 年第 8 期为最新在编期号）。
+  - 三个最关键 URL：主站 https://www.guizhou.gov.cn/ 、政策文件库 https://www.guizhou.gov.cn/ztzl/zcwjk/ 、政府公报 https://www.guizhou.gov.cn/zwgk/zfgb/gzszfgb/
+sources_consulted:
+  - url: https://www.guizhou.gov.cn/
+    type: main_homepage
+  - url: https://www.guizhou.gov.cn/zwgk/
+    type: disclosure_homepage
+  - url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zfxxgkzn/
+    type: disclosure_guide
+  - url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zfxxgkzd/
+    type: disclosure_regime
+  - url: https://www.guizhou.gov.cn/zwgk/zfxxgk/fdzdgknr/
+    type: disclosure_proactive_catalog
+  - url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zfxxgknb/
+    type: disclosure_annual_report
+  - url: https://www.guizhou.gov.cn/zwgk/ysqgk/
+    type: disclosure_upon_request
+  - url: https://www.guizhou.gov.cn/ztzl/zcwjk/
+    type: policy_library
+  - url: https://www.guizhou.gov.cn/zwgk/zfxxgk/zc/
+    type: regulation_library
+  - url: https://www.guizhou.gov.cn/ztzl/gzsgzhgfxwjsjk/gfxwjsjk/
+    type: normative_library
+  - url: https://www.guizhou.gov.cn/zwgk/zfxxgk/
+    type: disclosure_library
+  - url: https://www.guizhou.gov.cn/zwgk/zfgb/gzszfgb/
+    type: gazette

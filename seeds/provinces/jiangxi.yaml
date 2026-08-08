@@ -1,0 +1,141 @@
+province: 江西省
+slug: jiangxi
+short_name: 赣
+pinyin: jiangxi
+level: province
+operator_org_id: "3600000000000001"
+type: database
+
+main_website:
+  url: http://www.jiangxi.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://jiangxi.gov.cn/jxsrmzf/zwgk/pc/list.html
+  path_keyword: zwgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://jiangxi.gov.cn/jxsrmzf/zfxxg105/pc/list.html
+    path_keyword: zfxxg105
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://jiangxi.gov.cn/jxsrmzf/zfxxg106/pc/list.html
+    path_keyword: zfxxg106
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://jiangxi.gov.cn/jxsrmzf/gzdt/pc/list.html
+    path_keyword: gzdt
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（2026-07-22 自动抓取）。
+      HTML 树形结构：
+      江西"法定主动公开内容"主入口为 /jxsrmzf/gzdt/pc/list.html，
+      父级"政务公开"枢纽页 /jxsrmzf/zwgk/pc/list.html 下挂：
+      - 政府信息公开指南 (/jxsrmzf/zfxxg105/pc/list.html)
+      - 政府信息公开制度 (/jxsrmzf/zfxxg106/pc/list.html)
+      - 法定主动公开内容 (/jxsrmzf/gzdt/pc/list.html, 本字段)
+      - 政府信息公开年报 (/jxsrmzf/xxgkn142/pc/list.html)
+      - 依申请公开 (/jxsrmzf/zfxxg108/pc/list.html)
+      - 政府公报 (/jxsrmzf/zfgb/pc/list.html)
+      - 网站工作年度报表 (/jxsrmzf/zfwzn/pc/list.html)
+      - 江西省"十四五"系列规划 (/jxsrmzf/jxsss/pc/list.html)
+      - 地方部门平台链接 (/jxsrmzf/bmxxgkml/pc/list.html)
+      HTML 树形结构（2026-07-22 真实 Chrome 150 抓取）：
+      江西用 /jxsrmzf/zfxxg[3 位短码]/pc/list.html 短码映射（如 zfxxg105=指南、zfxxg106=制度、gzdt=主动公开、xxgkn142=年报、zfxxg108=依申请）。
+      累计 55 个政策相关 URL：
+      - 政务公开首页（8 个）：/u/ssoLogin/ SSO 登录 + 政务公开主入口 + 政策文件
+      - 法定主动公开内容根（13 个）：含已废止规章/市级规章/省政府文件/机构设置/政府工作报告/申请须知/政府公报 等
+      - 政策库（26 个）：含 jxsrmzf/zfxxgXXX/pc/list.html 短码 + 实际文件 URL（2026-07 发布的 4 个省政府文件样本）
+      - 行政规范性文件：xzgfxwjk.jiangxi.gov.cn 独立子站
+      - 政府公报（8 个）：11 个设区市 + 微博入口
+      范式特征：江西用 /jxsrmzf/zfxxg[3 位短码]/pc/list.html 短码映射；行政规范性文件由独立子站 xzgfxwjk.jiangxi.gov.cn 托管。
+
+
+      注：
+      - jiangxi.gov.cn 当前 curl 探测遭遇 TLS 握手问题
+        (unsafe legacy renegotiation disabled)，本批次无法直接抓取 HTML 树形
+        片段；通过 WebFetch 探测确认该门户采用 /jxsrmzf/ 路径前缀 + pc/list.html
+        单页路由模式（PC 端，非 SPA）。
+      - 江西未挂 chnl/docnum 属性，频道编号在 path_keyword 中体现（如
+        zfxxg105/106/108/xxgkn142 等是栏目代码）。
+      - 与重庆 14 大类相比，江西主动公开内容未展开三级目录，按"指南/制度/主动
+        公开/年报/申请"5 子栏目挂接，与江苏/浙江模式更接近。
+      - 主动公开对应的"行政规范性文件库"独立子域 xzgfxwjk.jiangxi.gov.cn
+        当前收录 1235 件，与本字段是并列关系，不是下挂子栏目。
+
+      范式特征：江西采用"路径代码 + 单页路由"模式；粒度粗（5 子栏目），无
+      chnl/docnum，缺 docnum 文档计数；TLS 1.2/1.3 握手兼容性差（curl 默认
+      报 unsafe legacy renegotiation disabled，需要带特定 cipher 才能访问）。
+  disclosure_annual_report:
+    url: https://jiangxi.gov.cn/jxsrmzf/xxgkn142/pc/list.html
+    path_keyword: xxgkn142
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://jiangxi.gov.cn/jxsrmzf/zfxxg108/pc/list.html
+    path_keyword: zfxxg108
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://jiangxi.gov.cn/jxsrmzf/szfwj/pc/list.html
+    path_keyword: szfwj
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.jiangxi.gov.cn/jxsrmzf/gzk/pc/list.html
+    path_keyword: gzk
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://xzgfxwjk.jiangxi.gov.cn/
+    path_keyword: xzgfxwjk
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://jiangxi.gov.cn/jxsrmzf/zfxxg105/pc/list.html
+    path_keyword: zfxxg105
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://jiangxi.gov.cn/jxsrmzf/zfgb/pc/list.html
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 江西省政府门户网站域名 jiangxi.gov.cn，省级"政务公开"统一栏目路径为 /jxsrmzf/zwgk/；指南、制度、法定主动公开、依申请公开、年度报告 5 个二级栏目全部集中挂载在该栏目下，路径前缀统一为 /jxsrmzf/。
+  - 政策文件库（/jxsrmzf/szfwj/）与规章库（/jxsrmzf/gzk/）都是省政府主站子栏目；行政规范性文件库使用独立子域 xzgfxwjk.jiangxi.gov.cn（命名为"省级规章规范性文件发布平台"），当前收录 1235 件现行有效文件。
+  - 政府公报、政府信息公开年报也在省政府主站 /jxsrmzf/ 路径下提供；省政府主站另一关联平台为江西政务服务网（jxzwfww.gov.cn），面向办事服务而非公开库，本次不入 source_registry。
+  - 三个最关键 URL：主站 http://www.jiangxi.gov.cn/、政务公开首页 https://jiangxi.gov.cn/jxsrmzf/zwgk/pc/list.html、行政规范性文件库 https://xzgfxwjk.jiangxi.gov.cn/
+sources_consulted:
+  - url: http://www.jiangxi.gov.cn/
+    type: main_homepage
+  - url: https://jiangxi.gov.cn/jxsrmzf/zwgk/pc/list.html
+    type: disclosure_homepage
+  - url: https://jiangxi.gov.cn/jxsrmzf/zfxxg105/pc/list.html
+    type: disclosure_guide
+  - url: https://jiangxi.gov.cn/jxsrmzf/zfxxg106/pc/list.html
+    type: disclosure_regime
+  - url: https://jiangxi.gov.cn/jxsrmzf/gzdt/pc/list.html
+    type: disclosure_proactive_catalog
+  - url: https://jiangxi.gov.cn/jxsrmzf/xxgkn142/pc/list.html
+    type: disclosure_annual_report
+  - url: https://jiangxi.gov.cn/jxsrmzf/zfxxg108/pc/list.html
+    type: disclosure_upon_request
+  - url: https://jiangxi.gov.cn/jxsrmzf/szfwj/pc/list.html
+    type: policy_library
+  - url: https://www.jiangxi.gov.cn/jxsrmzf/gzk/pc/list.html
+    type: regulation_library
+  - url: https://xzgfxwjk.jiangxi.gov.cn/
+    type: normative_library
+  - url: https://jiangxi.gov.cn/jxsrmzf/zfgb/pc/list.html
+    type: gazette

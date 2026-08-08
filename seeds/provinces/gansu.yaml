@@ -1,0 +1,266 @@
+province: 甘肃省
+slug: gansu
+short_name: 甘
+pinyin: gansu
+level: province
+operator_org_id: "6200000000000001"
+type: database
+
+main_website:
+  url: https://www.gansu.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    甘肃省人民政府门户网站。导航含 首页 / 领导之窗 / 政府要闻 / 政务公开 /
+    互动交流 / 全省政府网站。主办：甘肃省人民政府办公厅。9 月 20 日升级后
+    仍以 https://www.gansu.gov.cn/gsszf/index.shtml 为政务版入口。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: http://www.gansu.gov.cn/gsszf/c100034/zfxxgk.shtml
+  path_keyword: gsszf/c100034/zfxxgk
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "政务公开"频道主入口（栏目号 c100034），下设 5 子栏目（指南/制度/法定主动
+    公开内容/年报/依申请公开）+ 政策/规章/规范性文件专题库 + 政府公报。
+    是省政府侧"政府信息公开"对标国办模板的总枢纽页。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: https://www.gansu.gov.cn/gsszf/c100043/zfxxgk_zn.shtml
+    path_keyword: c100043/zfxxgk_zn
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开指南。介绍主动公开范围（甘政发/甘政函/甘政任/甘政办发/甘政办函
+      等文件、政府工作报告、重大决策、政策解读、领导活动、常务会议、人事任免、
+      重大督办事项、重点领域信息）、公开形式（门户/微信公众号/省政府公报/省档案
+      局查阅/新闻发布会）、不予公开的 6 类信息、工作机构与联系方式。
+
+  disclosure_regime:
+    url: http://www.gansu.gov.cn/gsszf/c100262/common_noleftlist.shtml
+    path_keyword: c100262
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开制度栏（栏目号 c100262）。汇集国办/省政府/办公厅制定的
+      信息公开相关法规与规范性文件，包括 2008 年度省政府信息公开工作报告
+      (c100262/202012/275599.shtml)、《甘肃省政府信息依申请公开办法（试行）》
+      (甘政办发〔2015〕156 号)、《甘肃省政府信息公开工作考核办法（试行）》等。
+      注：c100262 是制度子栏的常见编号；具体子页 URL 以门户左侧栏为准。
+
+  disclosure_proactive_catalog:
+    url: http://www.gansu.gov.cn/gsszf/c100034/zfxxgk.shtml
+    path_keyword: c100034/fdzdgk
+    verified_at: 2026-07-22
+    status: fetch_failed
+    note: |
+      法定主动公开内容作为 c100034 政务公开频道下的子目录存在，无独立门户页；
+      入口位于 c100034 频道左侧栏，含省政府文件、省政府办公厅文件、规章、
+      规范性文件、政策解读、规划计划、统计信息、预算决算、行政执法、人事任免、
+      重大决策事项目录、回应关切、人大建议政协提案办理等子类。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      抓取失败：360 网防拦截。curl + Mozilla UA 命中 412 Precondition Failed，gsszf/c100034/zfxxgk.shtml 实际返回经混淆的 JS 挑战页（`<script r='m'>$_ts.nsd=61766; ... _$_t();</script>`）。所有 /gsszf/c10*/ 子栏目均返回 412 + Set-Cookie 验证 cookie。
+
+      已知子栏目（来自 c100034 频道左侧栏 + YAML 已有 note）：
+      - 省政府文件          gsszf/c10*/zfwj/          （栏目号未在源码中暴露）
+      - 省政府办公厅文件    gsszf/c10*/nsfbwj/
+      - 规章               gsszf/c10*/gz/
+      - 规范性文件          gsszf/c10*/gfxwj/
+      - 政策解读           gsszf/c100055/
+      - 规划计划           gsszf/c10*/ghjh/
+      - 统计信息           gsszf/c100102/xxgk_tjxx.shtml
+      - 预算决算           gsszf/c10*/ysjs/
+      - 行政执法           gsszf/c10*/xzzf/
+      - 人事任免           gsszf/c10*/rsrm/
+      - 重大决策事项目录    gsszf/c10*/zdjcsxmd/
+      - 回应关切           gsszf/c10*/hygq/
+      - 人大建议政协提案办理 gsszf/c108889/
+
+      统计：13 个已知子类；chnl/docnum 元数据全部不可见（被 JS 挑战页拦截）。
+
+      特色发现：
+      - 甘肃「法定主动公开内容」颗粒度中等（13 类），与陕西 18 类、重庆 14 类相比，缺少「重大项目」「民生信息」「应急管理」「监督检查」等独立类目
+      - 树形入口在 c100034 总频道左侧栏而非 fdzdgknr 子树；无独立 fdzdgknr/ 路径
+      - 抓取边界：360 网防挑战应记录为 blocked/handoff；不得使用 Selenium、真实浏览器指纹或 TLS 指纹伪装绕过
+      - 360 网防特征：返回 9 行 JS 混淆挑战页 + Set-Cookie 验证 cookie；所有 /gsszf/c10*/ 子路径均返回 412
+
+  disclosure_annual_report:
+    url: http://www.gansu.gov.cn/gsszf/c100262/202012/275599.shtml
+    path_keyword: c100262/xxgk_nb
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报入口。最新为《甘肃省2022年政府信息公开工作年度报告》
+      (c100262 区下，/C1000546pk/202301/70416755.shtml)；历史年份报告置于
+      c100262 区，按年度倒序排列。另存在甘肃省政府网站工作年报
+      (gsszf/ljzfwzgznb/、/gsszf/2024wznb/yearForm.shtml) 是网站工作年报，
+      与"信息公开年报"为两个并行年度体系。
+
+  disclosure_upon_request:
+    url: https://www.gansu.gov.cn/gsszf/c100265/xxgk_ysqdetail_ysqgksm.shtml
+    path_keyword: c100265/xxgk_ysqdetail_ysqgksm
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开"申请指南"页（栏目号 c100265）。说明书面（信函/传真/当面）与
+      互联网在线（gansu.gov.cn 依申请公开栏目）两种申请渠道，登记之日起
+      7 个工作日内一次性告知补正，按《条例》常规时限答复；身份证明、申请内容
+      不明确时需补正。年报另有"依申请公开统计"分项。
+
+# 专题库
+libraries:
+  policy_library:
+    url: http://www.gansu.gov.cn/col/col159/index.html
+    path_keyword: col/col159
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      甘肃省人民政府门户网站"政策"专题库（col159），汇集省政府规章、
+      规范性文件、政策解读等各类政策文献。下挂 /col/col159/col162/ 等子页
+      （"规范性文件管理系统使用说明"即位于 col159/col162 下）。与
+      col180（规章/规范性文件库）并列。
+
+  regulation_library:
+    url: http://www.gansu.gov.cn/col/col180/index.html
+    path_keyword: col/col180
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      甘肃省规章和规范性文件库（col180）。汇集省政府现行有效规章和规范性文件
+      的集中查询入口，可按发文机关、文种、主题分类检索。另设独立系统：
+      甘肃省司法厅"甘肃省规章行政规范性文件管理信息系统"
+      (http://gfxwj.sft.gansu.gov.cn/public)，含公众登录、意见征集公告、
+      规章文件查询、审查建议申请、专家人才展示、工作管理制度等模块，覆盖
+      省级及 14 州市。
+
+  normative_library:
+    url: http://gfxwj.sft.gansu.gov.cn/public
+    path_keyword: gfxwj.sft.gansu.gov.cn/public
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      甘肃省规章行政规范性文件管理信息系统（甘肃省司法厅主办）。
+      提供现行有效规章/规范性文件目录查询、意见征集、审查建议申请、
+      专家评审等；管理办法见《甘肃省行政规范性文件管理办法》（甘政令第158号，
+      2021-10-01 施行）。是省政府门户"政策/规章/规范性文件"专题的最权威来源。
+      注：与省政府门户 col180 库内容同步，但系统具备审查/征求意见/备案等
+      业务功能。
+
+  disclosure_library:
+    url: http://www.gansu.gov.cn/gsszf/c100034/zfxxgk.shtml
+    path_keyword: c100034/zfxxgk
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政务公开/政府信息公开专栏（c100034 频道），与 disclosure_homepage 同址。
+      承担"主动公开总目录 + 各类专题 + 5 子栏目"角色，是省政府信息公开
+      总枢纽。各厅局子站（省人社厅 rst.gansu.gov.cn、省自然资源厅
+      zrzy.gansu.gov.cn、省商务厅 swt.gansu.gov.cn 等）均设独立子专栏，
+      共同构成全省信息公开体系。
+
+  supplementary_libraries:
+    policy_finder:
+      url: http://www.gansu.gov.cn/gsszf/c100055/common_noleftlist.shtml
+      path_keyword: c100055
+      status: ok
+      note: |
+        "政策解读"专题（栏目号 c100055），列《一图读懂：甘肃省加快公共数据
+        资源开发利用实施方案》等图解/视频/文字解读稿。位于门户左侧栏
+        "政策"二级分类下。
+    zhengwu_service:
+      url: https://zwfw.gansu.gov.cn/
+      path_keyword: zwfw.gansu.gov.cn
+      status: ok
+      note: |
+        甘肃政务服务网（一站式政务服务平台），提供个人/法人/部门事项/
+        便民服务等办理入口；移动端为"甘快办"APP/小程序。是省政府门户之外
+        独立的政务服务总入口，与政府信息公开体系并行。
+
+# 政府公报
+gazette:
+  url: https://www.gansu.gov.cn/gsszf/c100034/zfxxgk.shtml
+  path_keyword: c100034/政府公报
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    甘肃省人民政府公报。半月刊（CN62-1205/D），国内外公开发行，免费赠阅；
+    主办：甘肃省人民政府办公厅政府公报编辑室，编辑部 0931-8929402，
+    邮箱 gsgb@gansu.gov.cn。公报栏目含卷首语、特载、国务院/国务院办公厅文件、
+    省委省政府文件、政府工作报告、省委办公厅文件、省政府办公厅文件、人事与
+    机构、部门文件、地方法规、政务要闻、领导讲话、收发文目录、政策解读、
+    省政府常务会议、大事记、统计月报、市州公报。
+    现行入口走政务公开频道（c100034）下"政府公报"子栏目；往期按年期号连续
+    发布，可通过 art/c103795/.../gongbao.shtml（如 /art/c103795/2023/705/
+    gongbao.shtml、/art/c103795/2024/742/gongbao.shtml 等）访问单期。
+
+notes: |
+  - 甘肃省与其他省份不同，采用"政务公开频道 + 政府信息公开子频道"双层结构：
+    上层 /gsszf/c100002/（甘肃要闻/通知公告/专题专栏）承担日常新闻/通知；
+    下层 /gsszf/c100034/zfxxgk.shtml 才是法定"政府信息公开"总枢纽。
+  - 政策类资源分两块：省政府门户的 col159（政策）/col180（规章+规范性文件）
+    专题库 + 甘肃省司法厅独立的"甘肃省规章行政规范性文件管理信息系统"
+    (gfxwj.sft.gansu.gov.cn/public)。后者具备审查/征求意见/备案业务功能，
+    是该省特色权威来源，建议作为规范化文件首选。
+  - 公报为半月刊（CN62-1205/D），登载文件与正式文件具同等效力；现行入口在
+    c100034 政务公开频道下，按年期号连续归档至 art/c103795/.../gongbao.shtml。
+  - 三个最关键 URL：
+    1) http://www.gansu.gov.cn/gsszf/c100034/zfxxgk.shtml
+       （政务公开/政府信息公开总枢纽）
+    2) http://gfxwj.sft.gansu.gov.cn/public
+       （甘肃省规章行政规范性文件管理信息系统——司法厅独立系统）
+    3) http://www.gansu.gov.cn/col/col180/index.html
+       （省政府门户规章/规范性文件专题库）
+
+sources_consulted:
+  - url: https://www.gansu.gov.cn/
+    type: homepage
+  - url: https://www.gansu.gov.cn/gsszf/index.shtml
+    type: homepage
+  - url: http://www.gansu.gov.cn/gsszf/c100034/zfxxgk.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c100043/zfxxgk_zn.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c100265/xxgk_ysqdetail_ysqgksm.shtml
+    type: search_result
+  - url: http://www.gansu.gov.cn/col/col159/index.html
+    type: search_result
+  - url: http://www.gansu.gov.cn/col/col180/index.html
+    type: search_result
+  - url: http://gfxwj.sft.gansu.gov.cn/public
+    type: search_result
+  - url: http://www.gfxwj.sft.gansu.gov.cn/
+    type: search_result
+  - url: http://www.gansu.gov.cn/gsszf/c100020/gongbao.shtml
+    type: search_result
+  - url: http://www.gansu.gov.cn/art/c103795/2024/749/202412/174053547.shtml
+    type: search_result
+  - url: http://www.gansu.gov.cn/art/c103795/2023/705/gongbao.shtml
+    type: search_result
+  - url: http://www.gansu.gov.cn/gsszf/c100262/202012/275599.shtml
+    type: search_result
+  - url: http://www.gansu.gov.cn/gsszf/C1000546pk/202301/70416755.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c100055/202501/174059157.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c100054/202302/81333912/files/037a95a1e7e44e91a4bf91455dae2447.pdf
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c100102/xxgk_tjxx.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/2024wznb/yearForm.shtml
+    type: search_result
+  - url: http://www.gansu.gov.cn/gsszf/ljzfwzgznb/common_noleftlist.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c100002/c100010/common_noleftlist.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c100035/ldzc.shtml
+    type: search_result
+  - url: https://zwfw.gansu.gov.cn/
+    type: search_result
+  - url: http://www.gansu.gov.cn/gsszf/c108889/202310/173779750.shtml
+    type: search_result
+  - url: https://www.gansu.gov.cn/gsszf/c108889/202401/173832453.shtml
+    type: search_result

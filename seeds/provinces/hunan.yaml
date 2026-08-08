@@ -1,0 +1,187 @@
+province: 湖南省
+slug: hunan
+short_name: 湘
+pinyin: hunan
+level: province
+operator_org_id: "4300000000000001"
+type: database
+
+main_website:
+  url: https://www.hunan.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  # 政务公开总入口(顶部导航"政务公开")
+  url: https://www.hunan.gov.cn/hnszf/xxgk/xxgk.html
+  path_keyword: xxgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  # 政府信息公开专栏采用参数化 URL: index.html?state=N
+  # state=0 公开指南 / state=1 公开制度 / state=3 公开年报;
+  # 主动公开(法定主动公开内容)对应专栏默认页(公开内容)
+  disclosure_guide:
+    url: https://www.hunan.gov.cn/hnszf/xxgk/zfxxgk/index.html?state=0
+    path_keyword: zfxxgk?state=0
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.hunan.gov.cn/hnszf/xxgk/zfxxgk/index.html?state=1
+    path_keyword: zfxxgk?state=1
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    # "法定主动公开内容"为专栏默认视图;另有独立"重点领域信息公开"页
+    url: https://www.hunan.gov.cn/hnszf/xxgk/zfxxgk/index.html
+    path_keyword: zfxxgk
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      Playwright 完整抓取（2026-07-22）：750251 字节 DOM，758 个政策相关 URL。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      湖南"法定主动公开内容"采用 ul.navContent#fdzd_gknr 渲染（无 chnl/docnum 字段，
+      走自定义 Hunan-CMS 范式），与重庆 chnl/docnum 模型差异显著。
+
+      抓取到的 758 URL 分类（Playwright + 模拟 hover）：
+
+      1. 政府信息公开制度（4 个）：
+         - http://czt.hunan.gov.cn/czt/gkzd/...
+         - /hnszf/xxgk/zfxxgkzd/201910/t20191022_10488180.html 等
+
+      2. 法定主动公开内容（1 个入口，但实际含 14 子类链接分散在 5 个部门子站）：
+         - http://jtt.hunan.gov.cn/jtt/xxgk/zdlyxxgk/fdzdgkml/202601/...
+         - http://www.hunan.gov.cn/hnszf/xxgk/zdlyxxgk/zdlyxxgk.html
+
+      3. 政府信息公开年报（**618 个** — 单一栏目页展开所有历史年报）：
+         - 省政府年报：/hnszf/xxgk/zfxxgknb/szf_97943/202603/t20260331_33945412
+         - 省政府办公厅：/hnszf/xxgk/zfxxgknb/szbm_97944/202601/...
+         - 省发改委：/fgw.hunan.gov.cn/fgw/xxgk_70899/zwxxgk11/zfxxgknb11/...
+         - 注：618 个 URL 完整列表见 sources_consulted 字段
+
+      4. 依申请公开（2 个）：
+         - /hnszf/xxgk/ysqgk/ysqgk.html
+         - /hnszf/xxgk/ysqgk/202401/.../湖南省政府信息公开申请表.docx
+
+      5. 政策文件库（14 个，文件库 6 大类）：
+         - /hnszf/xxgk/wjk/tzdzlm.html （文件库首页）
+         - /hnszf/xxgk/wjk/szfwj/wjk_glrb.html （省政府文件）
+         - /hnszf/xxgk/wjk/szfwj/202606/... （单篇示例）
+
+      6. 规章库（46 个 — 含 docx/pdf 双格式）：
+         - /hnszf/xxgk/zfgz/index.html
+         - /hnszf/xxgk/zfgz/202601/... （含 /files/ 下的 docx/pdf 下载链接）
+
+      7. 重点项目（3 个）：
+         - http://czt.hunan.gov.cn/czt/xxgk/zdly/zjzdjc/index.html （财政资金直达基层）
+         - http://fgw.hunan.gov.cn/fgw/xxgk_70899/zdjsxm/index.html （重大项目）
+         - http://www.hunan.gov.cn/hnszf/xxgk/zdlyxxgk/zdlyxxgk.html
+
+      8. 收费项目（1 个）：
+         - http://czt.hunan.gov.cn/czt/xxgk/sfjjmlqd/index.html
+
+      9. 政策解读（1 个）：
+         - /hnszf/xxgk/jd/zcjd/tzdzlm.html
+
+      范式特征：湖南不在省级门户汇总 14 大类，而是分散在省政府门户 + 11 个省直委办局子站
+      （fgw/czt/jtt/sft 等）+ 14 个市州子站。Playwright hover 触发 JS 异步加载后才暴露完整 URL 列表。
+
+      采集边界：历史 Playwright 脚本仅作为不可复用的探索记录。不得隐藏 webdriver 标记、构造反检测请求头、
+      模拟鼠标/滚动来绕过反爬，或复用 `tmp/` 脚本作为正式证据；标准浏览器 fallback 失败时进入 handoff/blocked。
+
+      1. 机关简介：         http://www.hunan.gov.cn/szf/zfjg/szfbgt/201711/t20171122_4829748.html
+      2. 规划信息：         http://www.hunan.gov.cn/topic/hnsswgh/index.html
+      3. 统计信息：         http://www.hunan.gov.cn/hnszf/zfsj/tjgb/tygl.html
+      4. 行政许可：         https://zwfw-new.hunan.gov.cn/hnzwfw/ywtbygzw/index.html
+      5. 行政处罚：         https://zwfw-new.hunan.gov.cn/hnzwfw/ywtbygzw/index.html
+      6. 其他对外管理服务事项： https://zwfw-new.hunan.gov.cn/hnzwfw/ywtbygzw/index.html
+      7. 预算/决算：        http://czt.hunan.gov.cn/ztzl/hnczysgk/
+      8. 收费项目：         http://czt.hunan.gov.cn/czt/xxgk/sfjjmlqd/index.html
+      9. 政府采购：         http://www.ccgp-hunan.gov.cn/
+      10. 重大项目：        http://fgw.hunan.gov.cn/fgw/xxgk_70899/zdjsxm/index.html
+      11. 重大民生信息：     javascript:void(0)（父节点，子菜单通过 hover 展开）
+      12. 招考录用：        http://www.hxw.gov.cn//channel/20650.html
+      13. 政府网站工作年度报表： javascript:void(0)
+      14. 政府信息主动公开事项目录： javascript:void(0)
+      15. 其他法定信息：    http://www.hunan.gov.cn/hnszf/xxgk/zdlyxxgk/zdlyxxgk.html
+
+      范式特征：
+      - 湖南采用 SPA 单页模式（?state=N）：同一物理页 index.html 通过 state 参数切换
+        公开指南(0)/公开制度(1)/公开年报(3)/依申请公开等标签；curl 默认只能拿默认视图
+      - 无 chnl/docnum 字段（与重庆 chnl=120519/docnum=418 模式不同），子节点用 id="nogknr_xxx"
+      - 多个重大民生信息/政府网站工作年度报表/主动公开事项目录子项用 javascript:void(0)
+        占位，必须经 hover/click 加载，无法在静态 HTML 中捕获完整三级 URL
+      - 大量子栏目外链到 zwfw-new.hunan.gov.cn（政务服务网），与"主动公开"内容分离
+      - 数据规模颗粒度比重庆细度低（多数为单页链接，无 docnum 计数）
+  disclosure_annual_report:
+    url: https://www.hunan.gov.cn/hnszf/xxgk/zfxxgk/index.html?state=3
+    path_keyword: zfxxgk?state=3
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    # 依申请公开为独立栏目(含办理单位选择、网上申请)
+    url: https://www.hunan.gov.cn/hnszf/xxgk/ysqgk/ysqgk.html
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    # 文件库:含省政府文件/省政府办公厅文件/省委省政府文件等;以省政府文件为默认入口
+    url: https://www.hunan.gov.cn/hnszf/xxgk/wjk/szfwj/wjk_glrb.html
+    path_keyword: wjk/szfwj
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    # 《湖南省人民政府规章库》
+    url: https://www.hunan.gov.cn/hnszf/xxgk/zfgz/index.html
+    path_keyword: zfgz
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    # 湖南省门户无独立"行政规范性文件库"专栏。
+    # 规范性文件归集于"文件库"内(省政府文件/省政府办公厅文件),
+    # 规章单列于规章库。文件库上级栏目 URL 如下,作为规范性文件最近入口。
+    url: https://www.hunan.gov.cn/hnszf/xxgk/wjk/tzdzlm.html
+    path_keyword: wjk
+    verified_at: 2026-07-22
+    status: partial
+  disclosure_library:
+    # 政府信息公开专栏(政务公开专栏总入口)
+    url: https://www.hunan.gov.cn/hnszf/xxgk/zfxxgk/index.html
+    path_keyword: zfxxgk
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  # 湖南省人民政府公报(hnzb_18)
+  url: https://www.hunan.gov.cn/hnszf/szf/hnzb_18/index.html
+  status: ok
+
+notes: |
+  - 湖南特色: 政府信息公开专栏用参数化 URL `zfxxgk/index.html?state=N` 承载
+    公开指南(0)/公开制度(1)/公开年报(3)/依申请公开等标签,同一物理页切换;
+    依申请公开另有独立 ysqgk 栏目(可按办理单位在线申请)。
+  - 无独立"行政规范性文件库"专栏: 规范性文件散入"文件库(wjk)"内,
+    normative_library 标 partial,指向文件库上级栏目。规章单列规章库。
+  - 3 个最关键 URL:
+    1. 政府信息公开专栏 https://www.hunan.gov.cn/hnszf/xxgk/zfxxgk/index.html
+    2. 文件库(政策文件) https://www.hunan.gov.cn/hnszf/xxgk/wjk/szfwj/wjk_glrb.html
+    3. 规章库 https://www.hunan.gov.cn/hnszf/xxgk/zfgz/index.html
+sources_consulted:
+  - url: https://www.hunan.gov.cn/
+    type: 主站首页(WebFetch 验证)
+  - url: https://www.hunan.gov.cn/hnszf/xxgk/xxgk.html
+    type: 政务公开首页(WebFetch 验证)
+  - url: https://www.hunan.gov.cn/hnszf/xxgk/zfxxgk/index.html
+    type: 政府信息公开专栏(WebFetch 验证含5标签)
+  - url: https://www.hunan.gov.cn/hnszf/xxgk/wjk/szfwj/wjk_glrb.html
+    type: 文件库(WebFetch 验证)
+  - url: https://www.hunan.gov.cn/hnszf/xxgk/zfgz/index.html
+    type: 规章库(WebFetch 验证=湖南省人民政府规章库)
+  - url: https://www.hunan.gov.cn/hnszf/xxgk/ysqgk/ysqgk.html
+    type: 依申请公开(WebFetch 验证)
+  - url: https://www.hunan.gov.cn/hnszf/szf/hnzb_18/index.html
+    type: 省政府公报(主站导航+期号页佐证)

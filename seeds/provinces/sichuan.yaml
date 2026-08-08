@@ -1,0 +1,143 @@
+province: 四川省
+slug: sichuan
+short_name: 川
+pinyin: sichuan
+level: province
+operator_org_id: "5100000000000001"
+type: database
+
+main_website:
+  url: https://www.sc.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.sc.gov.cn/10462/index.shtml
+  path_keyword: "10462"
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.sc.gov.cn/10462/zfxxgkzn/zfxxgk_xxgkzn.shtml
+    path_keyword: zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.sc.gov.cn/10462/zfxxgkzd/zfxxgk_xxgkzdf.shtml
+    path_keyword: zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.sc.gov.cn/10462/c102917/zfxxgk_jgjj.shtml
+    path_keyword: c102917
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      栏目名"法定主动公开内容"，聚合机关简介/规划/统计/行政许可等分类
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      四川"法定主动公开内容"采用侧栏 anchor 链渲染（c10xxxx 节点 ID，
+      自定义 Sichuan-CMS 范式，无 chnl/docnum 字段；含 21 个一级类目）。
+
+      1. 规章：           https://www.sc.gov.cn/10462/c108923/xxgkgz.shtml
+      2. 政府规范性文件：  https://www.sc.gov.cn/10462/c102914/gfxwj.shtml
+      3. 部门规范性文件：  （class="bmgfxwjLi"，无独立链接，列表页式）
+      4. 其他文件：        https://www.sc.gov.cn/10462/c103041/newzfwj.shtml
+      5. 机关简介：        https://www.sc.gov.cn/10462/c102917/zfxxgk_jgjj.shtml
+      6. 规划信息：        https://www.sc.gov.cn/10462/c108547/zfxxgk_ghxx.shtml
+      7. 统计信息：        https://www.sc.gov.cn/10462/c102930/zfxxgk_tjxx.shtml
+      8. 行政许可/服务事项：https://www.sc.gov.cn/10462/c102934/zfxxgk_gknrsgs.shtml
+      9. 行政处罚/行政强制：https://www.sc.gov.cn/10462/c109479/zfxxgk_gknrxzcf.shtml
+      10. 预算/决算：      http://czt.sc.gov.cn/scczt/c102367/sbjyjs.shtml  （外链，省财政厅）
+      11. 收费项目：      http://czt.sc.gov.cn/scczt/c102373/zfxxgk_gknr.shtml  （外链）
+      12. 政府采购：      https://www.ccgp-sichuan.gov.cn/  （外链，四川政府采购网）
+      13. 重大项目：      https://www.sc.gov.cn/10462/c102941/zfxxg_zdxm.shtml
+      14. 重大民生信息：    https://www.sc.gov.cn/10462/c102945/zfxxgk_zdmsxx.shtml
+      15. 招考录用：      https://www.sc.gov.cn/10462/10464/10720/10721/listf.shtml
+      16. 其他法定信息：   https://www.sc.gov.cn/10462/c108996/jump.shtml
+      17. 重点领域：       https://www.sc.gov.cn/10462/c111321/zfxxgk_zdly.shtml
+      18. 五公开：        https://www.sc.gov.cn/10462/c111324/zfxxgk_wgk.shtml
+      19. 建议提案：      https://www.sc.gov.cn/10462/11689/zfxxgk_jyta.shtml
+      20. 政府工作报告：   https://www.sc.gov.cn/10462/10464/10699/10700/zfxxgk_gknrgb.shtml
+      21. 法治政府建设报告：https://www.sc.gov.cn/10462/fzzfjs/zfxxgk_gknrjs.shtml
+
+      范式特征：
+      - 四川采用自定义 Sichuan-CMS 范式（侧栏 anchor + c10xxxx 节点 ID），
+        不走 chnl/docnum 频道号模型（与重庆 chnl=120519 差异显著）
+      - 颗粒度比重庆细（21 个一级类目 vs 重庆 14 类 36 URL），
+        特色是新增「部门规范性文件/其他文件/重点领域/五公开/建议提案/
+        政府工作报告/法治政府建设报告」七个四川特有类目
+      - 多个子项外链到 czt.sc.gov.cn / ccgp-sichuan.gov.cn 等厅局子站，
+        是四川"分散维护"模式
+      - 节点 ID 数字连续（c102917 机关简介 → c102914 规范性文件 → c102930 统计 →
+        c102934 行政许可 → c102941 重大项目 → c102945 重大民生 → c108547 规划 →
+        c108923 规章 → c109479 行政处罚 → c111321 重点领域 → c111324 五公开），
+        揭示 CMS 后台按栏目顺序预分配 ID 的工程实现
+  disclosure_annual_report:
+    url: https://www.sc.gov.cn/10462/2025nb/xxgknbs.shtml
+    path_keyword: xxgknbs
+    verified_at: 2026-07-22
+    status: ok
+    note: 年报按年份分节点（2025=2025nb，2024=2024nb，历史年为 c1xxxxx 节点）
+  disclosure_upon_request:
+    url: https://www.sc.gov.cn/10462/ysqgk/ysqgk.shtml
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.sc.gov.cn/10462/c108704/scszkwjkn.shtml
+    path_keyword: scszkwjkn
+    verified_at: 2026-07-22
+    status: ok
+    note: 四川省政策文件库，聚合规章/规范性文件/省市县各级政府文件，支持检索
+  regulation_library:
+    url: https://www.sc.gov.cn/10462/scszcwjkss/scszcwjkss.shtml?policyType=1
+    path_keyword: scszcwjkss
+    verified_at: 2026-07-22
+    status: ok
+    note: 政策文件库内"政府规章"筛选（policyType=1，314 件）
+  normative_library:
+    url: https://www.sc.gov.cn/10462/scszcwjkss/scszcwjkss.shtml?policyType=2
+    path_keyword: scszcwjkss
+    verified_at: 2026-07-22
+    status: ok
+    note: 政策文件库内"行政规范性文件"筛选（policyType=2）
+  disclosure_library:
+    url: https://www.sc.gov.cn/10462/index.shtml
+    path_keyword: "10462"
+    verified_at: 2026-07-22
+    status: ok
+    note: 政府信息公开专栏总入口即 disclosure_homepage（10462 节点），无独立"公开专栏库"
+
+gazette:
+  url: https://www.sc.gov.cn/scszfgb/index.shtml
+  path_keyword: scszfgb
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 四川特色：省政府信息公开各子栏目统一挂在门户 10462 节点下，路径命名规范（zfxxgkzn/zfxxgkzd/ysqgk）。
+  - 专题库集中在"四川省政策文件库"(scszkwjkn)，规章库/规范性文件库并非独立站点，而是同一检索库
+    scszcwjkss 通过 policyType 参数区分（=1 规章，=2 行政规范性文件）。
+  - 政府公报为独立子站 /scszfgb/。年报入口随年份变更节点，2025 年报为 2025nb。
+  - 3 个最关键 URL：政务公开首页 https://www.sc.gov.cn/10462/index.shtml ；
+    政策文件库 https://www.sc.gov.cn/10462/c108704/scszkwjkn.shtml ；
+    政府公报 https://www.sc.gov.cn/scszfgb/index.shtml
+sources_consulted:
+  - url: https://www.sc.gov.cn/
+    type: main_website
+  - url: https://www.sc.gov.cn/10462/wza2012/zwxx/zwxx.shtml
+    type: disclosure_nav
+  - url: https://www.sc.gov.cn/10462/zfxxgkzn/zfxxgk_xxgkzn.shtml
+    type: disclosure_guide
+  - url: https://www.sc.gov.cn/10462/zfxxgkzd/zfxxgk_xxgkzdf.shtml
+    type: disclosure_regime
+  - url: https://www.sc.gov.cn/10462/ysqgk/ysqgk.shtml
+    type: disclosure_upon_request
+  - url: https://www.sc.gov.cn/10462/c108704/scszkwjkn.shtml
+    type: policy_library
+  - url: https://www.sc.gov.cn/scszfgb/index.shtml
+    type: gazette

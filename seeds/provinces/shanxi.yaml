@@ -1,0 +1,144 @@
+province: 山西省
+slug: shanxi
+short_name: 晋
+pinyin: shanxi
+level: province
+operator_org_id: "1400000000000001"
+type: database
+
+main_website:
+  url: https://www.shanxi.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.shanxi.gov.cn/zfxxgk/
+  path_keyword: zfxxgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zfxxgkzn/
+    path_keyword: zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zfxxgkzd/
+    path_keyword: zfxxgkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/fdzdgknr/
+    path_keyword: fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（fdzdgknr）下设 21 个一级类目（2026-07-22 自动抓取）
+      URL: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/fdzdgknr/
+      注意：根 URL 通过 meta-refresh + JS 跳转到 ./lzyj/，需先进入一级子页 lzyj 才能获得完整 21 类侧栏。
+
+      1. 履职依据（lzyj）           - /zfxxgk/zfxxgkzl/fdzdgknr/lzyj/
+                                   子项：中央有关文件 + 国务院文件（外链至 gov.cn）
+      2. 机关简介（jgjj）           - /zfxxgk/zfxxgkzl/fdzdgknr/jgjj/
+      3. 规划信息（ghxx）           - /zfxxgk/zfxxgkzl/fdzdgknr/ghxx/
+      4. 统计信息（tjxx）           - /zfxxgk/zfxxgkzl/fdzdgknr/tjxx/
+      5. 权力和责任清单（qlhzrqd）  - /zfxxgk/zfxxgkzl/fdzdgknr/qlhzrqd/
+      6. 行政许可信息（xzxkxx）     - /zfxxgk/zfxxgkzl/fdzdgknr/xzxkxx/
+      7. 处罚强制信息（cfqzxx）     - /zfxxgk/zfxxgkzl/fdzdgknr/cfqzxx/
+      8. 财政信息（czxx）           - /zfxxgk/zfxxgkzl/fdzdgknr/czxx/
+      9. 收费项目（sfxm）           - /zfxxgk/zfxxgkzl/fdzdgknr/sfxm/
+      10. 政府采购（zfcg）          - /zfxxgk/zfxxgkzl/fdzdgknr/zfcg/
+      11. 重大项目（zdxm）          - /zfxxgk/zfxxgkzl/fdzdgknr/zdxm/
+      12. 重大会议信息公开（zdhyxxgk）- /zfxxgk/zfxxgkzl/fdzdgknr/zdhyxxgk/
+      13. 重大决策预公开（zdjcygk） - /zfxxgk/zfxxgkzl/fdzdgknr/zdjcygk/
+      14. 重点领域公开（zdlygk）    - /zfxxgk/zfxxgkzl/fdzdgknr/zdlygk/
+      15. 招考录用（zkly）          - /zfxxgk/zfxxgkzl/fdzdgknr/zkly/
+      16. 应急管理（yjgl）          - /zfxxgk/zfxxgkzl/fdzdgknr/yjgl/
+      17. 国企信息（gqxx）          - /zfxxgk/zfxxgkzl/fdzdgknr/gqxx/
+      18. 政府公报（zfgb）          - /zfxxgk/zfxxgkzl/fdzdgknr/zfgb/
+      19. 建议提案（jyta）          - /zfxxgk/zfxxgkzl/fdzdgknr/jyta/
+      20. 政府网站年报（zfwznb，4 个年度子目录）
+          - 2025nzfwznb/  2024nzfwznb/  2023nzfwznb/  2022nzfwznb/
+      21. （其他/兜底类目，政策聚合：sfj 省级/市级政府规章分目录）
+          - 省级政府规章：  /zfxxgk/zfxxgkzl/zc/gz/sjzfgz/
+          - 市级政府规章：  /zfxxgk/zfxxgkzl/zc/gz/sjzfgz_73445/
+
+      文档抽样（2026-07-22 最新发布样本，来自 lzyj 子页 page-1/2/3）：
+      - 中共山西省委关于表彰全省优秀共产党员/优秀党务工作者和全省先进基层党组织的决定（2026-07-01）
+      - 《山西省加快建立长期护理保险制度实施方案》（2026-05-20，省委办公厅）
+      - 《山西省逐步把永久基本农田建成高标准农田实施方案》（2026-05-09，省委办公厅）
+      - 中共山西省委 山西省人民政府关于锚定农业农村现代化扎实推进乡村全面振兴的实施意见（2026-03-20）
+      - 《山西省深化养老服务改革发展的若干举措》（2026-03-20）
+      - 《山西省推进营商环境优化升级方案》（2026-03-17）
+      规章样本：山西省行政执法过错责任追究办法（2026-06-10）、山西省人民政府关于废止部分政府规章的决定（2026-01-05）、山西省军人抚恤优待实施办法（2025-11-24）、山西省行政裁决程序规定（2025-08-06）、山西省气象监测设施统筹规划建设和资源共享管理办法（2025-08-05）。
+      政府文件样本：山西省人民政府关于祁县历史文化名城保护规划（2023—2035年）的批复（2026-06-26）、山西省人民政府关于印发山西省经营主体住所（经营场所）登记管理办法的通知（2026-05-26）。
+      办公厅文件样本：山西省人民政府办公厅关于印发山西省服务业扩能提质行动方案（2026—2030年）的通知、山西省第十七届运动会工作方案、促进微短剧产业高质量发展若干举措、文物系统性保护的实施意见、地震应急预案、地质灾害应急预案（均 2026-07-17 发布）。
+
+      特色发现：
+      - 山西省「法定主动公开内容」颗粒度居中（21 类，比重庆 14 类更细）：在《政府信息公开条例》§20 列举项之外新增「权力和责任清单 / 重大会议信息公开 / 重大决策预公开 / 国企信息 / 建议提案 / 政府网站年报」5 项省级特色
+      - HTML 源码无 chnl/docnum 字段（晋cms 自有模板）；按 URL pinyin 缩写（lzyj/jgjj/...）索引
+      - 政府公报（zfgb）整合在 fdzdgknr 内（与重庆独立 /zfgb/ 不同）；年报目录（zfwznb）也挂在 fdzdgknr 同级而非独立 gknb 类
+      - 兜底类目挂载省级/市级政府规章为 zc/gz 子目录双轨：sjzfgz（省级）和 sjzfgz_73445（市级）
+  disclosure_annual_report:
+    url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zfxxgknb/
+    path_keyword: zfxxgknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zfxxgkzn/
+    path_keyword: zfxxgkzn
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.shanxi.gov.cn/zcwjk/
+    path_keyword: zcwjk
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zc/gz/sjzfgz/
+    path_keyword: sjzfgz
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zc/xzgfxwj/bmgfxwj1/szfzcbm_76475/srmzf/
+    path_keyword: xzgfxwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://www.shanxi.gov.cn/zfxxgk/
+    path_keyword: zfxxgk
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/fdzdgknr/zfgb/
+  status: ok
+
+notes: |
+  - 山西已建设独立的“政策文件省级服务平台”，并从平台直达规章库、行政规范性文件库和政府公报。
+  - “依申请公开”未发现独立栏目入口；官网将申请说明、申请表及线下/邮寄渠道统一置于政府信息公开指南页，因此复用该已验证页面。
+  - 关键 URL：https://www.shanxi.gov.cn/zfxxgk/；https://www.shanxi.gov.cn/zcwjk/；https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zc/gz/sjzfgz/
+sources_consulted:
+  - url: https://www.shanxi.gov.cn/
+    type: official_homepage
+  - url: https://www.shanxi.gov.cn/zfxxgk/
+    type: official_disclosure_portal
+  - url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zfxxgkzn/
+    type: official_disclosure_guide
+  - url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zfxxgkzd/
+    type: official_disclosure_regime
+  - url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/fdzdgknr/
+    type: official_proactive_disclosure
+  - url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zfxxgknb/
+    type: official_annual_reports
+  - url: https://www.shanxi.gov.cn/zcwjk/
+    type: official_policy_library
+  - url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zc/gz/sjzfgz/
+    type: official_regulation_library
+  - url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/zc/xzgfxwj/bmgfxwj1/szfzcbm_76475/srmzf/
+    type: official_normative_library
+  - url: https://www.shanxi.gov.cn/zfxxgk/zfxxgkzl/fdzdgknr/zfgb/
+    type: official_gazette

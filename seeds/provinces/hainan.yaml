@@ -1,0 +1,273 @@
+province: 海南省
+slug: hainan
+short_name: 琼
+pinyin: hainan
+level: province
+operator_org_id: "4600000000000001"
+type: database
+
+main_website:
+  url: https://www.hainan.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    海南省人民政府门户网站。导航含 首页 / 时政 / 关注 / 公开 / 服务 / 互动 / 专题 / 数据 / 海南、
+    加载呈"PC + 移动版"双屏（移动版入口 /hainan/mhainan/index_m.shtml）。站点标识
+    "海南省人民政府.政务"，IPv6 已支持。主办：海南省人民政府办公厅；
+    承办：海南省人民政府网站运行管理中心。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: https://www.hainan.gov.cn/hainan/zfxxgk/newxxgk_index.shtml
+  path_keyword: /hainan/zfxxgk/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "政府信息公开"专栏侧栏入口（/hainan/zfxxgk/newxxgk_index.shtml）。
+    顶部 9 项主菜单：政府规章、行政规范性文件、其他文件、政府信息公开指南、
+    政府信息公开制度、法定主动公开内容、政府信息公开年报、依申请公开、
+    政府公报。各菜单中部分年份/类别链接（特别是 2021-2025 年报、机关简介、
+    规划信息、招考录用、应急管理等）使用 javascript:void(0) 占位，需经侧栏
+    数字列表或栏目页多入口访问。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: https://www.hainan.gov.cn/hainan/xxgkzn/newxxgk_list.shtml
+    path_keyword: /hainan/xxgkzn/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开指南页，按《政府信息公开条例》（国务院令第 711 号）编制。
+      三章：主动公开（15 大类，含规章、规划、预算、环境监测、公务员考录等）、
+      依申请公开（网络/信函/当面三种渠道，20 工作日可延 20 日）、监督和救济
+      （投诉电话 0898-65230373、复议/诉讼）。受理机关：海南省人民政府办公厅，
+      地址：海口市美兰区国兴大道 9 号，邮编 570204。
+
+  disclosure_regime:
+    url: https://www.hainan.gov.cn/zfxxgkzd/
+    path_keyword: /zfxxgkzd/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政府信息公开制度"专栏（根域名下 /zfxxgkzd/）。WebSearch 命中该 URL
+      作为制度专栏的官方标题入口；其下属子文档链接见
+      /hainan/xxgk/0200/0202/201401/15/...考核制度.docx、
+      /hainan/xxgk/0200/0202/201401/13/...保密审查制度.shtml、
+      /hainan/xxgk/0200/0202/201401/12/...发布协调制度.shtml 等。
+
+  disclosure_proactive_catalog:
+    url: https://www.hainan.gov.cn/hainan/zfxxgk/newxxgk_index.shtml
+    path_keyword: /hainan/zfxxgk/ (法定主动公开内容子菜单)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容即"/hainan/zfxxgk/newxxgk_index.shtml"中部的子菜单
+      （导航锚点）。展开后挂接：国民经济与社会发展规划 /hainan/5342/list3.shtml、
+      专项规划 /hainan/5334/list3.shtml、空间规划 /hainan/kjgh/list3.shtml、
+      财政预决算 /hainan/czyjs/list2.shtml、预算绩效 /hainan/ysjx/list3.shtml、
+      省级财政预决算公开专栏 /hainan/sjczyjszl/list3.shtml、
+      公务员招考和录用 /hainan/gwyzk/list3.shtml。部分子项采用
+      javascript:void(0) 占位需经列表分页访问。
+      注：本主条目与 disclosure_homepage 同址，但语义为"法定主动公开"
+      分类目录，属于 disclosure_homepage 的子区块。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      海南"法定主动公开内容"采用 ul.navContent#fdzd_gknr 渲染（无 chnl/docnum 字段，
+      与湖南 ul.navContent#fdzd_gknr 同源海南-CMS 变体）。
+
+      1. 机关简介：
+         - 领导信息：    https://www.hainan.gov.cn/hainan/szf/zf.shtml?ddtab=true
+         - 机关概况：    https://www.hainan.gov.cn/hainan/zfjg2/list_jgjj.shtml?ddtab=true
+      2. 规划信息：     javascript:void(0)（gknr_ghxx）
+      3. 统计信息：     https://www.hainan.gov.cn/hainan/zfsj/xsj.shtml
+      4. 权力清单：     https://www.hainan.gov.cn/hainan/xzxk1/list_notime.shtml?ddtab=true
+      5. 监管清单：     https://www.hainan.gov.cn/hainan/xzcf2/list_notime.shtml?ddtab=true
+      6. 预算/决算：    javascript:void(0)（gknr_ysjs）
+      7. 收费项目：     http://plan.hainan.gov.cn/sfgw/jgglml/list.shtml?ddtab=true  （外链）
+      8. 政府采购：     https://www.hainan.gov.cn/hainan/zfcg1/list_notime.shtml?ddtab=true
+      9. 重大项目：
+         - 项目目录：   http://www.hainan.gov.cn/hainan/zdxmml/list_notime.shtml
+         - 项目进展：   http://plan.hainan.gov.cn/sfgw/zdxm/list3.shtml  （外链）
+         - 项目审批：   http://plan.hainan.gov.cn/sfgw/xmsp/list3.shtml  （外链）
+      10. 重大民生信息：
+          - 乡村振兴：  https://agri.hainan.gov.cn/hnsnyt/ywdt/spxw/  （外链）
+          - 教育：       http://www.hainan.gov.cn/hainan/jyxx1/list_notime.shtml
+          - 医疗卫生：  https://www.hainan.gov.cn/hainan/ylws1/list_notime.shtml?ddtab=true
+          - 社保：       http://www.hainan.gov.cn/hainan/shbz1/list_notime.shtml
+          - 就业：       http://www.hainan.gov.cn/hainan/yycy1/list_notime.shtml
+          - 环保：       http://www.hainan.gov.cn/hainan/hjbh1/list_notime.shtml
+          - 卫生：       https://www.hainan.gov.cn/hainan/msws/list_notime.shtml
+          - 安全：       http://www.hainan.gov.cn/hainan/aqsc/list_notime.shtml
+          - 食药：       http://www.hainan.gov.cn/hainan/spyp1/list_notime.shtml
+          - 质量：       http://amr.hainan.gov.cn/zw/zlcc/  （外链）
+      11. 招考录用：    javascript:void(0)（gknr_zkly）
+      12. 应急管理：
+          - 应急预案：  http://yjglt.hainan.gov.cn/xxgk/yjya/?ddtab=true  （外链）
+      13. 其他专项信息：
+          - 政府会议：  http://www.hainan.gov.cn/hainan/zfhy/list_more.shtml
+          - 政府工作报告：http://www.hainan.gov.cn/hainan/zfgzbg/zfgzbg12.shtml
+
+      范式特征：
+      - 海南采用与湖南同源 SPA 自定义范式（ul.navContent#fdzd_gknr），
+        不走 chnl/docnum 频道号模型（与重庆 chnl=120519 差异显著）
+      - 颗粒度比重庆细（13 个一级类目下 22 个三级 URL），特色是新增「权力清单/
+        监管清单/其他专项信息(政府会议、政府工作报告)」海南特有类目
+      - 多处使用 javascript:void(0) 占位父节点（gknr_ghxx/gknr_ysjs/gknr_zkly/法规文件），
+        必须 hover/click 才能加载三级菜单
+      - 大量子项外链到 plan.hainan.gov.cn / agri.hainan.gov.cn / yjglt.hainan.gov.cn /
+        amr.hainan.gov.cn 等厅局子站，是海南"分散维护"模式
+
+  disclosure_annual_report:
+    url: https://www.hainan.gov.cn/hainan/zfxxgknb/newxxgk_list.shtml
+    path_keyword: /hainan/zfxxgknb/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报列表页（/hainan/zfxxgknb/newxxgk_list.shtml）。
+      列出 2017–2025 各年度报告 + 政府网站年度报表（2017–2025）。
+      2025→/hainan/zfxxgknb/202603/5f9715351dfd4d459ebb7db13686fa72.shtml；
+      2024→/hainan/zfxxgknb/202503/ca118def9c9a46af91ac36f073546e00.shtml；
+      2023→/hainan/zfxxgknb/202403/cbcd8c4b4bba471db5479473f67d96da.shtml；
+      2022→/hainan/zfxxgknb/202303/2d11028cbc8c4f3db1df4a80c6c8730a.shtml；
+      2021→/hainan/zfxxgknb/202203/463efdde118a4cd1a4f2140a0c372ab1.shtml；
+      2020→/hainan/2020nxxgknb/202103/a6198ede4971443eae145484a263b552.shtml；
+      2019→https://www.hainan.gov.cn/hainan/zfxxgknb/202003/d509a45d47d84829b93ebe805a5593ba.shtml；
+      2018→http://www.hainan.gov.cn/hainan/2019xxgknb/2018xxgkndbg.shtml；
+      2017→http://www.hainan.gov.cn/hainan/66235/2017zfxxgkndbg.shtml；
+      2016及以前→/hainan/2016nyqnb/list2.shtml。
+
+  disclosure_upon_request:
+    url: https://www.hainan.gov.cn/hainan/ysqgk/newxxgk_list.shtml
+    path_keyword: /hainan/ysqgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开专栏（/hainan/ysqgk/newxxgk_list.shtml）。提供流程介绍、
+      申请表 .doc 下载，并列出海南省、市县、各部门申请受理入口。
+      依据：海南省政府信息依申请公开工作规程
+      （/hainan/szfjbgtzd/201906/5323d47417024e73a92f29d92199e54f.shtml）。
+
+# 专题库
+libraries:
+  policy_library:
+    url: https://www.hainan.gov.cn/hainan/zfwj/zcwj_list.shtml
+    path_keyword: /hainan/zfwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政策文件"列表页（/hainan/zfwj/zcwj_list.shtml）= 政策文献库。
+      三大分类：省委有关文件 / 省政府文件 / 省政府办公厅文件，
+      含"十五五"生态文明建设规划、消费品以旧换新、灾后重建等近期文件。
+      是省政府公开门户中"非规章类政策文件"的主索引。
+
+  regulation_library:
+    url: https://www.hainan.gov.cn/hainan/xxyxzfgz/zfgzk.shtml
+    path_keyword: /hainan/xxyxzfgz/zfgzk.shtml
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      海南省政府规章库（/hainan/xxyxzfgz/zfgzk.shtml，页头标题"海南省政府规章库"）。
+      汇集"全省现行有效规章"，每条附文号、公布日期、DOCX/PDF 下载。
+      当前样本含 15 部：废止太阳能热水器管理规定（令 340 号）、12345 政府
+      服务热线管理、海南自贸港"零关税"日用消费品管理、公共数据资源开发
+      利用、失业保险、城镇饮用水卫生监督、行政规范性文件制定与备案、土地
+      储备管理、政府规章备案审查、潜水作业管理、商事调解组织登记管理、
+      科学技术奖励、消防安全责任制、地图管理等。
+      注：WebFetch 命中页面（主域 SSL 重定向 http 仍可达）。
+
+  normative_library:
+    url: https://www.hainan.gov.cn/hainan/flfgxzgfxwj/fgsjk_ywh.shtml
+    path_keyword: /hainan/flfgxzgfxwj/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      行政规范性文件栏目（/hainan/flfgxzgfxwj/fgsjk_ywh.shtml）。
+      提供文号 / 制定机关 / 公布日期 / 时效性（尚未生效/有效）/ 主题分类
+      五个筛选器，列示 278 条规范性文件（含"十五五"卫生健康规划、
+      旅游、教育、育儿补贴、长期护理保险、安居房管理等）。页面首部以司法厅
+      备案目录（justice.hainan.gov.cn）作为外部权威链接。
+
+  disclosure_library:
+    url: https://www.hainan.gov.cn/hainan/zfxxgk/newxxgk_index.shtml
+    path_keyword: /hainan/zfxxgk/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开专栏 = /hainan/zfxxgk/newxxgk_index.shtml（即
+      disclosure_homepage 同址）。承担"政务公开/政府信息公开"统一入口角色，
+      包含 9 项主菜单 + 法定主动公开各子项 + 政府公报 + 各部门各市县
+      信息公开子站链接。是该省"政务公开专题"总枢纽。
+
+  supplementary_libraries:
+    gazette_history:
+      url: https://www.hainan.gov.cn/zfgbhtml/history.html
+      path_keyword: /zfgbhtml/history.html
+      status: ok
+      note: |
+        政府公报历史档案（1989-2004）。提供历史公报（2003、2002、2001、
+        2000、1999、1995 等）链接，可作为旧档批量补采入口。
+
+# 政府公报
+gazette:
+  url: https://www.hainan.gov.cn/zfgbhtml/zfgb.html
+  path_keyword: /zfgbhtml/zfgb.html
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    《海南省人民政府公报》主页面（/zfgbhtml/zfgb.html）。海南省人民政府
+    机关刊物，创办于 1989 年，刊登省人大常委会、省政府、省政府办公厅
+    制定的法规性、政策性文件，在《公报》上刊发的各类公文与正式文件具有
+    同等效力。检索维度：标题 / 正文 / 文件类别 / 文号 / 成文日期。
+    历史档案入口 /zfgbhtml/history.html。单期样例：
+    /zfgbhtml/detail.html?id=6611 与 /zfgbhtml/detail.html?id=7139。
+    提供 PDF 下载与手机扫码阅读入口，并链海口市、三亚市地方公报。
+
+notes: |
+  - 海南省政府信息公开采用"政府信息公开" + "政策法规" 双轨命名：根目录
+    /hainan/zfxxgk/ 是政府信息公开总枢纽；/hainan/zfwj/ 是政策文献
+    主索引（既含"政策文件"统称又含省政府/办公厅子分类）。"规章库"与
+    "行政规范性文件库"则各为独立栏目，分别挂接 /hainan/xxyxzfgz/zfgzk.shtml
+    和 /hainan/flfgxzgfxwj/fgsjk_ywh.shtml，未设在 zfxxgk 频道下。
+  - 该省特色是"政府信息公开制度"独立挂接根域下 /zfxxgkzd/，与 /hainan/
+    下大多数栏目平级，下属单篇制度文档则回到 /hainan/xxgk/0200/0202/
+    201401/ 路径下，导致新旧两套路径风格共存。
+  - 部分子栏目（特别是 2021-2025 年报、规划/招考/应急等法定主动公开子项、
+    "机关简介"等）虽在主菜单列出但具体年份/类别链接大量使用
+    javascript:void(0)，需经栏目列表分页或鼠标悬停展开访问；本调研只
+    列出经实际可达 URL 确认的核心入口，避免编造 null/placeholder。
+  - 三个最关键 URL：
+    1) https://www.hainan.gov.cn/hainan/zfxxgk/newxxgk_index.shtml
+       （政府信息公开总枢纽，覆盖 9 个主菜单）
+    2) https://www.hainan.gov.cn/hainan/xxyxzfgz/zfgzk.shtml
+       （省政府规章库，含 15 部现行有效规章）
+    3) https://www.hainan.gov.cn/zfgbhtml/zfgb.html
+       （省政府公报 1989-）
+
+sources_consulted:
+  - url: https://www.hainan.gov.cn/
+    type: homepage
+  - url: https://www.hainan.gov.cn/hainan/zfxxgk/newxxgk_index.shtml
+    type: page_content
+  - url: https://www.hainan.gov.cn/hainan/xxgkzn/newxxgk_list.shtml
+    type: page_content
+  - url: https://www.hainan.gov.cn/zfxxgkzd/
+    type: search_result
+  - url: https://www.hainan.gov.cn/hainan/zfxxgknb/newxxgk_list.shtml
+    type: page_content
+  - url: https://www.hainan.gov.cn/hainan/ysqgk/newxxgk_list.shtml
+    type: page_content
+  - url: https://www.hainan.gov.cn/hainan/zfwj/zcwj_list.shtml
+    type: page_content
+  - url: https://www.hainan.gov.cn/hainan/xxyxzfgz/zfgzk.shtml
+    type: page_content
+  - url: https://www.hainan.gov.cn/hainan/flfgxzgfxwj/fgsjk_ywh.shtml
+    type: page_content
+  - url: https://www.hainan.gov.cn/zfgbhtml/zfgb.html
+    type: page_content
+  - url: https://www.hainan.gov.cn/zfgbhtml/history.html
+    type: search_result
+  - url: https://www.hainan.gov.cn/hainan/mljj/list_tt.shtml
+    type: search_result
+  - url: https://www.hainan.gov.cn/hainan/szfjbgtzd/201906/5323d47417024e73a92f29d92199e54f.shtml
+    type: search_result

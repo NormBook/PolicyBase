@@ -1,0 +1,236 @@
+province: 浙江省
+slug: zhejiang
+short_name: 浙
+pinyin: zhejiang
+level: province
+operator_org_id: "3300000000000001"
+type: database
+
+main_website:
+  url: https://www.zj.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+# 信息公开总枢纽（"浙里看"-"政府信息公开"总入口）
+disclosure_homepage:
+  url: https://www.zj.gov.cn/col/col1229697780/index.html
+  path_keyword: col1229697780
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    浙江省政府门户网站"政府信息公开"总入口。从该页可进入 5 个固定子栏目
+    （指南/制度/法定主动公开/年报/依申请公开），并链接到"政务公开"主枢纽
+    /col/col1543574/ 的所有重点领域、监管信息、专题等板块。
+
+# "政务公开"一级页面（与"政府信息公开"并列的导航枢纽）
+disclosure_government_openness_homepage:
+  url: https://www.zj.gov.cn/col/col1543574/index.html
+  path_keyword: col1543574
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "政务公开"主枢纽页：含机构职能、省政府常务会议、政府工作报告、省政府公报、
+    数据发布、公示公告、回应关切、政策文件、政策解读、规划信息、人事任免、
+    政府规章、行政规范性文件、政府其他文件、各市政府文件、部门文件、
+    权责清单、政务服务效能、监管信息、重点领域信息公开、政务专题等
+    数十个二级板块。"政府信息公开"（/col/col1229697780/）为并列入口。
+
+sub_sections:
+  disclosure_guide:
+    url: http://www.zj.gov.cn/col/col1229000532/index.html
+    path_keyword: col1229000532
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      浙江省人民政府办公厅政府信息公开指南（当前为 2026 年版）。正文包含
+      公开渠道（省政府门户、"浙江发布"、《浙江省人民政府公报》纸质+数字版、
+      政务服务网等）、主动公开范围、依申请公开流程、申请表下载等。
+      同页导航并列呈现制度、主动公开、年报、申请公开等 4 个子栏目。
+
+  disclosure_regime:
+    url: http://www.zj.gov.cn/col/col1571902/index.html
+    path_keyword: col1571902
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开制度：列示国家层面制度（《政府信息公开条例》及 2017-2022
+      国务院相关配套文件 13 件）+ 浙江省层面制度（《2022 年浙江省政务公开
+      工作要点》、《政府信息公开信息处理费收取工作的通知》等）。
+
+  disclosure_proactive_catalog:
+    url: https://www.zj.gov.cn/col/col1229663115/index.html
+    path_keyword: col1229663115
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容。子分类（按政府信息公开条例第 20-21 条）含政府领导、
+      机构职能、法规政策、财政资金、政府采购、统计信息、应急管理、审计公开、
+      建议提案办理、行政复议决定书、行政执法、重大行政决策等。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      浙江门户"法定主动公开内容"采用 col[col编号] + JS location.href 重定向
+      模式，无 chnl/docnum 属性。col1229663115 入口页自身重定向到
+      /col/col1229663310/index.html （"政府领导"页）。
+
+      已探测 13 个子类频道（按 §20 列举式展开）：
+      - 政府领导 (col1229698008 → 重定向到 ljbzlm133 子页面)
+      - 法规政策 (col1229697778 → 重定向到 col1229697779)
+      - 政策解读 (col1229667607)
+      - 人事信息 (col1229697843)
+      - 行政权力 (col1229697844)
+      - 财政资金 (col1229697846)
+      - 政府公报 (col1229697848 → 重定向到 col1656332/2023nfb/)
+      - 统计信息 (col1229697849)
+      - 规划信息 (col1229019367)
+      - 浙江省政府工作报告 (col1229019379)
+      - 建议提案 (col1229019384)
+      - 政府采购 (col1229019385)
+      - 省政府会议 (col1229019396)
+      - 法治政府建设 (col1229019586)
+      - 国家、地方、部门平台链接 (col1229219367)
+      - 行政复议决定书 (col1229003634)
+      - 重点领域信息公开 (col1229399758)
+      - 法规政策(主索引) (col1229604640 → 重定向到 col1229697780)
+
+      设区市公开（11 个）：
+      - 杭州/宁波/温州/湖州/嘉兴/绍兴/金华/衢州/舟山 (col1229697782-790)
+      + 文件有效性筛选：有效/废止/失效 (col1229836653-655,
+      col1229697826-831)
+      + 发文机构：省政府/省政府办公厅 (col1229697833-834)
+
+      范式特征：
+      - 浙江"法定主动公开内容"无 chnl/docnum 树形，每个子类用 col[] 编号 +
+        JS 跳转实现单页路由（SPA 风格）；
+      - 与重庆颗粒度对比：重庆 14 大类 + 30 个三级 URL；浙江仅一级频道，
+        二级通过 location.href 重定向拼接，无 docnum 文档数；
+      - 重庆 §20 第 11 项用"脱贫攻坚与乡村振兴"、浙江 §20 第 11 项用
+        "重大民生信息"（与重庆同口径）。
+
+  disclosure_annual_report:
+    url: http://www.zj.gov.cn/col/col1577424/index.html
+    path_keyword: col1577424
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报汇总页。已确认 2008-2025 共 18 个年度报告，
+      含省政府本级 + 各市/省级部门年度报告。2024 年报告图解见
+      /art/2025/3/31/art_1229847484_60261466.html。
+
+  disclosure_upon_request:
+    url: https://mapi.zjzwfw.gov.cn/web/mgop/gov-open/zj/2002446329/reserved/index.html#/?areaCode=33000
+    path_keyword: mapi.zjzwfw.gov.cn
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开统一入口（"浙里办" APP / 浙江政务服务网"浙里公开"应用）。
+      导航枢纽页 /col/col1595486/（申请公开政府信息）跳转到此。
+      同时承接"浙里公开"应用使用须知 PDF / 申请表样表下载。
+
+libraries:
+  policy_library:
+    url: http://www.zj.gov.cn/col/col1229577560/index.html
+    path_keyword: col1229577560
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      浙江省政策文件库（统一政策文件聚合检索入口）。高级检索筛选项：
+      全部 / 地方性法规 / 决定决议 / 政府规章 / 行政规范性文件 /
+      法院规范性文件 / 检察院规范性文件 / 其他文件 / 政策解读。
+      同页底部链接到国家法律法规数据库（flk.npc.gov.cn）和
+      国务院政策文件库（gov.cn/zhengce/zhengcewenjianku/）。
+
+  regulation_library:
+    url: https://www.zj.gov.cn/col/col1545734/index.html
+    path_keyword: col1545734
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府规章栏目（位于"政务公开-法规文件"下）。仅按"省级 / 设区市"分类浏览，
+      当前列表为空（实际规章数据需通过 /col/col1229577560/ 政策文件库或
+      /col/col1544911/ 法规文件总集检索）。
+
+  normative_library:
+    url: http://www.zj.gov.cn/col/col1228964496/index.html
+    path_keyword: col1228964496
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      省级行政规范性文件栏目。分省政府、省政府办公厅、省级部门三个子类。
+      同级兄弟栏目 /col/col1545737/ 为行政规范性文件总入口（亦含三级子分类）。
+
+  disclosure_library:
+    url: https://www.zj.gov.cn/col/col1543574/index.html
+    path_keyword: col1543574
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政务公开"专栏总枢纽（与"政府信息公开" col1229697780 并列）。
+      是浙江全省政府信息主动公开最完整的总集入口，含所有主动公开类目
+      （政策、规章、规范性文件、年报、规划、人事任免、行政执法、
+      重点领域信息、政务专题等），可作为"政务公开/政府信息公开专栏"对应项。
+
+gazette:
+  url: https://www.zj.gov.cn/col/col1656332/index.html
+  path_keyword: col1656332
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    《浙江省人民政府公报》目录页。旬刊，CN 33-1354/D。
+    另有独立数字版入口 zfgb.zj.gov.cn（子域，访问需证书验证）。
+    历年目录可按年份检索：2024 年 /col/col1228995236/、2023 年等。
+    纸质版为正式文本（红头文件同等效力）。
+
+notes: |
+  - 浙江将"政府信息公开"和"政务公开"两个总入口并列呈现（分别对应 col1229697780
+    和 col1543574），前者更聚焦 5 个法定子栏目，后者是更宽泛的政务公开总枢纽。
+  - 5 个法定子栏目 URL 均采用 /col/col[编号]/ 路径模式，可通过指南页
+    /col/col1229000532/ 一次性访问所有子栏目导航。
+  - 依申请公开走独立子域 mapi.zjzwfw.gov.cn（"浙里公开"应用）；
+    公报有独立子域 zfgb.zj.gov.cn（数字版）；政策文件库和行政规范性文件
+    整合在主站 /col/ 路径下。
+  - 浙江省政策文件库 /col/col1229577560/ 是统一检索入口，整合 9 类文件；
+    "法规文件"/col/col1544911/ 是按规章/规范性文件/其他文件分流的浏览入口。
+  - 三个最关键 URL：
+    1) https://www.zj.gov.cn/col/col1229697780/index.html （政府信息公开总入口）
+    2) https://www.zj.gov.cn/col/col1543574/index.html （政务公开主枢纽）
+    3) http://www.zj.gov.cn/col/col1229577560/index.html （浙江省政策文件库）
+
+sources_consulted:
+  - url: https://www.zj.gov.cn/
+    type: homepage
+  - url: https://www.zj.gov.cn/col/col1229697780/index.html
+    type: page_content
+  - url: https://www.zj.gov.cn/col/col1543574/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1229000532/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1571902/index.html
+    type: page_content
+  - url: https://www.zj.gov.cn/col/col1229663115/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1577424/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1595486/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1229577560/index.html
+    type: page_content
+  - url: https://www.zj.gov.cn/col/col1545734/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1228964496/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1545737/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1544911/index.html
+    type: page_content
+  - url: https://www.zj.gov.cn/col/col1656332/index.html
+    type: page_content
+  - url: http://www.zj.gov.cn/col/col1228995236/index.html
+    type: page_content
+  - url: https://www.zj.gov.cn/art/2025/3/31/art_1229847484_60261466.html
+    type: page_content
+  - url: http://zfgb.zj.gov.cn/
+    type: homepage
+  - url: https://mapi.zjzwfw.gov.cn/web/mgop/gov-open/zj/2002446329/reserved/index.html#/?areaCode=33000
+    type: page_content
+  - url: tmp/paradigm-survey.md
+    type: search_result

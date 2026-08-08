@@ -1,0 +1,129 @@
+province: 天津市
+slug: tianjin
+short_name: 津
+pinyin: tianjin
+level: municipality
+operator_org_id: "1200000000000001"
+type: database
+
+main_website:
+  url: https://www.tj.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.tj.gov.cn/zwgk/zfxxgkzl/
+  path_keyword: zwgk/zfxxgkzl
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/gkzn/
+    path_keyword: zfxxgkzl/gkzn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/gkzd/
+    path_keyword: zfxxgkzl/gkzd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/fdzdgknr/
+    path_keyword: zfxxgkzl/fdzdgknr
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（fdzdgknr）下设多个一级类目（2026-07-22 自动抓取）
+      URL: https://www.tj.gov.cn/zwgk/zfxxgkzl/fdzdgknr/
+      注意：根 URL 通过 meta-refresh 跳转到 ./jgxx/，用户访问需先经过一次 JS 跳转。
+
+      一级类目（需进下级子页面确认子结构）：
+      1. 机关简介（jgxx）       - https://www.tj.gov.cn/zwgk/zfxxgkzl/fdzdgknr/jgxx/
+                               （根路径通过 meta-refresh 进一步跳转到 ldxx/，疑似目录壳页面）
+      2. 履职依据               - 待级联抓取
+      3. 规划信息               - 待级联抓取
+      4. 统计信息               - 待级联抓取
+      5. 行政许可               - 待级联抓取
+      6. 行政处罚/强制          - 待级联抓取
+      7. 预算/决算              - 待级联抓取
+      8. 收费项目               - 待级联抓取
+      9. 政府采购               - 待级联抓取
+      10. 重大项目              - 待级联抓取
+      11. 重大民生信息          - 待级联抓取
+      12. 应急管理              - 待级联抓取
+      13. 招考录用              - 待级联抓取
+      14. 监督检查              - 待级联抓取
+
+      特色发现：
+      - 天津市主动公开页采用「目录壳页面」范式：一级 URL 仅为跳转入口（meta-refresh + JS location.replace），实际内容挂载在二级 /ldxx/、/jgxx/ 等子页
+      - 与重庆 14 类 36 URL 相比目录结构扁平、未在 HTML 源码中提供 chnl/docnum 字段；颗粒度接近北京（4-5 类）
+      - 抓取受限：因 meta-refresh 重定向到二级目录，在 curl 静态抓取时只能获得中间页（268 字节），建议用浏览器/JS 渲染或直接从 zfxxgkzl 子页 (gkzn/gkzd/gknb/ysqgk/) 反向推断
+  disclosure_annual_report:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/gknb/
+    path_keyword: zfxxgkzl/gknb
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/ysqgk/
+    path_keyword: zfxxgkzl/ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.tj.gov.cn/zwgk/zcwjk/
+    path_keyword: zwgk/zcwjk
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/zlzc/zlgz/index_21681.html
+    path_keyword: zfxxgkzl/zlzc/zlgz
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/zlzc/xzgfxwj/index_25183.html
+    path_keyword: zfxxgkzl/zlzc/xzgfxwj
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://www.tj.gov.cn/zwgk/zfxxgkzl/
+    path_keyword: zwgk/zfxxgkzl
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.tj.gov.cn/zwgk/szfgb/
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 天津市将"政策文件库"命名为"津政文库"(/zwgk/zcwjk/)，是同一入口聚合地方性法规、规章、行政规范性文件三类的总枢纽。
+  - 规章库与行政规范性文件库通过 /zwgk/zfxxgkzl/zlzc/ 路径下两个独立栏目提供（zlgz 与 xzgfxwj），而非 zcwjk 的子页。
+  - 政府信息公开年报支持 2017–2025 年子目录入口（侧栏列出），无独立分页 URL，沿用 gknb 入口即可获取全部年度。
+  - 三大关键 URL：https://www.tj.gov.cn/zwgk/zcwjk/ (政策文件库)、https://www.tj.gov.cn/zwgk/zfxxgkzl/ (信息公开专栏)、https://www.tj.gov.cn/zwgk/szfgb/ (政府公报)
+sources_consulted:
+  - url: https://www.tj.gov.cn/
+    type: main_website
+  - url: https://www.tj.gov.cn/zwgk/
+    type: disclosure_homepage
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/
+    type: disclosure_subnav
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/gkzn/
+    type: disclosure_guide
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/gkzd/
+    type: disclosure_regime
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/fdzdgknr/
+    type: disclosure_proactive
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/gknb/
+    type: disclosure_annual
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/ysqgk/
+    type: disclosure_upon_request
+  - url: https://www.tj.gov.cn/zwgk/zcwjk/
+    type: policy_library
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/zlzc/zlgz/index_21681.html
+    type: regulation_library
+  - url: https://www.tj.gov.cn/zwgk/zfxxgkzl/zlzc/xzgfxwj/index_25183.html
+    type: normative_library
+  - url: https://www.tj.gov.cn/zwgk/szfgb/
+    type: gazette

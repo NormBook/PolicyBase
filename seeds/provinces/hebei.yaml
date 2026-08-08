@@ -1,0 +1,147 @@
+province: 河北省
+slug: hebei
+short_name: 冀
+pinyin: hebei
+level: province
+operator_org_id: "1300000000000001"
+type: database
+
+main_website:
+  url: https://www.hebei.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+# 政府信息公开/政务公开首页
+# 主导航上"政府信息公开"对应 UUID 7b96ca20-...
+# 政务公开聚合 index 页面 (49f13cc2-...) 实际是"政策"聚合；下方 disclosure_homepage 取正式"政府信息公开"总入口。
+disclosure_homepage:
+  url: https://www.hebei.gov.cn/columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html
+  path_keyword: /columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  # 指南 (政府信息公开指南) — 同 UUID 首页的子页面/列表
+  disclosure_guide:
+    url: https://www.hebei.gov.cn/columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html
+    path_keyword: /columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html
+    verified_at: 2026-07-22
+    status: ok
+  # 制度 (政府信息公开制度)
+  disclosure_regime:
+    url: https://www.hebei.gov.cn/columns/a026eb1f-c2cf-42ad-bb8c-83da8a53df07/index.html
+    path_keyword: /columns/a026eb1f-c2cf-42ad-bb8c-83da8a53df07/index.html
+    verified_at: 2026-07-22
+    status: ok
+  # 法定主动公开内容 — UUID df18331a-... (机构职能/权责清单/规划信息/统计信息/预算决算 等子页面)
+  disclosure_proactive_catalog:
+    url: https://www.hebei.gov.cn/columns/df18331a-bf24-4c06-bc5f-07e45eeda295/index.html
+    path_keyword: /columns/df18331a-bf24-4c06-bc5f-07e45eeda295/index.html
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（df18331a-…）下设 1+N 范式（2026-07-22 自动抓取）
+      URL: https://www.hebei.gov.cn/columns/df18331a-bf24-4c06-bc5f-07e45eeda295/index.html
+
+      一级类目（侧栏导航）：
+      1. 机构职能（UUID 4200a8b2-…）    /columns/4200a8b2-0c3c-4f29-8dae-8da5c06ba846/index.html
+      2. 权责清单（UUID df18331a-… 主页）- /columns/df18331a-bf24-4c06-bc5f-07e45eeda295/index.html
+      3. 行政许可/服务事项（外链）      hbzwfw.gov.cn/hbzw/foursxcx/itemList/xz_index.do?webId=1
+      4. 行政执法/强制（外链，省司法厅）  sft.hebei.gov.cn/zfgs/Index/index
+      5. 行政许可处罚信用公示（外链）   xy.hebei.gov.cn/publicity/04
+      6. 规划信息（UUID 2122f9d5-…）    /columns/2122f9d5-0de4-40d8-b780-9585cb401598/index.html
+      7. 统计信息（UUID 24c63737-…）    /columns/24c63737-7797-4a32-bf85-c2da059ca91f/index.html
+      8. 预算决算（UUID 53f1d9cd-…）    /columns/53f1d9cd-f671-4c01-bc77-d46a1a10c4cc/index.html
+      9. 重点领域信息公开（slideToggle 展开组）
+         - 教育：            jyt.hebei.gov.cn/col/1533807631441/index.html
+         - 医疗卫生：        wsjkw.hebei.gov.cn/ylws/index.jhtml
+         - 社保：UUID 517bce54-…   /columns/517bce54-f7a9-42a7-8f2a-a35c3ef3cfef/index.html
+         - 就业：            rst.hebei.gov.cn/ggzp/
+         - 生态环境（外链）：hbepb.hebei.gov.cn/hbhjt/zwgk/fdzdgknr/zdlyxxgk/
+         - 医保：UUID 15d5f24f-…   /columns/15d5f24f-56c9-4cf0-b3a0-40728b8ea3fb/index.html
+         - 药品安全：UUID e15ce210-… /columns/e15ce210-6040-4f69-b2e7-8ed9068db397/index.html
+         - 市场监管（外链）：scjg.hebei.gov.cn/node/913
+         - 住房和城乡建设（外链）：zfcxjst.hebei.gov.cn/hbzjt/ztzl/jj/zjmsgc/
+         - 社会救助和社会福利：minzheng.hebei.gov.cn/government?path=ETFLXX
+
+      特色发现：
+      - 河北省「法定主动公开内容」采用 1+N 范式：UUID 主页 df18331a-… 自身承载 1 个一级类目（权责清单），其余 9 类通过 UUID 子页或外链垂域门户挂载
+      - 与重庆 14 类相比略少（无「机关简介/收费项目/招考录用/应急管理」独立类目）；但「重点领域信息公开」slideToggle 折叠组收纳 10 个垂域公开，是河北特色
+      - HTML 源码为 easysite CMS 模板（含 eportalCurrentColumnId 等字段），但侧栏导航未暴露 chnl/docnum；按 UUID + 名称两级方式索引
+  # 政府信息公开年报
+  disclosure_annual_report:
+    url: https://www.hebei.gov.cn/columns/29527d47-65f0-4e58-9a95-804549f339e9/index.html
+    path_keyword: /columns/29527d47-65f0-4e58-9a95-804549f339e9/index.html
+    verified_at: 2026-07-22
+    status: ok
+  # 依申请公开 (河北省人民政府办公厅依申请公开须知, 2023-08-21 更新)
+  disclosure_upon_request:
+    url: https://www.hebei.gov.cn/columns/6529759d-7822-4191-8bc3-da82dee85c25/index.html
+    path_keyword: /columns/6529759d-7822-4191-8bc3-da82dee85c25/index.html
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  # 政策文献库 — 河北省没有独立的"政策文献库", 把"政策"聚合页 (49f13cc2-...)
+  # 作为 policy_library:它聚合 政府规章 + 行政规范性文件 + 省政府文件 + 省政府办公厅文件。
+  policy_library:
+    url: https://www.hebei.gov.cn/columns/49f13cc2-db03-4d0c-b4fe-2f3f659d3b6e/index.html
+    path_keyword: /columns/49f13cc2-db03-4d0c-b4fe-2f3f659d3b6e/index.html
+    verified_at: 2026-07-22
+    status: ok
+  # 规章库 (政府规章)
+  regulation_library:
+    url: https://www.hebei.gov.cn/columns/e4a82431-5daf-4e1f-b7ff-80a68ad951b2/index.html
+    path_keyword: /columns/e4a82431-5daf-4e1f-b7ff-80a68ad951b2/index.html
+    verified_at: 2026-07-22
+    status: ok
+  # 行政规范性文件库 (河北省未单设"规范性文件库"独立子站;沿用省政府门户的栏目页)
+  normative_library:
+    url: https://www.hebei.gov.cn/columns/332d4a26-5321-4072-967a-fda55b1f345f/index.html
+    path_keyword: /columns/332d4a26-5321-4072-967a-fda55b1f345f/index.html
+    verified_at: 2026-07-22
+    status: ok
+  # 政务公开/政府信息公开专栏 — 即政府信息公开首页(同 disclosure_homepage)
+  disclosure_library:
+    url: https://www.hebei.gov.cn/columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html
+    path_keyword: /columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html
+    verified_at: 2026-07-22
+    status: ok
+
+# 省政府公报 — hebei.gov.cn 设有政府公报目录页 (UUID 34db8c86-...);
+# 每期通过 UUID 子页发布;历史样本 PDF 路径模式 .../hbszfxxgk/resource/cms/article/...pdf
+gazette:
+  url: https://www.hebei.gov.cn/columns/34db8c86-ac4c-4774-9974-e7d88fd3bb1f/index.html
+  status: ok
+  verified_at: 2026-07-22
+
+notes: |
+  - 河北省政府门户 (www.hebei.gov.cn) 未单设"政策文献库",把政策聚合页 49f13cc2-... 同时作为 policy_library 使用;它聚合 政府规章 + 行政规范性文件 + 省政府文件 + 省政府办公厅文件 4 类。
+  - 政府信息公开/政务公开体系全部 in-house 在 hebei.gov.cn 域内,不存在独立域 info.hebei.gov.cn 库门户(仅早期信息检索跳板);所有 URL 用 https://www.hebei.gov.cn/columns/<UUID>/index.html 模式。
+  - 最关键的 3 个 URL:
+      1) https://www.hebei.gov.cn/                  省政府主站
+      2) https://www.hebei.gov.cn/columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html  政府信息公开专栏(首页+指南)
+      3) https://www.hebei.gov.cn/columns/49f13cc2-db03-4d0c-b4fe-2f3f659d3b6e/index.html  政策聚合(4 类政策文件)
+  - 特殊性:依申请公开主体是 "河北省政务公开办公室",联系电话 0311-87806536,邮箱 xxgk@hebei.gov.cn。
+
+sources_consulted:
+  - url: https://www.hebei.gov.cn/
+    type: main_website
+  - url: https://www.hebei.gov.cn/columns/7b96ca20-882f-436c-9d13-7c91d82ccd55/index.html
+    type: disclosure_homepage + guide
+  - url: https://www.hebei.gov.cn/columns/a026eb1f-c2cf-42ad-bb8c-83da8a53df07/index.html
+    type: disclosure_regime
+  - url: https://www.hebei.gov.cn/columns/df18331a-bf24-4c06-bc5f-07e45eeda295/index.html
+    type: proactive_disclosure_catalog
+  - url: https://www.hebei.gov.cn/columns/29527d47-65f0-4e58-9a95-804549f339e9/index.html
+    type: annual_report
+  - url: https://www.hebei.gov.cn/columns/6529759d-7822-4191-8bc3-da82dee85c25/index.html
+    type: upon_request
+  - url: https://www.hebei.gov.cn/columns/49f13cc2-db03-4d0c-b4fe-2f3f659d3b6e/index.html
+    type: policy_aggregation (作为 policy_library)
+  - url: https://www.hebei.gov.cn/columns/e4a82431-5daf-4e1f-b7ff-80a68ad951b2/index.html
+    type: regulation_library
+  - url: https://www.hebei.gov.cn/columns/332d4a26-5321-4072-967a-fda55b1f345f/index.html
+    type: normative_library
+  - url: https://www.hebei.gov.cn/columns/34db8c86-ac4c-4774-9974-e7d88fd3bb1f/index.html
+    type: gazette

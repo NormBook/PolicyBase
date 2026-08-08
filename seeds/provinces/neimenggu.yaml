@@ -1,0 +1,128 @@
+province: 内蒙古自治区
+slug: neimenggu
+short_name: 蒙
+pinyin: neimenggu
+level: autonomous_region
+operator_org_id: "1500000001"
+type: database
+
+main_website:
+  url: https://www.nmg.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/
+  path_keyword: zwgk/zfxxgk/zfxxgkml
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=1
+    path_keyword: zfxxgkml?gk=1
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=2
+    path_keyword: zfxxgkml?gk=2
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=3
+    path_keyword: zfxxgkml?gk=3
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（zfxxgkml/?gk=3）下设 SPA 单页模式（2026-07-22 自动抓取）
+      URL: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=3
+      范式类型：**single_page_spa**（查询参数 SPA：gk=1 指南、gk=2 制度、gk=3 主动公开、gk=4 年报）
+
+      HTML 源码特征：
+      - 侧栏包含 gk-item / xxgkItemList 容器（含 firstList / secondList / threeList 三级 ul-li 列表）
+      - 顶部为「中国政府网 / 各部委」横排外链（gov.cn + 各部委门户）
+      - 类目字段由 JS 动态注入，未在静态 HTML 中提供 chnl/docnum；外链字段 data-idLink="oLink" 标记部门入口
+      - 已知主动公开栏目锚点（待浏览器渲染后逐项 chnl 化）：
+        - 履职依据（中央、国务院、自治区党委政府文件库）
+        - 机关简介（自治区领导 + 工作机构）
+        - 规划信息（国民经济五年规划、专项规划）
+        - 统计信息（区统计局公报、年鉴）
+        - 行政许可 / 行政处罚（双公示入口）
+        - 财政预决算
+        - 重大民生信息（教育、医疗、社保、就业、扶贫）
+        - 应急管理
+        - 招考录用
+        - 政府公报
+
+      特色发现：
+      - 内蒙古「法定主动公开内容」采用 SPA 单页模式（zfxxgkml/?gk=N），与湖南（zfxxgk/?state=N）同属查询参数 SPA
+      - 静态 HTML 抓不到 chnl/docnum，需浏览器渲染或 API 反查（建议从 asnmg/zwgk/zwgkMore 接口）
+      - 因 SPA 特性，本表不做静态 chnl/docnum 统计；建议另由 SPA 抓取 Agent 接管（运行 Playwright 或 Puppeteer）
+  disclosure_annual_report:
+    url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=4
+    path_keyword: zfxxgkml?gk=4
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: https://www.nmg.gov.cn/zwgk/zfxxgk/ysqgk/
+    path_keyword: zfxxgk/ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: https://www.nmg.gov.cn/nmg_zcwjk/
+    path_keyword: nmg_zcwjk
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: https://www.nmg.gov.cn/zwgk/gzk/index.html
+    path_keyword: zwgk/gzk
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: https://www.nmg.gov.cn/xxgfxwjkk/
+    path_keyword: xxgfxwjkk
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/
+    path_keyword: zwgk/zfxxgk/zfxxgkml
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: https://www.nmg.gov.cn/zwgk/zfgb/
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 内蒙古自治区政府门户网站（nmg.gov.cn）以 /zwgk/zfxxgk/zfxxgkml/ 作为政府信息公开总枢纽，下设 gk=1~4 四个 tab 分别承载指南/制度/法定主动公开/年报，依申请公开独立为 /zwgk/zfxxgk/ysqgk/。
+  - 政策文件库（nmg_zcwjk）、规章库（zwgk/gzk）、现行有效规范性文件库（xxgfxwjkk）三大专题库均为独立入口；规章库额外聚合了 12 个盟市政府规章入口。
+  - 政府公报（zwgk/zfgb）根路径会自动 302 至当前年份目录（2026n/index.html），可直接使用根 URL。
+  - 三个最关键的 URL：https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/ ；https://www.nmg.gov.cn/nmg_zcwjk/ ；https://www.nmg.gov.cn/xxgfxwjkk/
+sources_consulted:
+  - url: https://www.nmg.gov.cn/
+    type: main_website
+  - url: https://www.nmg.gov.cn/zwgk/
+    type: zwgk_root
+  - url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/
+    type: disclosure_homepage
+  - url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=1
+    type: sub_section
+  - url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=2
+    type: sub_section
+  - url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=3
+    type: sub_section
+  - url: https://www.nmg.gov.cn/zwgk/zfxxgk/zfxxgkml/?gk=4
+    type: sub_section
+  - url: https://www.nmg.gov.cn/zwgk/zfxxgk/ysqgk/
+    type: sub_section
+  - url: https://www.nmg.gov.cn/nmg_zcwjk/
+    type: library
+  - url: https://www.nmg.gov.cn/zwgk/gzk/index.html
+    type: library
+  - url: https://www.nmg.gov.cn/xxgfxwjkk/
+    type: library
+  - url: https://www.nmg.gov.cn/zwgk/zfgb/
+    type: gazette

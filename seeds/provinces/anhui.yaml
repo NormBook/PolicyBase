@@ -1,0 +1,240 @@
+province: 安徽省
+slug: anhui
+short_name: 皖
+pinyin: anhui
+level: province
+operator_org_id: "3400000000000001"
+type: database
+
+main_website:
+  url: https://www.ah.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    安徽省人民政府门户网站。导航含 首页 / 省长之窗 / 政务公开 / 皖事通办 /
+    互动交流 / 政府数据 / 徽风皖韵；底部标 皖ICP备05003657号、皖公网安备34000002000001号，
+    主办单位：安徽省人民政府办公厅。中文域名未启用英文/繁体版本镜像到 english.ah.gov.cn。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=2&activeId=333
+  path_keyword: /public/column/1681 (siteId=6781961)
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    政务公开 → 政府信息公开 专栏侧栏枢纽页（siteId=6781961，columnId=1681）。
+    侧栏完整列出 9 个子栏目入口：政策、规章、行政规范性文件、政府信息公开指南、
+    政府信息公开制度、法定主动公开内容、政府信息公开年报（2019-2025）、
+    依申请公开、省政府公报。是 5 子栏目 + 4 专题库的统一入口。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: https://www.ah.gov.cn/public/column/1681?type=2&nav=1
+    path_keyword: /public/column/1681?type=2&nav=1
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      页面标题为"安徽省人民政府办公厅政府信息公开指南"。按《政府信息公开条例》
+      编制，含主动公开、依申请公开、不予公开、工作机构、监督救济五章，
+      附《安徽省政府信息公开申请表》下载（/download/file?filePath=/group1/M00/01/78/
+      wKg8TWG8WGyAd3F6AACYAMpx8iI669.doc）。
+
+  disclosure_regime:
+    url: https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=1&action=list&nav=2
+    path_keyword: /public/column/1681?type=1&nav=2
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      公开制度页（type=1）以列表形式呈现国务院/省政府/办公厅与信息公开相关的
+      法规、规范性文件，链接 /public/1681/8354121.html、554049681.html 等。
+
+  disclosure_proactive_catalog:
+    url: https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=4&action=list&nav=3
+    path_keyword: /public/column/1681?type=4&nav=3
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（type=4，nav=3）。下分省政府文件（catId=6708461）、
+      省政府办公厅文件（catId=6708471）、其他发文（catId=6708491）、
+      规章（catId=6718161）等子类，是省政府主动公开文件主索引。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      安徽门户"法定主动公开内容"采用 siteId=6781961 + type=4 + catId=xxxxxx
+      路径模式，无 chnl/docnum 属性。该字段下挂 5 个 catId 顶级分类 + 9 个
+      catId 二级子类（按"政策解读 + 主动公开"两个分支并列）：
+
+      一、政策解读分支（/public/column/1681?type=4&catId=...）：
+      - 政策解读 (catId=6708431, 字段名="政策法规")
+        - 部门解读 (catId=6711091)
+        - 政策图解 (catId=6711101)
+        - 新闻发布会 (catId=6711111)
+        - 媒体报道 (catId=6711121)
+        - 在线访谈 (catId=6711131)
+      - 政策大白话 (catId=6711421)
+
+      二、主动公开分支（type=4，nav=3 下级）：
+      - 政府文件 (catId=6708431)
+        - 省政府文件 (catId=6708461)
+        - 省政府办公厅文件 (catId=6708471)
+      - 政策法规 (catId=6708481)
+      - 规章库 (catId=6718161)
+      - 政策大白话 (catId=6711421)
+
+      注：catId=6708481（政策法规）和 catId=6718081 直访 type=4 action=list
+      返回空 ColumnName 与 count=0，疑似未配置内容；建议正式入库前在浏览器
+      端验证是否需要不同的 siteId/type 组合。
+
+      范式特征：
+      - 安徽"法定主动公开内容"采 catId 分类（不是 chnl 编号），颗粒度较粗；
+      - 政策解读与主动公开按 catId 并列（解读 catId 6711xxx 系列 vs 主动公开
+        catId 6708xxx/6718xxx 系列），与重庆"14 大类下挂多子类"模式差异较大；
+      - 安徽与重庆对比：颗粒度 5-6 类 vs 14 类；HTML 内不挂 chnl/docnum，
+        不能直接枚举子条目数。
+
+  disclosure_annual_report:
+    url: https://www.ah.gov.cn/site/tpl/7931?nav=4&year=2024
+    path_keyword: /site/tpl/7931?year=2024
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      2024 年度省政府办公厅信息公开年报汇总入口（tpl=7931）。
+      历史年份入口：2025→/site/tpl/8611、2023→7741、2022→7161、2021→6621、
+      2020→5281、2019→5591。2024 报告单篇 URL 为 /public/1681/565412321.html
+      （含 docx 全文下载），依申请公开 2024 年全省办结 22,979 件（同比 +30.4%）。
+
+  disclosure_upon_request:
+    url: https://www.ah.gov.cn/site/tpl/1971
+    path_keyword: /site/tpl/1971
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开主入口（tpl=1971）。页面提供网上申请、流程图（tpl=3161）、
+      办理规程（tpl=4381）、办理状态查询（tpl=1981）、信息处理费管理办法
+      （tpl=5621）、申请表 sqb2019.doc 下载，并需要验证码（/member/getCode）。
+
+# 专题库
+libraries:
+  policy_library:
+    url: https://www.ah.gov.cn/site/tpl/6311?catIds=6718161&action=list&type=6&typeNode=6&nav=0
+    path_keyword: /site/tpl/6311?typeNode=6&nav=0
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政策文献库（tpl=6311）。汇集省政府政策发文，覆盖省政府文件、
+      办公厅文件、政策解读等，可按"政策"全字段检索。
+      与"规章库（tpl=6431）"、"行政规范性文件库（tpl=6991）"并列于
+      政务公开侧栏"政策"分类下。
+
+  regulation_library:
+    url: https://www.ah.gov.cn/site/tpl/6431?catId=6718161&catIds=6718161&action=list&type=6
+    path_keyword: /site/tpl/6431?type=6
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      安徽省人民政府规章库（tpl=6431）。列表按时间倒序展示现行有效
+      省政府规章，每条附 doc/docx 与 pdf 双版本全文下载。已抓样本含
+      医疗机构管理办法、科学技术奖励办法、立法审查办法、土地储备管理办法、
+      出租汽车客运管理办法、城市节约用水管理办法、物业专项维修资金管理办法、
+      应急避难场所管理办法、农业植物检疫管理办法、长江河道采砂管理条例办法、
+      城市管理领域相对集中行政处罚权办法、灾害性天气应对规定、
+      行政规范性文件管理办法、土地征收及补偿安置办法、税费征管和服务保障办法等。
+
+  normative_library:
+    url: https://www.ah.gov.cn/site/tpl/6991
+    path_keyword: /site/tpl/6991
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      行政规范性文件专栏（tpl=6991）。标题为"安徽省人民政府行政规范性文件专栏"，
+      汇集省政府及办公厅印发的规范性文件，并提供意见征集入口
+      （/zwyw/ztzl/gfwjyjzj/index.html）。
+
+  disclosure_library:
+    url: https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=2&activeId=333
+    path_keyword: /public/column/1681 (siteId=6781961)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政务公开/政府信息公开专栏 = /public/column/1681 (siteId=6781961)。
+      与 disclosure_homepage 同址，承担"主动公开总目录 + 各类专题"角色，
+      含政策、规章、规范性文件、5 子栏目、政府公报、各市各部门链接。
+
+  supplementary_libraries:
+    policy_finder:
+      url: https://www.ah.gov.cn/site/tpl/4931?activeId=6784771
+      path_keyword: /site/tpl/4931?activeId=6784771
+      status: ok
+      note: |
+        "我要找政策"政策检索器（tpl=4931）。按个人政策（themeType=0）和
+        企业政策（themeType=1）两条主线、按主题（生育收养/户籍办理/工程建设等
+        共 23 类）聚合政策文件，含搜索热词、政策大白话等特色栏目。
+    declaration_platform:
+      url: https://www.ahzwfw.gov.cn/ysqgk/
+      path_keyword: ahzwfw.gov.cn/ysqgk
+      status: ok
+      note: |
+        安徽政务服务网"依申请公开"子站（ahzwfw.gov.cn 域名，tld 与主门户分离）。
+        提供依申请公开在线办理入口，作为 /site/tpl/1971 之外的备用受理渠道。
+
+# 政府公报
+gazette:
+  url: https://www.ah.gov.cn/szf/zfgb/index.html
+  path_keyword: /szf/zfgb/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    安徽省人民政府公报（位于"省长之窗"/szf/ 下）。含 1992-2001 历史公报
+    存档 + 2001 至今按年期号连续发布，提供"上一期/下一期/目录"导航，
+    每期可按标题/全文检索。历史档案入口为"历史公报1952-2001"专页。
+
+notes: |
+  - 安徽采用"政务公开（/public/）+ 政府信息公开（/public/column/1681?siteId=6781961）"
+    双层结构：上层 /public/index.html 展示"决策/执行/管理/服务/结果"五公开 + 文件列表；
+    下层 siteId=6781961 是"政府信息公开"法定五大栏目 + 政府公报 + 各市各部门链接的
+    总枢纽。下层页面才是真正对标国办模板的栏目入口。
+  - 政策类资源分三个并列 tpl：政策 /site/tpl/6311、规章 /site/tpl/6431、
+    规范性文件 /site/tpl/6991；其中"规章库（6431）"已确认含 30+ 部现行有效
+    省政府规章，每部同时提供 doc/docx + pdf 双格式下载。
+  - 政策检索走 /site/tpl/4931（"我要找政策"），按个人/企业 + 23 个主题聚合，
+    是该省特色服务入口，建议作为初采辅助通道。
+  - 三个最关键 URL：
+    1) https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=2&activeId=333
+       （政府信息公开总枢纽）
+    2) https://www.ah.gov.cn/site/tpl/6431?catId=6718161&catIds=6718161&action=list&type=6
+       （规章库）
+    3) https://www.ah.gov.cn/szf/zfgb/index.html （省政府公报）
+
+sources_consulted:
+  - url: https://www.ah.gov.cn/
+    type: homepage
+  - url: https://www.ah.gov.cn/public/index.html
+    type: homepage
+  - url: https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=2&activeId=333
+    type: page_content
+  - url: https://www.ah.gov.cn/public/column/1681?action=list&siteId=6781961&type=2
+    type: page_content
+  - url: https://www.ah.gov.cn/public/column/1681?type=2&nav=1
+    type: page_content
+  - url: https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=1&action=list&nav=2
+    type: page_content
+  - url: https://www.ah.gov.cn/public/column/1681?siteId=6781961&type=4&action=list&nav=3
+    type: page_content
+  - url: https://www.ah.gov.cn/site/tpl/7931?nav=4&year=2024
+    type: page_content
+  - url: https://www.ah.gov.cn/public/1681/565412321.html
+    type: page_content
+  - url: https://www.ah.gov.cn/site/tpl/1971
+    type: page_content
+  - url: https://www.ah.gov.cn/site/tpl/6311?catIds=6718161&action=list&type=6&typeNode=6&nav=0
+    type: page_content
+  - url: https://www.ah.gov.cn/site/tpl/6431?catId=6718161&catIds=6718161&action=list&type=6
+    type: page_content
+  - url: https://www.ah.gov.cn/site/tpl/6991
+    type: page_content
+  - url: https://www.ah.gov.cn/szf/zfgb/index.html
+    type: page_content
+  - url: https://www.ah.gov.cn/site/tpl/4931?activeId=6784771
+    type: page_content
+  - url: https://www.ahzwfw.gov.cn/ysqgk/
+    type: search_result

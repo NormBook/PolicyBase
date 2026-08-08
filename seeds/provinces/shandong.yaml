@@ -1,0 +1,149 @@
+province: 山东省
+slug: shandong
+short_name: 鲁
+pinyin: shandong
+level: province
+operator_org_id: "3700000000000001"
+type: database
+
+main_website:
+  url: http://www.shandong.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: http://www.shandong.gov.cn/col/col159182/index.html?vc_xxgkarea=113700000045022274&jh=261
+  path_keyword: col159182
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: http://www.shandong.gov.cn/col/col315153/index.html?vc_xxgkarea=113700000045022274&jh=261
+    path_keyword: col315153
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: http://www.shandong.gov.cn/col/col305157/index.html?vc_xxgkarea=113700000045022274&jh=262
+    path_keyword: col305157
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: http://www.shandong.gov.cn/col/col305158/index.html?vc_xxgkarea=113700000045022274
+    path_keyword: col305158
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（2026-07-22 自动抓取）。
+      HTML 树形结构：
+      山东门户"法定主动公开内容"主入口为 col305158（页头 ColumnName="法定主动公开内容"）。
+      直接 curl 该频道返回的不是 14 大类树形，而是"省直部门 + 设区市"两级列表，
+      列出省市场监管局/大数据局/财政厅/教育厅/发改委/工信厅/国资委/人社厅/海洋局/
+      机关事务局/交通厅/监狱局/科技厅/粮食局/药监局/民政厅/能源局/人防办/司法厅
+      等 30+ 部门 + 16 个地市 + 各自年报链接。
+      HTML 树形结构（2026-07-22 真实 Chrome 150 抓取）：
+      山东统一用 col[col编号] + vc_xxgkarea=113700000045022274 参数 + xxgkhide=1 隐藏参数；URL 模式高度规律化适合批量抓取。
+      累计 213 个政策相关 URL：
+      - 政府信息公开专栏（186 个）：/art/YYYY/M/D/art_NNNNN_NNNNN.html?xxgkhide=1 模式，单篇文件示例（鲁政发、鲁政办发、批复、统计公报、行政事业性收费目录等）
+      - 政策文件库（6 个）：/col/col320658 + /col/col305158 法定主动公开（vc_xxgkarea 参数）
+      - 规章库（65 个）：/col/col266672 频道
+      - 规范性文件公开管理平台（484 个！）：/col/col314852 + number=SD2701/SD2702 子栏目（规范性文件备案/清理）
+      - 政府公报（412 个）：/col/col100618 + 2026 年第 19 期已发布
+      - 依申请公开（17 个）：含统一用户 SSO 登录 + 17 市政府受理入口
+      范式特征：山东用 col[col编号] + vc_xxgkarea=113700000045022274 参数 + xxgkhide=1 隐藏参数；URL 模式高度规律化适合批量抓取。
+
+
+      已探测 col305158 同级 col 编号（与本字段形成对照）：
+      - col100004 / col100229 / col100862 / col101024 / col103834 / col110784 /
+        col113584 / col122414 / col122776 / col122951 / col13646 / col151376 /
+        col158937 / col158939 / col159024 / col159028 / col159029 / col159354 /
+        col159452 / col159961 / col160429 / col160878 / col162733 / col162770 /
+        col162794 / col162799 / col162804 / col162826 / col163666 / col165503 /
+        col165545 / col165606 / col168496 / col183156 / col190774 / col208178 /
+        col235486 / col243708 / col254783 / col321612 / col321633 / col323376 /
+        col33356 / col345279 / col356385 / col366099 / col38805 / col40815 /
+        col55590 等
+      （这些 col 编号指向各部门 / 各市"政府信息公开年报"频道，与"法定主动
+      公开内容"分类无直接对应关系）
+
+      注：
+      - 山东 col305158 自身不含 chnlid/docnum 属性；
+      - 实际 14 大类（机关简介/规划信息/统计信息/行政许可/行政处罚强制/预决算/
+        收费/采购/重大建设项目/重大民生信息/应急管理/监督检查/招考录用）分散
+        在各厅局子站，未在省门户统一汇总；
+      - 行政规范性文件库使用独立频道 col314852（含 1798 件、有效 967 件）；
+      - 规章库 col266672；政策文件库 col320658（与 disclosure_homepage 下
+        col159182 / col305157 / col315153 / col315154 / col320658 等并列）。
+
+      范式特征：山东"法定主动公开内容"是"省直部门 + 设区市"二维组织模式，
+      与重庆"14 大类"模式差异显著；颗粒度粗（部门维度而非内容维度），无
+      chnlid/docnum 三级树形；采集建议走各厅局子站频道号 col[col编号] 体系。
+  disclosure_annual_report:
+    url: http://www.shandong.gov.cn/col/col315154/index.html?vc_xxgkarea=113700000045022274&jh=264
+    path_keyword: col315154
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_upon_request:
+    url: http://www.shandong.gov.cn/ysqgk/
+    path_keyword: ysqgk
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: http://www.shandong.gov.cn/col/col320658/index.html
+    path_keyword: col320658
+    verified_at: 2026-07-22
+    status: ok
+  regulation_library:
+    url: http://www.shandong.gov.cn/col/col266672/index.html
+    path_keyword: col266672
+    verified_at: 2026-07-22
+    status: ok
+  normative_library:
+    url: http://www.shandong.gov.cn/col/col314852/index.html
+    path_keyword: col314852
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_library:
+    url: http://www.shandong.gov.cn/col/col159182/index.html?vc_xxgkarea=113700000045022274&jh=261
+    path_keyword: col159182
+    verified_at: 2026-07-22
+    status: ok
+
+gazette:
+  url: http://www.shandong.gov.cn/col/col100618/index.html
+  verified_at: 2026-07-22
+  status: ok
+
+notes: |
+  - 山东省政府门户采用统一"政府信息公开"专栏（col159182），5 个子栏目均在 col15xxxx / col305xxx 体系下，并挂 vc_xxgkarea 组织区代码 113700000045022274。依申请公开使用独立子路径 /ysqgk/，未在 col159182 体系内。
+  - 政策文件库（col320658）实为"省政府及省政府办公厅文件"专题，含 省政府令/鲁政发/鲁政办发/鲁政字 等多文档号类目，部门规范性文件另由 col107862 承载。
+  - 规章库（col266672）收录省政府令；行政规范性文件由 col314852"规范性文件公开管理平台"统一管理（已收录 1798 件、有效 967 件）。
+  - 政府公报使用门户内 col100618 频道（http 接口 jpaas-jpolicy-web-server/front/gongbao 仅 405，需走 HTML 频道），未见独立子域名。
+  - 三个最关键 URL：主站 http://www.shandong.gov.cn/、信息公开专栏 http://www.shandong.gov.cn/col/col159182/index.html?vc_xxgkarea=113700000045022274&jh=261、规范性文件公开管理平台 http://www.shandong.gov.cn/col/col314852/index.html
+sources_consulted:
+  - url: http://www.shandong.gov.cn/
+    type: main_homepage
+  - url: http://www.shandong.gov.cn/col/col159182/index.html?vc_xxgkarea=113700000045022274&jh=261
+    type: disclosure_homepage
+  - url: http://www.shandong.gov.cn/col/col315153/index.html?vc_xxgkarea=113700000045022274&jh=261
+    type: disclosure_guide
+  - url: http://www.shandong.gov.cn/col/col305157/index.html?vc_xxgkarea=113700000045022274&jh=262
+    type: disclosure_regime
+  - url: http://www.shandong.gov.cn/col/col305158/index.html?vc_xxgkarea=113700000045022274
+    type: disclosure_proactive_catalog
+  - url: http://www.shandong.gov.cn/col/col315154/index.html?vc_xxgkarea=113700000045022274&jh=264
+    type: disclosure_annual_report
+  - url: http://www.shandong.gov.cn/ysqgk/
+    type: disclosure_upon_request
+  - url: http://www.shandong.gov.cn/col/col320658/index.html
+    type: policy_library
+  - url: http://www.shandong.gov.cn/col/col266672/index.html
+    type: regulation_library
+  - url: http://www.shandong.gov.cn/col/col314852/index.html
+    type: normative_library
+  - url: http://www.shandong.gov.cn/col/col159182/index.html?vc_xxgkarea=113700000045022274&jh=261
+    type: disclosure_library
+  - url: http://www.shandong.gov.cn/col/col100618/index.html
+    type: gazette

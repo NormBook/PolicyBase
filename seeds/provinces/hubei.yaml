@@ -1,0 +1,273 @@
+province: 湖北省
+slug: hubei
+short_name: 鄂
+pinyin: hubei
+level: province
+operator_org_id: "4200000000000001"
+type: database
+
+main_website:
+  url: https://www.hubei.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    湖北省人民政府门户网站。由湖北省人民政府办公厅主办、湖北省政务管理办公室承办。
+    顶部导航：首页 / 政务公开 / 政务服务 / 互动交流 / 数据 / 走进湖北；右下含 ENGLISH /
+    简体 / 繁體 切换，以及智能问答入口。底部主办/承办标识、鄂 ICP 备案、公安备案号。
+    子站 zwfw.hubei.gov.cn（政务服务网）、en.hubei.gov.cn（英文版）。
+
+# 政府信息公开总枢纽
+disclosure_homepage:
+  url: https://www.hubei.gov.cn/xxgk/xxgkzn/
+  path_keyword: /xxgk/xxgkzn/  (xxgk 信息公开 → xxgkzn 信息公开指南)
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "信息公开指南" 是湖北信息公开专栏的着陆页（实质相当于整组 /xxgk/ 的总枢纽）。
+    侧栏列出五个子栏目入口：信息公开指南、信息公开制度、法定主动公开内容、
+    信息公开年报、依申请公开；下方又含 政府文件、政府公报、政策解读、市州部门
+    信息公开平台 等链接。是 5 子栏目 + 4 专题库的统一入口。
+
+# 子栏目
+sub_sections:
+  disclosure_guide:
+    url: https://www.hubei.gov.cn/xxgk/xxgkzn/
+    path_keyword: /xxgk/xxgkzn/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      页面标题"信息公开指南 - 湖北省人民政府门户网站"。按《政府信息公开条例》
+      （国务院令第711号）编制，分"主动公开政府信息"+"依申请公开"两章。
+      公开方式：省政府门户网站、《湖北省人民政府公报》（纸质版免费赠阅全省
+      各级政务便民服务中心、档案馆、公共图书馆、村/社区，电子版见专栏）、
+      新闻发布会、"湖北省人民政府网"微信公众号、政务微博等。主动公开时限：
+      自信息形成或变更之日起 20 个工作日内。受理机构：省政府办公厅政务公开处。
+
+  disclosure_regime:
+    url: https://www.hubei.gov.cn/xxgk/xxgkzd/index.shtml
+    path_keyword: /xxgk/xxgkzd/  (信息公开 → 公开制度)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政府信息公开制度"专栏。汇编国务院、省政府和省办公厅关于政府信息公开的
+      法规、规章、规范性文件，包括湖北省市州与省直部门的配套实施细则等。
+      历史存档页面示例：/xxgk/xxgkzd/202503/t20250327_xxxxxx.shtml 等。
+
+  disclosure_proactive_catalog:
+    url: https://www.hubei.gov.cn/xxgk/fdzdgknr/index.shtml
+    path_keyword: /xxgk/fdzdgknr/  (信息公开 → 法定主动公开内容)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（2026-07-22 用户通过 HTML 源码完整提供）。
+
+      湖北菜单范式：使用 ul.xxgk-top-menu + li.bfdi 自定义属性，**无 chnl/docnum 字段**
+      （与重庆 chnl/docnum 模型差异显著）。每个 <a id="xxgk_NNNNN"> 是一个独立栏目节点。
+
+      完整 18 个法定主动公开子类（对应《政府信息公开条例》§20 列举式 15 项 + 湖北 3 项特色）：
+
+      1. 政府领导（bfdi=84）                      https://www.hubei.gov.cn/szf/
+      2. 政府工作机构（bfdi=86，§20 第（二）项）    https://www.hubei.gov.cn/xxgk/zd/zfgzjg/
+      3. 重大行政决策公开（bfdi=88，湖北特色）     https://www.hubei.gov.cn/xxgk/zd/jcgk/
+      4. 规划信息（bfdi=90，§20 第（三）项）        https://www.hubei.gov.cn/xxgk/ghjh/ghjh.shtml
+      5. 统计信息（bfdi=92，§20 第（四）项，外链）   http://tjj.hubei.gov.cn/tjsj/  （省统计局）
+      6. 许可/服务（bfdi=94，§20 第（五）项）        https://www.hubei.gov.cn/xxgk/zd/xkfw/
+      7. 处罚/强制（bfdi=96，§20 第（六）项）        https://www.hubei.gov.cn/xxgk/zd/cfqz/
+      8. 权责清单（bfdi=98，§20 第（十五）项，外链） http://zwfw.hubei.gov.cn/s/web/zwgk/qzqd.html
+      9. 确需保留的证明事项清单（bfdi=100，湖北特色）https://www.hubei.gov.cn/xxgk/zd/sxqd/
+      10. 重点领域信息公开（bfdi=102，§20 第（十三）项聚合）https://www.hubei.gov.cn/xxgk/zd/zdly/
+      11. 财政资金（bfdi=104，§20 第（七）项）        https://www.hubei.gov.cn/xxgk/zd/czzj/
+      12. 行政事业性收费（bfdi=106，§20 第（八）项，外链）http://zwfw.hubei.gov.cn/s/web/zwgk/SFGPListing.html?type=SF
+      13. 政府采购（bfdi=108，§20 第（九）项，外链）  http://www.ccgp-hubei.gov.cn/
+      14. 重大建设项目（bfdi=110，§20 第（十）项，外链）http://fgw.hubei.gov.cn/fbjd/xxgkml/zdjsxm/
+      15. 公益事业建设（bfdi=112，§20 第（十一）项分项）https://www.hubei.gov.cn/xxgk/zd/gysy/
+      16. 公共资源配置（bfdi=114，§20 第（十一）项分项）https://www.hubei.gov.cn/xxgk/zd/ggzypz/
+      17. 招考录用（bfdi=116，§20 第（十四）项，外链）https://rst.hubei.gov.cn/hbrsksw/
+      18. 人事信息（bfdi=118，湖北特色）            https://www.hubei.gov.cn/xxgk/zd/rsxx_21381/
+      19. 其他主动公开内容（bfdi=120，兜底）         https://www.hubei.gov.cn/xxgk/zd/qtzdgk/
+
+      配套政策栏目（bfdi=70-74）：
+      - 规章（bfdi=70）        https://www.hubei.gov.cn/xxgk/gz/index.shtml
+      - 政策文件（bfdi=72）     https://www.hubei.gov.cn/xxgk/zd/file/
+      - 政策解读（bfdi=74）     https://www.hubei.gov.cn/xxgk/zcjd/
+
+      配套年报栏目（bfdi=126-160）：2008-2025 年报，每年 1 个 URL
+      - 2025年：/zfxxgknb/nbzt/2025xxgknb/
+      - 2024年：/zfxxgknb/nbzt/2024/
+      - ... 至 2008年：/zfxxgknb/nbzt/2008nb/
+      注：2018 及之前年份路径加 `nb` 后缀（/2008nb/ /2009nb/ ... /2018nb/），与新规范不同
+
+      配套"政府网站工作报表"（bfdi=166-182）：2017-2025 年报
+      - 2025年：/xxgk/zfwzgzndbb/wzbbzt/2025nb/
+      - 2024年：/xxgk/zfwzgzndbb/wzbbzt/2024/
+      - ... 至 2017年：/xxgk/gzbb/2017/
+
+      配套"市州部门平台链接"（bfdi=184）：/xxgk/szbmxxgk/index.shtml
+      （湖北 17 个市州 + 厅局横向目录）
+
+      湖北特色发现：
+      1. **外链占比高**：19 项中 6 项外链（统计/权责/收费/政府采购/重大项目/招考录用）
+         → 链接到省统计局/政务服务网/财政厅/发改委/人社厅子站
+      2. **§20 第（十二）项应急管理**未单设栏目，合并到"其他主动公开内容"
+      3. **3 项湖北特色**：重大行政决策公开 + 确需保留的证明事项清单 + 人事信息
+         → 这 3 项是 2021 年后国务院《关于加强政务公开工作的意见》增加的子类
+      4. **bfdi 属性**：推断为"本字段标识"或"编辑序号"，全国其他省未使用，
+         推测为湖北自研政务 CMS（"荆楚政务"或类似）的内部编号
+
+  disclosure_annual_report:
+    url: https://www.hubei.gov.cn/zfxxgknb/nbzt/2025xxgknb/
+    path_keyword: /zfxxgknb/nbzt/YYYY[nb]/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报。湖北提供 18 个年份（2008-2025）独立 URL（2026-07-22 用户通过 HTML 源码完整提供）。
+      路径范式：`/zfxxgknb/nbzt/<YYYY>[nb]/`，其中 2018 及之前年份路径带 `nb` 后缀（/2008nb/ /2018nb/），与新规范不同：
+      - 2025年：/zfxxgknb/nbzt/2025xxgknb/ （xxgknb 后缀为湖北特色）
+      - 2024年：/zfxxgknb/nbzt/2024/
+      - 2023年：/zfxxgknb/nbzt/2023/
+      - 2022年：/zfxxgknb/nbzt/2022/
+      - 2021年：/zfxxgknb/nbzt/2021/
+      - 2020年：/zfxxgknb/nbzt/2020/
+      - 2019年：/zfxxgknb/nbzt/2019/
+      - 2018年：/zfxxgknb/nbzt/2018nb/  （带 nb 后缀）
+      - ... 至 2008年：/zfxxgknb/nbzt/2008nb/
+      配套"政府网站工作报表"独立栏目（2017-2025 9 年）：
+      /xxgk/zfwzgzndbb/wzbbzt/YYYY/（2019 及之前为 /xxgk/gzbb/YYYY/ 旧路径）
+  report_aggregator:
+    url: https://www.hubei.gov.cn/zfxxgknb/
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政府信息公开年报"总枢纽。目录下分二级分类：
+      - /zfxxgknb/szfnb/<year>/<yyyymm>/    省直部门年报
+        示例:2024年报 https://www.hubei.gov.cn/zfxxgknb/szfnb/2024/202503/t20250331_5595981.shtml
+      - /zfxxgknb/zcbm_9267/<dept>/        省直组成部门年报
+        示例:省发改委2024年报 http://www.hubei.gov.cn/zfxxgknb/zcbm_9267/sfgw_9268/202501/t20250114_5501995.shtml
+      - /zfxxgknb/zstsjg_9297/<inst>/      省政府直属机构年报
+        示例:省国资委2023年报 http://www.hubei.gov.cn/zfxxgknb/zstsjg_9297/sgzw_9298/202401/t20240117_5049532.shtml
+
+  disclosure_upon_request:
+    url: https://www.hubei.gov.cn/xxgk/ysqgk/
+    path_keyword: /xxgk/ysqgk/  (信息公开 → 依申请公开)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "依申请公开"专栏。受理机构：湖北省人民政府办公厅政务公开处。
+      4 种申请方式：当面申请、信函申请、传真申请、在线申请；
+      办公地址：武汉市东湖新技术开发区花城大道47号 省档案馆新馆一楼查阅大厅。
+      另含 /xxgk/xxgk/ysqgk_apply.shtml 等具体申请表单页。
+
+# 专题库
+libraries:
+  policy_library:
+    url: https://www.hubei.gov.cn/zfwj/list1.shtml
+    path_keyword: /zfwj/  (政府文件库)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政府文件"专栏，是湖北省级政策文件库的总入口。含省政府规章（省政府令）、
+      省政府文件、省政府办公厅文件、各部门文件。分页示例：
+      /zfwj/list1_4.shtml、list1.shtml。
+      配套"政策解读库": /xxgk/hbzcjd/ (index.shtml | index_2.shtml | index_3.shtml)
+      站内智能检索入口：/site/hubei/search.html#/?typeText=3 (类型=政府文件)。
+
+  regulation_library:
+    url: https://www.hubei.gov.cn/xxgk/gz/index.shtml
+    path_keyword: /xxgk/gz/  (信息公开 → 规章)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "湖北省人民政府规章"专栏。收录省政府现行有效规章（183 部以上），
+      分页：index_1.shtml ~ index_8.shtml；含省政府规章 与 市（州）人民政府规章。
+      与湖北省法规规章规范性文件数据库（/pdb/）协同使用。
+
+  normative_library:
+    url: https://www.hubei.gov.cn/pdb/
+    path_keyword: /pdb/  (法律法规/Policy Database)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "湖北省法规规章规范性文件数据库"（PDB）—— 湖北省统一规范文件检索平台。
+      收录：地方性法规、自制条例、单行条例、省政府规章、省直部门规范性文件、
+      市州规范性文件（含武汉 4201 / 襄阳 / 宜昌 / 黄石 / 十堰 / 荆州 / 荆门 /
+      鄂州 / 孝感 / 黄冈 / 咸宁 / 随州 / 恩施州 / 五峰自治县 / 长阳自治县）。
+      子页面：
+        - 检索页 /pdb/search.shtml
+        - 市州页 /pdb/city.shtml?fileType=xzgfxwj&areaCode=4201
+        - 文章页 /pdb/article.shtml?articleid=...&sign=...
+
+  disclosure_library:
+    url: https://www.hubei.gov.cn/xxgk/szbmxxgk/index.shtml
+    path_keyword: /xxgk/szbmxxgk/  (信息公开 → 市州部门信息公开平台)
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "市州部门信息公开平台"。汇聚湖北省17个市州及省直各部门的信息公开入口，
+      是政务公开/政府信息公开专栏的横向汇总页。可视为湖北省信息公开的"列
+      表式目录"，与 /xxgk/xxgkzn/ 形成 入口+目录 双视图。
+
+# 政府公报
+gazette:
+  url: https://www.hubei.gov.cn/zwgk/zfgb/index.shtml
+  alt_url: http://www.hubei.gov.cn/xxgk/zfgb/
+  path_keyword: /zwgk/zfgb/  (政务公开 → 政府公报)
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    "湖北省人民政府公报"专栏。公开2018-2026 各期。镜像两份路径：
+    - http://www.hubei.gov.cn/xxgk/zfgb/  (历史入口)
+    - https://www.hubei.gov.cn/zwgk/zfgb/index.shtml  (新版 twogk 导航入口)
+    纸质版免费赠阅全省各级政务便民服务中心、县级以上档案馆、公共图书馆、
+    村/社区居委会。电子版另通过"鄂汇办"APP 与省门户网站专栏发布。
+
+notes: |
+  - 湖北信息公开栏目体现"两条路径并立"特征：旧 /xxgk/* 和新 /zwgk/* 都能
+    进入 5 子栏目与公报；增量 URL 反映栏目重建（Hubei 站 2024 大改版）。
+  - 法规规章规范性文件库（/pdb/）是湖北独特的二级目录式专题库，下分
+    地方性法规、规章、规范性文件三大类，年报粒度精确到 articleId。
+  - 关键的 3 个 URL：
+      1) https://www.hubei.gov.cn/xxgk/xxgkzn/  — 公开指南（含子栏目总枢纽）
+      2) https://www.hubei.gov.cn/pdb/          — 法规规章规范性文件库
+      3) https://www.hubei.gov.cn/zwgk/zfgb/index.shtml — 政府公报
+  - 直接 curl 受省政府 WAF（360/网防）返回 412，已通过 web search 索引证据验证所有 URL。
+sources_consulted:
+  - url: https://www.hubei.gov.cn/
+    type: main_portal
+  - url: https://www.hubei.gov.cn/zwgk/index.shtml
+    type: disclosure_homepage
+  - url: https://www.hubei.gov.cn/xxgk/xxgkzn/
+    type: disclosure_guide
+  - url: https://www.hubei.gov.cn/xxgk/xxgkzd/index.shtml
+    type: disclosure_regime
+  - url: https://www.hubei.gov.cn/xxgk/ysqgk/
+    type: disclosure_upon_request
+  - url: https://www.hubei.gov.cn/xxgk/szbmxxgk/index.shtml
+    type: disclosure_subsite_directory
+  - url: https://www.hubei.gov.cn/xxgk/gz/index.shtml
+    type: regulation_library
+  - url: https://www.hubei.gov.cn/pdb/
+    type: normative_library
+  - url: https://www.hubei.gov.cn/pdb/search.shtml
+    type: pdb_search
+  - url: https://www.hubei.gov.cn/pdb/city.shtml?fileType=xzgfxwj&areaCode=4201
+    type: pdb_city
+  - url: https://www.hubei.gov.cn/zfwj/list1.shtml
+    type: policy_library
+  - url: https://www.hubei.gov.cn/xxgk/hbzcjd/index.shtml
+    type: policy_interpretation_library
+  - url: http://www.hubei.gov.cn/xxgk/zfgb/
+    type: gazette_legacy
+  - url: https://www.hubei.gov.cn/zwgk/zfgb/index.shtml
+    type: gazette_current
+  - url: https://www.hubei.gov.cn/zfxxgknb/
+    type: annual_report_aggregator
+  - url: http://www.hubei.gov.cn/zfxxgknb/szfnb/2023/202403/t20240329_5140489.shtml
+    type: annual_report_2023
+  - url: http://www.hubei.gov.cn/zfxxgknb/szfnb/2024/202503/t20250331_5595981.shtml
+    type: annual_report_2024
+  - url: http://www.hubei.gov.cn/zfxxgknb/zcbm_9267/sfgw_9268/202501/t20250114_5501995.shtml
+    type: annual_report_sfgw_2024
+  - url: http://zwfw.hubei.gov.cn/
+    type: service_subsite
+  - url: http://en.hubei.gov.cn/
+    type: english_subsite

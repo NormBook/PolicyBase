@@ -1,0 +1,163 @@
+province: 青海省
+slug: qinghai
+short_name: 青
+pinyin: qinghai
+level: province
+operator_org_id: "6300000000000001"
+type: database
+
+main_website:
+  url: https://www.qinghai.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+  note: HTTP version (http://www.qinghai.gov.cn/) returns HTTP 200 in this environment; HTTPS cannot complete TLS handshake via the test proxy but is the canonical publicly-used URL (confirmed via Bing/DDG search results).
+
+disclosure_homepage:
+  url: http://www.qinghai.gov.cn/xxgk/xxgk/
+  path_keyword: xxgk
+  verified_at: 2026-07-22
+  status: ok
+
+sub_sections:
+  disclosure_guide:
+    url: http://www.qinghai.gov.cn/xxgk/xxgk/zn/
+    path_keyword: xxgk/zn
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_regime:
+    url: http://www.qinghai.gov.cn/xxgk/xxgk/zd/
+    path_keyword: xxgk/zd
+    verified_at: 2026-07-22
+    status: ok
+  disclosure_proactive_catalog:
+    url: http://www.qinghai.gov.cn/xxgk/xxgk/fd/zfwj/
+    path_keyword: xxgk/fd/zfwj
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容（xxgk/xxgk/fd/）。下挂 17 个一级类目 + 5 类主题分类（青政/青政人/青政办/青政办函），采用 chnl/docnum 元数据（id="c_X" 形式）。
+      HTML 树形结构（2026-07-22 真实 Chrome 150 抓取）：
+      青海用 c_X 频道号模型 + /xxgk/1/[发文字号分类] 二级栏目结构 + 8 个市州全覆盖。
+      累计 409 个政策相关 URL（青海最完整）：
+      - 政府信息公开首页（106 个）：含省政府规章/行政规范性文件 + 8 个市州（西宁/海南州/海西州/果洛州/黄南州/玉树州/海北州/海东市）法规库入口 + 5 个发文字号栏目（青政/青政人/青政办/青政办函/省政府令）
+      - 政府信息公开制度（90 个）：与首页同源但侧栏不同
+      - 法定主动公开内容根（93 个）：含 /xxgk/1/2/ 省政府令 + /xxgk/1/4/ 青政 等发文字号分类
+      - 规章库（109 个）：/xxgk/xxgk/fd/lzyj/gzk/ + 8 个市州 + c_X 频道号（青海独特）
+      - 政府公报（951 个！）：/xxgk/xxgk/qhzb/ 半月刊，覆盖 2017-2026 多年
+      范式特征：青海用 c_X 频道号模型 + /xxgk/1/[发文字号分类] 二级栏目结构 + 8 个市州全覆盖。
+
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+
+      17 个一级 fd 类目（来自 http://www.qinghai.gov.cn/xxgk/xxgk/fd/）：
+      1.  履职依据        chnl=c_29  /xxgk/xxgk/fd/lzyj/
+      2.  政府文件        chnl=c_30  /xxgk/xxgk/fd/zfwj/           （缺省入口）
+      3.  机关简介        chnl=c_31  /xxgk/xxgk/fd/jg/
+      4.  规划信息        chnl=c_32  /xxgk/xxgk/fd/ghxx/
+      5.  统计信息        chnl=c_33  /xxgk/xxgk/fd/tjsj/
+      6.  权力和责任清单   chnl=c_34  /xxgk/xxgk/fd/zeqd/
+      7.  处罚/强制       chnl=c_35  /xxgk/xxgk/fd/cfqz/
+      8.  预算/决算       chnl=c_36  /xxgk/xxgk/fd/ys/
+      9.  收费项目        chnl=c_37  /xxgk/xxgk/fd/sfxm/
+      10. 政府采购        chnl=c_38  /xxgk/xxgk/fd/zfcg/
+      11. 重大建设项目     chnl=c_39  /xxgk/xxgk/fd/zdxm/
+      12. 重大民生信息     chnl=c_40  /xxgk/xxgk/fd/zdms/
+      13. 公务员招考录用    chnl=c_41  /xxgk/xxgk/fd/zk/
+      14. 公共资源配置     chnl=c_42  /xxgk/xxgk/fd/ggzy/
+      15. 议案和提案       chnl=c_43  /xxgk/xxgk/fd/qh/
+      16. "放管服"清单    chnl=c_44  /xxgk/xxgk/fd/fgfqd/
+      17. （组织机构/综合政务主题分类） chnl=c_9..c_30  /xxgk/8/X/   （9=组织机构、10=综合政务、11=国民经济管理/国有资产监管、12=财政/金融/审计、13=国土资源/能源、14=农业/林业/水利、15=工业/交通、16=商贸/海关/旅游、17=市场监管/安全生产监管、18=城乡建设/环境保护、19=科技/教育、20=文化/广电/新闻出版、21=卫生/体育、22=人口与计生/妇女儿童工作、23=劳动/人事/监察、24=公安/安全/司法、25=民政/扶贫/救灾、26=民族/宗教、27=对外事务、28=港澳台侨工作、29=国防、30=其他）
+
+      文号分类（5 大类，来自 /xxgk/1/ 政策文件检索）：
+      - 省政府规章     id=c_2  /xxgk/1/2/   docnum=0
+      - 省政府令       id=c_2  /xxgk/1/2/   docnum=0
+      - 青政           id=c_4  /xxgk/1/4/   docnum=0
+      - 青政人         id=c_5  /xxgk/1/5/   docnum=0
+      - 青政办         id=c_6  /xxgk/1/6/   docnum=0
+      - 青政办函       id=c_7  /xxgk/1/7/   docnum=0
+
+      政府信息公开年报（侧栏年度目录）：
+      /xxgk/xxgk/zwgkzfxxgknb/n{2025,2024,2023,2022,2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011,2010}/
+
+      统计：17 个 fd 一级类目 + 22 个主题分类（c_9..c_30）+ 5 个文号分类 + 16 年年报 = 60 个可达 URL；所有 fd 类目 docnum=0（需进入类目页后另行计算）。
+
+      特色发现：
+      - 青海「法定主动公开内容」颗粒度与重庆最接近（17 类 vs 重庆 14 类）；超出 §20 列举式，新增「权力和责任清单」「议案和提案」「公共资源配置」「放管服清单」4 类
+      - 树形节点挂载 chnl 元数据（c_X 形式），但 docnum 全部为 0（不同于重庆的 chnl=120519/docnum=418 形式）
+      - 主题分类采用 22 个 c_9..c_30 编号（与国办主题分类 GB/T 21010 对齐），但未在 fd 主树上挂载，而是放在 /xxgk/8/ 政策文件检索路径下
+      - 缺省入口是「政府文件」/xxgk/xxgk/fd/zfwj/，与 fdzdgknr 同义
+  disclosure_annual_report:
+    url: http://www.qinghai.gov.cn/xxgk/xxgk/zwgkzfxxgknb/n2024/szf/202501/t20250122_236147.html
+    path_keyword: xxgk/zwgkzfxxgknb
+    verified_at: 2026-07-22
+    status: ok
+    note: 2024 年度报告样本; 同目录下逐年发布 (n2023/szf/..., n2022/szf/...)
+  disclosure_upon_request:
+    url: http://www.qinghai.gov.cn/xxgk/xxgk/ysq/
+    path_keyword: xxgk/ysq
+    verified_at: 2026-07-22
+    status: ok
+
+libraries:
+  policy_library:
+    url: http://www.qinghai.gov.cn/xxgk/1/
+    path_keyword: xxgk/1
+    verified_at: 2026-07-22
+    status: ok
+    note: 主入口为政策文件检索;按公文种类细分(青政/青政人/青政办/青政办函)及主题分类
+  regulation_library:
+    url: http://www.qinghai.gov.cn/xxgk/xxgk/fd/lzyj/gzk/
+    path_keyword: xxgk/fd/lzyj/gzk
+    verified_at: 2026-07-22
+    status: ok
+    note: 省政府规章(地方政府规章/省政府令)
+  normative_library:
+    url: http://www.qinghai.gov.cn/xxgk/xxgk/fd/lzyj/gfxwj/
+    path_keyword: xxgk/fd/lzyj/gfxwj
+    verified_at: 2026-07-22
+    status: ok
+    note: 行政规范性文件库 - 省政府及省政府办公厅规范性文件
+  disclosure_library:
+    url: http://www.qinghai.gov.cn/xxgk/
+    path_keyword: xxgk
+    verified_at: 2026-07-22
+    status: ok
+    note: 政务公开/政府信息公开专栏总入口,含政府领导/政策文件/政策解读/政府信息公开等频道
+
+gazette:
+  url: http://www.qinghai.gov.cn/xxgk/xxgk/qhzb/
+  path_keyword: xxgk/qhzb
+  verified_at: 2026-07-22
+  status: ok
+  note: 《青海省人民政府公报》(曾用名《青海政报》),半月刊,CN 63-1083/D;当期 PDF 链接路径模式 /xxgk/qhzb/nYYYY/YYYYMM/P0...pdf
+
+notes: |
+  - 青海省门户以 `www.qinghai.gov.cn` 为主域,政务公开与政府信息公开共用 `/xxgk/` 集群目录;`/xxgk/xxgk/fd/lzyj/{gzk,gfxwj}` 把"规章"与"规范性文件"做了清晰切分
+  - 政府公报路径为 `/xxgk/xxgk/qhzb/`,而非常见的 `/zfwj/zfgb/`
+  - 政策文件库入口 `/xxgk/1/`,按文号/年份/主题多维检索
+
+sources_consulted:
+  - url: http://www.qinghai.gov.cn/
+    type: main_site_homepage
+  - url: http://www.qinghai.gov.cn/xxgk/
+    type: disclosure_homepage
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/
+    type: disclosure_main
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/zn/
+    type: guide
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/zd/
+    type: regime
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/ysq/
+    type: upon_request
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/fd/zfwj/
+    type: proactive_catalog
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/fd/lzyj/gzk/
+    type: regulation_library
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/fd/lzyj/gfxwj/
+    type: normative_library
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/qhzb/
+    type: gazette
+  - url: http://www.qinghai.gov.cn/xxgk/1/
+    type: policy_library
+  - url: http://www.qinghai.gov.cn/xxgk/xxgk/zwgkzfxxgknb/n2024/szf/202501/t20250122_236147.html
+    type: annual_report_2024

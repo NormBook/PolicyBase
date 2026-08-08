@@ -1,0 +1,210 @@
+province: 广东省
+slug: guangdong
+short_name: 粤
+pinyin: guangdong
+level: province
+operator_org_id: "4400000000000001"
+type: database
+
+main_website:
+  url: https://www.gd.gov.cn/
+  verified_at: 2026-07-22
+  status: ok
+
+disclosure_homepage:
+  url: https://www.gd.gov.cn/zwgk/index.html
+  path_keyword: zwgk
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    广东省人民政府门户网站"政务公开"专栏首页（路径 /zwgk/）。
+    该页面汇聚指南、制度、年报、依申请公开、政府公报、文件库、重点领域等所有
+    政府信息公开相关入口；同时整合"广东省人民政府办公厅政府信息公开平台"
+    （/gkmlpt/index，下设"政府信息公开"和"规章库"两个主标签）。
+
+sub_sections:
+  disclosure_guide:
+    url: https://www.gd.gov.cn/zwgk/xxgkzn/index.html
+    path_keyword: zwgk/xxgkzn
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      广东省政府信息公开指南聚合页（/zwgk/xxgkzn/），下含"广东省人民政府办公厅
+      指南"（跳转 /gkmlpt/guide，2025 年 12 月修订版）以及各地级以上市、
+      省政府部门的指南入口列表。
+
+  disclosure_regime:
+    url: https://www.gd.gov.cn/zwgk/zfxxgkzdwj/index.html
+    path_keyword: zwgk/zfxxgkzdwj
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开制度文件专栏，分"国家制度文件"和"广东省制度文件"两类。
+      收录《政府信息公开条例》、《广东省政务公开条例》（2005）、
+      粤府办〔2009〕考核/评议/过错责任追究/发布协调四项制度等。
+
+  disclosure_proactive_catalog:
+    url: https://www.gd.gov.cn/gkmlpt/index
+    path_keyword: gkmlpt/index
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      法定主动公开内容由"广东省人民政府办公厅政府信息公开平台"
+      （/gkmlpt/index）"政府信息公开"标签承担，下设组织机构（领导分工、
+      政府机构、机构职能）、政务动态、财政预决算、政府工作报告等
+      法定主动公开类别；提供高级搜索（标题/全文、相关度/时间、
+      现行有效/已失效）。
+
+      HTML 树形结构（2026-07-22 自动抓取）：
+      广东"法定主动公开内容"采用客户端 JS 渲染（curl 默认只能拿
+      检索表单 + "出错了"占位页，无法获得 14 类树形）。
+
+      抓取结果：
+      - 主页 https://www.gd.gov.cn/gkmlpt/index HTML 含以下 id：
+        ContentRegion / input-keywords / policy-search__detail-button /
+        policy-search__form-button / standard-search__form-button /
+        search-button-gkml / search-form / _ideConac / _jiucuo_ /
+        add-fav / my-fav / my-slh / my-wza / popup__container
+      - 频道树通过 /gkmlpt/list?cId=120743 等动态参数加载，但所有
+        探测 URL 返回"出错了"占位页（HTTP 200 但 body 仅 1714 字节
+        错误页），表明广东 gkmlpt 后端不接受不带 token 的直接请求
+      - 树根 id：ContentRegion（加载树形容器）
+      - chnl/docnum 字段：未在静态 HTML 中暴露（需经 JS 接口异步加载）
+
+      范式特征：
+      - 广东采用 SPA + 后端 token 鉴权范式（gkmlpt），不走 chnl/docnum 频道号模型，
+        与重庆 chnl=120519 差异显著
+      - 是已抓 8 省中唯一采用"门户 + 独立子域检索平台"双架构的省份
+        （门户 gd.gov.cn + 子域 gkmlpt.gd.gov.cn / ysqgk.gd.gov.cn）
+      - 静态 HTML 只能拿到检索表单骨架（id=policy-search__form-button 等），
+        14 大类树形必须经浏览器渲染或带正确 token 的接口请求
+      - 抓取建议：必须用 puppeteer/playwright 等 headless 浏览器，
+        或调用 /gkmlpt/api/* JSON 接口（需先 GET 首页拿 cookie/CSRF）
+
+  disclosure_annual_report:
+    url: https://www.gd.gov.cn/zwgk/xxgknb/index.html
+    path_keyword: zwgk/xxgknb
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      政府信息公开年报汇总入口。页面以索引形式分别链接 21 个地级以上市
+      和 40 个省政府部门的年度报告。省政府办公厅自身年报一般在
+      /zwgk/xxgknb/ 索引下点击进入。
+
+  disclosure_upon_request:
+    url: https://ysqgk.gd.gov.cn/67/index
+    path_keyword: ysqgk.gd.gov.cn
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      依申请公开受理入口设在独立子域 ysqgk.gd.gov.cn。下分省政府办公厅、
+      组成部门（21 个）、直属特设机构、直属机构、部门管理机构、
+      21 个地级以上市，受理表单提交后跳 /[ID]/choice 选择具体部门，
+      另含 /67/query 查询办理结果。咨询电话 020-83135078。
+
+libraries:
+  policy_library:
+    url: https://www.gd.gov.cn/zwgk/wjk/index.html
+    path_keyword: zwgk/wjk
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      广东省政府文件库（/zwgk/wjk/）。按发文字号分六类：
+      粤府令 / 粤府 / 粤府函 / 粤府办 / 粤办函 / 全部文件。
+      这是广东省政策文献的总入口，粤府系列规范性文件也在此处汇集。
+
+  regulation_library:
+    url: https://www.gd.gov.cn/gkmlpt/index
+    path_keyword: gkmlpt/index#regulation
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      规章库挂在"广东省人民政府办公厅政府信息公开平台"
+      （https://www.gd.gov.cn/gkmlpt/index）右侧"规章库"标签下，
+      与"政府信息公开"标签并列为平台两大主库。
+      提供按时间/相关度/有效性的检索；现存地方政府规章以粤府令形式公布
+      （与文件库粤府令分类有部分交叉）。
+
+  normative_library:
+    url: null
+    path_keyword: null
+    verified_at: 2026-07-22
+    status: not_found
+    note: |
+      检索过程：(1) gkmlpt 平台仅设"政府信息公开"+"规章库"两个主标签，
+      未单独建"规范性文件库"标签（直接探测 /gkmlpt/normative、/regulation
+      均返回 404）；(2) WebSearch "广东省 行政规范性文件库"未发现省政府层
+      面的独立库入口；(3) 各地市（广州 2025-10 上线）和省发改委
+      （/gfxwj5633/）、人社厅（/zcfg/zcfgk/）等部门有独立规范性文件库。
+      建议初次采集以 /zwgk/wjk/ 的"粤府"+"粤府函"+"粤府办"+"粤办函"四类
+      作为省政府层面规范性文件总览入口；如需专门建库，需另行调研
+      司法厅或省政务服务网。
+
+  disclosure_library:
+    url: https://www.gd.gov.cn/gkmlpt/index
+    path_keyword: gkmlpt/index
+    verified_at: 2026-07-22
+    status: ok
+    note: |
+      "政府信息公开/政务公开专栏"对应到 /gkmlpt/index
+      （广东省人民政府办公厅政府信息公开平台）。
+      该平台是广东省政府主动公开文件的统一检索库，覆盖组织机构、规章、
+      规范性文件、规划计划、财政预决算、统计数据、重点领域等所有主动公开类目。
+      该库也兼任 regulation_library 的入口（"规章库"标签）。
+
+gazette:
+  url: https://www.gd.gov.cn/zwgk/gongbao/index.html
+  path_keyword: zwgk/gongbao
+  verified_at: 2026-07-22
+  status: ok
+  note: |
+    《广东省人民政府公报》栏目首页（/zwgk/gongbao/）。
+    公报原名《广东政报》（1950 年创刊），现为旬刊，国内统一刊号 44-1604/D。
+    栏目提供：(1) 最新发布列表（含 2026 年第 17 期等）；(2) 历史沿革；
+    (3) 公报检索（关键词、发文机构、文号、主题分类等）；
+    (4) 选择期数（1950—2026 完整年度归档）；
+    (5) 各地级以上市人民政府公报（21 市链接）；
+    (6) 全省政府公报统一检索平台入口。
+    同期 PDF 通过 /gbfj/gb[期号].pdf 路径下载（如 /gbfj/gb2024.pdf）。
+
+notes: |
+  - 广东省把"政府信息公开平台"与"规章库"合并在同一站 /gkmlpt/index 下，
+    设两个主标签即可完成全库检索；政策文件库（/zwgk/wjk/）独立于该平台，
+    按发文字号分类管理。
+  - 依申请公开独立子域 ysqgk.gd.gov.cn 是另一条主线，提供 21+ 部门
+    + 21 市的统一受理入口，与公开平台解耦。
+  - 广东省未在省政府层面单独建"行政规范性文件库"独立页面；
+    现有"粤府规""粤府办规"等分类实为文件库子栏目；
+    各地市（如广州）和省直部门（发改委、人社厅）有独立规范库。
+  - 三个最关键 URL：
+    1) https://www.gd.gov.cn/gkmlpt/index （政府信息公开+规章库双标签平台）
+    2) https://www.gd.gov.cn/zwgk/wjk/index.html （省政府文件库，按发文字号分类）
+    3) https://ysqgk.gd.gov.cn/67/index （依申请公开统一受理入口）
+
+sources_consulted:
+  - url: https://www.gd.gov.cn/
+    type: homepage
+  - url: https://www.gd.gov.cn/zwgk/index.html
+    type: homepage
+  - url: https://www.gd.gov.cn/gkmlpt/index
+    type: page_content
+  - url: https://www.gd.gov.cn/zwgk/xxgkzn/index.html
+    type: page_content
+  - url: https://www.gd.gov.cn/zwgk/zfxxgkzdwj/index.html
+    type: page_content
+  - url: https://www.gd.gov.cn/zwgk/xxgknb/index.html
+    type: page_content
+  - url: https://ysqgk.gd.gov.cn/67/index
+    type: page_content
+  - url: https://www.gd.gov.cn/zwgk/gongbao/index.html
+    type: page_content
+  - url: https://www.gd.gov.cn/zwgk/wjk/index.html
+    type: page_content
+  - url: https://www.gd.gov.cn/gkmlpt/guide
+    type: page_content
+  - url: https://www.gd.gov.cn/zwgk/zdlyxxgkzl/index.html
+    type: page_content
+  - url: http://www.gd.gov.cn/zwgk/gongbao/2009/29/content/post_3362737.html
+    type: page_content
+  - url: tmp/paradigm-survey.md
+    type: search_result
