@@ -42,9 +42,9 @@ P0-P8 不建设 Web GUI、移动应用或公共服务 API；不采集非主动�
 ```text
 P0 Repository Governance Bootstrap
   -> P1 Project Skeleton and Contract Foundation
-      -> P2 Identity, Dedup and Versioned Ingest
+      -> P2 Identity Dedup and Versioned Ingest
           -> P3 First Source and Content Closure
-              -> P4 Index, Search and Export
+              -> P4 Index Search and Export
                   -> P5 Editorial and CLI Completion
                       -> P6 Authorized Model Refinement
                           -> P7 Advanced Attachment and Layout
@@ -65,7 +65,7 @@ P0 Repository Governance Bootstrap
 
 范围：Python >=3.12 项目骨架和依赖组；CLI shell 与 minimal `verify` 命令（`layout`）；schema/taxonomy、source/rule、manifest/edition 的下限骨架；golden/fixture 基础；spec-manifest。P1 不实现完整采集、去重、索引、OCR 或模型调用。
 
-## 7. P2 Identity, Dedup and Versioned Ingest
+## 7. P2 Identity Dedup and Versioned Ingest
 
 目标：让 candidate 能安全、确定地成为带历史版本的正式文献包。
 
@@ -81,7 +81,7 @@ P3 必须具备：Source Registry、Profile、Recipe 和已实现 basic Rule；�
 
 P3 止于 `data/documents/` 中的 confirmed current edition。外部模型、高级 OFD/WPS、多引擎版面恢复不阻塞 P3。
 
-## 9. P4 Index, Search and Export
+## 9. P4 Index Search and Export
 
 目标：对 confirmed/current 且获准消费的文献建立确定、可重建的索引和导出。
 
