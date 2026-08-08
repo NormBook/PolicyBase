@@ -1,0 +1,56 @@
+name: "\U0001F680 功能需求"
+description: 提出新功能或能力
+labels: ["do:triage"]
+title: "feat(scope): "
+body:
+  - type: dropdown
+    id: scope
+    attributes:
+      label: 影响范围
+      description: 选择受影响的模块或种子分卷
+      options:
+        - spec (种子规格 PB01-19)
+        - infra (基础设施)
+        - ci (CI/CD)
+        - cli (CLI 命令)
+        - data (数据管线)
+        - docs (文档系统)
+        - governance (治理系统)
+    validations:
+      required: true
+  - type: input
+    id: spec_ref
+    attributes:
+      label: 规格引用
+      description: 关联的 PolicyBase 分卷与章节（如 PolicyBase_10 §source-registry）
+      placeholder: PolicyBase_NN §section
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: 需求描述
+      description: 要做什么、为什么、预期效果
+    validations:
+      required: true
+  - type: textarea
+    id: ac
+    attributes:
+      label: 验收标准（AC）
+      description: |
+        每条 AC 必须包含可原样执行的命令与可观察断言（格式见 PolicyBase_03 §9）。
+        未执行时省略 exit code 行，写 evidence: planned；执行后再填真实退出码。
+        格式示例（尚未执行）：
+        AC-1
+        command: python3 seeds/verify_seed_set.py
+        assert: 输出包含 "OK seed_set_verified: 19 volumes verified"
+        evidence: planned
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 优先级
+      options: ["priority:blocker", "priority:high", "priority:medium", "priority:low"]
+    validations:
+      required: true

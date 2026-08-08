@@ -1,0 +1,21 @@
+# PolicyBase CODEOWNERS
+# 单人开发期：所有路径归属 janssenkm；当前无强制力（见 §4.7 说明）。
+# 引入协作者后可按分卷/子系统拆分归属。
+
+* @janssenkm
+
+# 种子规格（唯一主权威，修改须通过 Issue + PR）
+seeds/                      @janssenkm
+
+# 治理配置（门禁/CI/模板，修改须通过 gov 类型 Issue）
+.github/                    @janssenkm
+AGENTS.md                   @janssenkm
+
+# 正式文档目录（子目录划分依据 PolicyBase_03 §8）
+docs/product/               @janssenkm
+docs/architecture/          @janssenkm
+docs/specs/                 @janssenkm
+docs/operations/            @janssenkm
+docs/development/           @janssenkm
+docs/governance/            @janssenkm
+docs/contracts/             @janssenkm
