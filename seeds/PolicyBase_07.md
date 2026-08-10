@@ -86,6 +86,26 @@ doc_id = TYPE + "-" + sha256(canonical_key.encode("utf-8")).hexdigest()[:10]
 
 CLI 解析时该 ID 的词法形态（token 正则）见 PolicyBase_15 §跨命令标识；本卷只定义生成语义。
 
+### 5.1 ID 生成权威表（本卷统一 owner）
+
+本卷是所有公共 ID 生成语义的统一权威索引。各 ID 的算法细节由对应业务卷展开，本卷只登记其前缀形态与生成归属，使 PolicyBase_15「ID 生成语义一律以 PolicyBase_07 为权威」成立。新增公共 ID 必须先在本表登记，再进 PolicyBase_15 词法投影表。
+
+| ID | 前缀/形态 | 生成式 / 算法 owner |
+|---|---|---|
+| `doc_id` | `TYPE` + `-` + 10 hex | 本卷 §5（`TYPE` 见 PolicyBase_05；sha256(canonical_key)[:10]） |
+| `edition_id` | `ed-` + 24 hex | PolicyBase_09 §4.1（payload frame 的 SHA-256 前 24 hex） |
+| `candidate_id` | `cand-` + 24 hex | PolicyBase_11 candidate manifest |
+| `artifact_id` | `art-{stage}-` + hex | PolicyBase_13 §4 内容工件 schema |
+| `switch_event_id` | `sw-` + 24 hex | PolicyBase_09 §4.5（canonical event payload SHA-256 前 24 hex） |
+| `auth_id` | `auth-` + 24 hex | PolicyBase_04 授权 registry（scope 路由见 PolicyBase_15 §3.1） |
+| `review_id` | `rev-` + 24 hex | PolicyBase_13 §5 内容层 review decision |
+| `file_id` | `file-` + 24 hex（内容寻址） | PolicyBase_09 manifest `files[]` |
+| `run_id` | `run-` + ASCII slug | PolicyBase_11 run manifest |
+| `profile_id` | 小写 kebab-case slug（如 `local-government-v1`） | PolicyBase_10 Profile 注册 |
+| `backend_id` | 小写 kebab-case slug（如 `rapidocr`） | PolicyBase_13 §10 backend capability |
+
+`source_id`（来源标识，非文献内容寻址）生成归 PolicyBase_10 Source Registry，不进本表。所有 hex 段为小写、SHA-256 前缀；碰撞集合与长度收紧规则见本卷 §25。各 ID 的 CLI token 词法投影见 PolicyBase_15 §3。
+
 ---
 
 ## 6. 核心术语

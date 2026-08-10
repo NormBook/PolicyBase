@@ -71,7 +71,7 @@ policybase export
 
 ## 3. 跨命令标识
 
-本卷维护公共标识在 **CLI 上的 token 词法投影**——即子卷在解析位置参数与 option 时唯一接受的字符串形式。**ID 的生成语义、canonical 形态、长度收紧、碰撞算法、稳定性规则一律以 PolicyBase_07 为权威**；本表只投影这些规则到 CLI 词法，不重新定义。
+本卷维护公共标识在 **CLI 上的 token 词法投影**——即子卷在解析位置参数与 option 时唯一接受的字符串形式。**ID 的生成语义、canonical 形态、长度收紧、碰撞算法、稳定性规则一律以 PolicyBase_07 §5（含 §5.1 ID 生成权威表）为权威**；本表只投影这些规则到 CLI 词法，不重新定义。
 
 | 类型 | CLI 词法投影 | 生成语义与业务存在性权威 |
 |---|---|---|
@@ -82,6 +82,11 @@ policybase export
 | `ARTIFACT_ID` | `art-{stage}-` + 小写 hex；`stage` 为 1..32 位小写 kebab-case；形态与稳定性见 PolicyBase_13 §4 | PolicyBase_13 内容工件 schema |
 | `RUN_ID` | `run-` + 小写 ASCII 字母、数字或 `-`，长度范围以 PolicyBase_11 为准 | PolicyBase_11 run manifest/registry |
 | `AUTH_ID` | `auth-` + 小写 hex，固定 29 ASCII bytes | 见 §3.1 scope 路由 |
+| `SWITCH_EVENT_ID` | `sw-` + 小写 hex，固定 27 ASCII bytes | PolicyBase_09 §4.5 switch event |
+| `REVIEW_ID` | `rev-` + 小写 hex，固定 28 ASCII bytes | PolicyBase_13 §5 内容层 review decision |
+| `FILE_ID` | `file-` + 小写 hex，固定 29 ASCII bytes（内容寻址） | PolicyBase_09 manifest `files[]` |
+| `PROFILE_ID` | 小写 kebab-case slug（如 `local-government-v1`），1..96 bytes | PolicyBase_10 Profile 注册 |
+| `BACKEND_ID` | 小写 kebab-case slug（如 `rapidocr`），1..64 bytes | PolicyBase_13 §10 backend capability |
 
 CLI 不接受模糊前缀、显示名称、自由路径或自定义别名作为标识替代。任何兼容迁移形式必须先由对应业务 owner 登记为**完整 alias**；CLI 不做"宽松匹配"或前缀补全。
 
