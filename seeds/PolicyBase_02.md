@@ -40,7 +40,7 @@ P0-P8 不建设 Web GUI、移动应用或公共服务 API；不采集非主动�
 ## 4. 阶段依赖图
 
 ```text
-P0 Repository Governance Bootstrap
+P0 GitHub Initialization
   -> P1 Project Skeleton and Contract Foundation
       -> P2 Identity Dedup and Versioned Ingest
           -> P3 First Source and Content Closure
@@ -53,11 +53,24 @@ P0 Repository Governance Bootstrap
 
 阶段按主路径串行验收，但后续阶段的研究、fixture 准备和非交付调研可以提前进行。**不得以提前研究证明前置能力已经完成。**
 
-## 5. P0 Repository Governance Bootstrap
+> **GitHub Milestone 绑定**：§4-§13 的阶段标题即 GitHub Milestone 列表。`P0 GitHub Initialization`（§5）由通用模板 `seeds/GITHUB-INIT.md` §4.3c 创建——P0 自指（P0 即 GitHub 初始化过程），对任意项目通用；P1-P8（§6-§13）由本卷定义，在 P0 完成后的规划阶段各自创建为 GitHub Milestone。不使用 `phase:p*` 标签。
 
-目标：建立可审计、可门禁、由用户控制远程授权边界的 issue-first 治理基础设施（详细任务定义见 `seeds/P0-GITHUB-INIT.md`）。P0 阶段不等同于优先级；Issue 优先级由治理文档的 `priority:blocker|high|medium|low` 标签表达。
+## 5. P0 GitHub Initialization
+
+目标：建立可审计、可门禁、由用户控制远程授权边界的 issue-first 治理基础设施。P0 的通用初始化流程见 `seeds/GITHUB-INIT.md`（通用模板；P0 自指——P0 即 GitHub 初始化过程，对任意项目通用）。P0 阶段不等同于优先级；Issue 优先级由治理文档的 `priority:blocker|high|medium|low` 标签表达。
 
 范围：本地仓库治理文件、GitHub 公共仓库初始化、Issue/PR 模板、CODEOWNERS、分支保护、CI 门禁、Issue-first 自动化及其可复核验收证据。P0 不实现完整采集、去重、索引、OCR 或模型调用。
+
+### 5.1 规格治理扩展（PolicyBase 在通用 P0 之上的叠加）
+
+`seeds/GITHUB-INIT.md` 是纯通用模板，不承载 PolicyBase 的规格卷体系（见 GITHUB-INIT.md §11 职责边界）。PolicyBase 在通用 P0 初始化之上叠加下列规格治理扩展，在 P0 期间（通用基础设施就绪后）接入：
+
+- **CI 验证 job**：在通用 pr-gates.yml（`ai-disclosure` + `dor-check`）之上追加 `verify-seeds` job，运行 `python3 seeds/verify_seed_set.py`，期望输出 `OK seed_set_verified: 19 volumes verified`；同步加入分支保护 `required_status_checks.contexts`。
+- **G0 会话启动**：在 AGENTS.md G0（通用：读 AGENTS.md + 认证 + 查 ready Issue）之上追加——读权威地图 `seeds/PolicyBase_01.md` + 协作约定 `seeds/PolicyBase_03.md`，并运行 `python3 seeds/verify_seed_set.py` 确认输出。
+- **规格修订流程**：Issue 标题前缀增 `seed`（→ 组织级 Issue Type `Seed Revision`）；Issue 模板增 `.github/ISSUE_TEMPLATE/seed-revision.yml`（标题 `seed(PolicyBase_NN): `）。
+- **scope 识别**：issue-triage.yml 增 scope 正则 `pb\d{2}` → 打 `scope:spec` 标签；标签集增 `scope:spec`。
+
+> **已知偏离（按 GITHUB-INIT.md §0.2 就地标注，非延后清单）**：上述扩展把 `seeds/` 钉进 CI 与 G0 运行时路径，与 PolicyBase_01 §9（禁止让正式实现长期引用 `seeds/PolicyBase_*`）、PolicyBase_03 §8（seed 文档是迁移源，不是长期运行时权威）暂时冲突。这是有意识的早期偏离：P1 正式文档体系（`docs/`）建立前，规格校验脚本无其他落点。**检测信号**：`git grep -nE 'seeds/(PolicyBase_|verify_seed)' .github/ AGENTS.md` 应返回上述扩展点。**修正条件**：P1 `docs/` 与 `scripts/verify_spec_set.py` 就绪后，CI job 改名 `verify-specs` 指向新路径，G0 改读 `docs/`，`seeds/` 降级为迁移源；该迁移走 `gov(governance)` Issue 并引用本节。
 
 ## 6. P1 Project Skeleton and Contract Foundation
 
